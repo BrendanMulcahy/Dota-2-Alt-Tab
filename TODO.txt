@@ -1,0 +1,403 @@
+== Important todo list ==
+=========================
+
+- Add Tuskar, Legion commander and Shredder guides
+
+- Add hero textual search bar
+
+- Add item and hero tooltips
+
+== General todo list ==
+=======================
+
+- Deduplicate playdota/playdota_main code
+
+- Create a more official solution for guide credits.
+
+- CSS reset
+
+- Fix tabbed builds not having columns in the same position (see Tinker)
+
+- Add version and date to the html guides.
+
+- Fix tabbed builds not being in the same position (see tinker)
+
+- Add links to original dota1 version of the guide.
+    
+- Choose new colors for the skill (invoker currently looks weird...)
+
+- Check spelling; Choose between british and american english (armor vs armour, etc)
+
+- Separate items that have multiple levels (dagon, necro, and diffusal)
+
+- Don't always use default nicknames; Set some by hand.
+
+- Allow the script to be run from different folders; Create Windows batch files.
+
+- Separator images (and / or) in the palydota guides are really ugly
+
+- Unprefixed css gradients.
+
+==========================
+== Hero guide todo-list ==
+==========================
+ 
+I consolidated here all the comments and questions I had from your updates
+as well as things from my old todo list (mostly user feedback that I haven't
+put into the guide yet)
+
+This might seem a little negative, but that is just because
+ I put the things I agreed with into the guide already.
+
+ - is for comments on your updates
+ + is for extra comments, either mine or from playdota and reddit feedback.
+
+ES
+    - In my replay data, only LGD.Chuan gets totem at 4. Everyone else getis it at 8.
+      Is this a parser glitch of is it important?
+
+SVEN
+    - Why the soul ring?
+
+CLOCK
+    - Why the 2-flare, 2-battery, 2-flare, 2-battery build?
+    + Flesh out build variations (explain why the weird build)
+
+ALCH
+    + We need to split the radiance/non-radiance build.
+    + Does that sobi mask trick also work in dota2?
+    + move explanation to the hero intro;
+
+WISP
+    + see http://www.reddit.com/r/DotA2/comments/11vvss/enjoy_playing_wisp_here_is_a_tiny_guide_on_some/
+    
+      + Tether does not transfer health/mana regen if have full health/mana. You can use overcharge to spend a bit of health.
+      
+      + Quickly toggling overcharge for the damage reduction can help against nukes.
+      
+      + Its easier to control the spirits if they are close to you.
+      
+      + > You can make your spirits "stop" at more places than max and min. Simply pressing out/in twice makes the spirits stop where they are. 
+      
+      + When you cast spirits the current ones explode immediately. Use this for ganking and for farming neutrals.
+      
+      + Regeneration items are very good on wisp - they work well with Tether and Overcharge costs a percentage of your total health.
+      
+      tranquils, urn, wand
+
+JUGGER
+    + Currently lacks a hero description (only has tips).
+
+LUNA    
+    + Luna is the fastest hero in the game, goes mid,
+      and gains more early game from lunar blessing than stats.
+      Early bottle is important, as luna can control runes better than most,
+      and can set up easy kills at level 7 due to having 1500 damage between Q/R.
+
+LD
+    + We should have a non-radiance build.
+    + How does entangle + quelling blade work in Dota2?
+
+STORM
+    - Explain build variations.
+
+RHASTA:
+    + My replay data gives very varied skill builds, often not maxing voodoo first.
+      We should get more concrete data, and decide if the current build is a good default.
+    + Easy build -> change name; explain.
+
+ENCH
+    + Remove that silly smoke
+
+SILENCER
+    + The silencer guide has always sucked (uncommon hero with greatly varied playstyle).
+      Perhaps creating tabs for the carry and support biuld woul dhelp this issue?
+
+OGRE
+    + Should we mention aghs or reject it?
+    
+PUDGE:
+    + Get a single point in Flesh Heap at 4.
+
+SB:
+    + MoM is controversial, since its so snowbally.
+      Perhaps we should use a "safer' build as the default?
+    + I don't understand the CoD vision mechanics.
+    
+CK:
+    + (fireblaze): I never liked the armlet build.
+       I'd reccomend something like Treads->Jango / VG -> HoT / Manta.
+    
+    + I think it makes makes sense to make the armlet build more optional
+      (it is something you can go for, but surely not obligatory like in Leoric's case)
+      
+      typo: juts
+
+WEAVER:
+    + We should check the new non-radiance build. I suck at weaver.
+      Also needs to make the hero description better, to lessen confusion.
+  
+WD:
+    + We should add separate tabs for the maledict and voodoo restoration skill builds.
+
+ENIGMA:
+    + Needs more suggested items.
+    
+NECRO
+    + Do we really go with HA at 2, even with sadist now healing HP?
+
+KROB:
+    + Add more luxury items to the MS itembuild.
+
+LESH:
+    + We should add the tabs back in (there is more then one way to play lesh)
+      The text got outdated because of this too.
+    + Do we need all those bracers in the stats build?
+
+INVOKER:
+    + (jtrager)
+        Suggested QW build: qrqwqwrwwwwerweereqeeeqqq﻿
+        Has more early quas.
+        
+        Should change exort items; Use treads as the boots.
+        Starting: tango,2 branches,circlet,Gauntlet
+
+OD:
+    Mek/Nulls  in optional
+
+== Dota1 heroes without guides
+
+LC:
+    + (noworries)
+      So many ways to play this guy. My personal favorite is the good ol jungling route
+
+        Jungle
+        MoC 1 3 5 7
+        OO 4 8 9 10
+        PtA 2 12 13 14
+        Ult 6 11 16
+
+        Starting
+          QB/Stout/Tango
+        Core
+          Phase/Lothars(Dagger)
+        Extend
+          Battlefury/Buriza/Satanic/Blademail
+
+        Lane
+        MoC 4 8 9 10
+        OO 1 3 5 7
+        PtA 2 12 13 14
+        Ult 6 11 16
+
+        Tresdin is powerful at all stages of the game.
+        MoC works like Counter Helix in reverse allowing for epic fights to the death.
+        OO is a good nuke which gives him some laning presence.
+        PtA is technically a buff but is more often a good solid heal.
+
+        [*]Early on, Use duel on dying enemies.
+           After 3-4 duels the damage really starts to stack up
+        [*]Remember to OO/PtA before dueling someone
+        [*]In team fights, Duel the SUPPORT heroes, not the enemy carries.
+           Since Duel dooms both targets, it can be very helpful to kill
+           warlocks before they infernal, or Lions before they hex
+        [*]Lothars works well, Dagger I would say if you are doing not so well
+        [*]Most builds work on him, however I find with Battlefury/Buriza
+           you either win the team fight or are going to lose the game.
+           With MoC, cleave, and crits you can do very well taking out
+           entire teams if supported with silence as auto-attackers should lose to you
+
+SHREDDER:
+    + (noworries)
+      Lots of ways to do him. He is a ninja that is very hard to kill
+      but gulps up Mana like sluts do jizz.
+
+        Armor 3 12 13 14
+        Whirl 2 8 9 10
+        Chain 1 4 5 7
+        Ult 6 11 16
+
+      Starting
+        Stout/Branch/Branch/Branch/Tango/Cp/Cp
+      Core
+        Arcane/Wand-->Bloodstone
+      Extensions
+        Heart/Shivas/AC
+
+      [*]Chain has good range, does pure damage, and has a low cd,
+         spam it frequently during team fights
+      [*]Chain also requires trees. Try to lane not mid
+      [*]Death does pure damage if by trees and has
+         a large AoE, keep that in mind
+      [*]Death also lowers the primary attribute, of course try to
+         hit all the enemies, but in no order
+         Agility-->Strength-->Intelligence helps a bit more
+ 
+XIN:
+
+== Dota1 heroes, in general
+
+LoA:
+   + (fireblaze) I suggest you change the build into a more hybrid one because just like omni, abba fails as a hard core support hero which you suggested. Try and get an item that gives both HP, mana and also some dps in.
+   
+    Phase->Urn+basi->Jango gives awesome stats and is great for whatever you plan on doing.
+    Extensions can be pipe if your team needs it, maelstorm, or even basher.
+    
+   + (kris) Go for tranquil; pushing overextending enemies with your healing skills.
+
+TUSKAR:
+    + Crappy build in general, should update.
+
+TC:
+    + Needs major guide overhaul. I heard he is finally being picked by the Chineese,
+      so we can get better data on him now.
+
+BB:
+    + Decide if we go for 1 point in goo, maxing goo or no goo at all.
+    
+PIT:
+    + (no worries)
+      While I agree Expulsion is very strong, early on the number of
+      creeps available to it are low-->none.
+      Rather, Firestorm is strong and stays very strong early and
+      can likewise push towers like no problem.
+      Also, Dark Rift can be just as effective at 6 as any time afterwards.
+        Pit 1 8/9/10 12/13/14
+        Firestorm 2 3 5 7
+        Expulsion 4 12/13/14 8/9/10
+        Rift 6 11 16
+      Taking levels or Pit or expulsion depends on your line-up.
+      Pit provides better disable while expulsion is better push/anti push and team fight
+
+TROLL:
+    + Max fervor or max bash?
+
+SLARK:
+    + (kenshiro, xyLoneZ)
+      Armlet is good for giving an HP and DPS boost.
+      Ult gives health regen and HotD becomes mandatory for keeping up in fights.
+
+TB:
+    + (noworries)
+        Holy wow there's about 100 ways to play him;
+        here's 3 general ideas though and the skill build
+        doesn't change a whole lot between them
+
+        ----------------
+        Reflection 1 8 9 10 12 13 14
+        Meta 3 4 5 7
+        Zeal 2 12 13 14 8 9 10
+        Ult 6 11 16
+
+        Meta is his strongest steroid skill, max it by 7.
+        Reflection verse Zeal, depends.
+        Zeal is a bit stronger if you plan on ricing and farming a bit more,
+        whereas Reflection allows you to participate in ganks and nab kills.
+        Some people would say to skip Sunder all together
+         although I do find it helpful in spots
+         
+
+        1. Stat Build
+
+        Starting
+          QB/Stout/Tango
+        Core
+          Manta/Treads/PMS/RoA
+        Extend
+          Skadi/Butterfly/Buriza
+
+        Thanks to Meta and Zeal, your images will do SICK damage.
+        However, due to their some 300% damage amplification,
+        this build really only works in 2 cases, either you have Silencer on your team
+        or the opponents lack AoE, and by lack AoE they need less than 3 spells that are AoE.
+        There is no doubt this build gives the best dps but this only occurs
+        if the images can attack for their entire duration
+
+        2. Mid-game Carry
+
+        Start
+          QB/Stout/Tango
+        Core
+          Treads/Maelstrom/BkB/HH
+        Extend
+          Mojin/Buriza
+
+        The idea here is to not build him about his images,
+        rather abuse Zeal and his new found range with Metamorph.
+        With Treads/BkB/HH you find yourself with ample health (something TB lacks)
+        as well as spell immunity allowing you to outlast most other heroes.
+        Maelstrom-->Mojin gives him AoE presence as well.
+        This is probably his safest way to play him.
+
+        3. Rice Carry
+
+        Start
+          QB/Stout/Tango
+        Core
+          HotD/Treads/PMS
+        Extend
+          BkB/Buriza/Satanic/DR
+
+        The idea here is use Hotd/Zeal to clear jungles/ancients very fast and rice it up.
+        With BkB/Satanic and range, he can then safely wield Divine Rapier and
+        just tear opponents apart.
+        Obviously this build is risky and is best suited around a turtle line-up
+
+== Style guide ==
+=================
+
+I found that I had written some of these rules for myself a while ago.
+Having these formalized might help us define a guide "ideal" to follow
+ as well as help make things more consistent (now that we have multiple people writing things).
+
+* The hero description should be one or two paragraphs explaining what the hero is about.
+  This shold contain information you learn from playing *against* the hero, but not
+  information you need when playing *as* the hero.
+  
+  The hero should be mentioned in the third prerson.
+
+* The hero tips should be written in a consise bullet-point style,
+  in order of importance (most important first).
+  
+  We should list things that help when playing the hero, but don't arise obviously
+  when reading the skill tooltips of finding the hero in the first time.
+  
+  Hero tips should be written in the imperative form, adressing the player.
+  
+  More detailed tips about build variations and mechanics should go in separate tabs.
+  
+* The builds should be standard and non-controversial.
+
+  -  If there are multiple "standard" builds for a hero, we should choose one
+     as the default (erring on the side of the easiest one to play).
+
+     Additional builds should be mentioned in separate tabs (so that we don't lose
+     the information that there are separate builds). This helps maintaining the guide in
+     the future, since its easier to change the default build when the meta changes
+     then it is to come up with the build all over again if
+     we didn't write it down in the first place.
+
+  - The idea is that less things can go wrong if you mindlessly copy a cookie-cutter build.
+   (Remember: this is an alt-tab guide and we don't have all the time in the world
+    to explain more subtle things)
+    
+  - I usually take my builds from high level and competive replays.
+    This gives an aspect of scientific reproducibility,
+    although it might make some builds less accessible to pub play
+
+* Do *not* include boilerplate content that takes up space without much benefit.
+  - Obvious combos you get from just reading the tooltips.
+  - "Rejected Item" sections, telling not to get Buriza on Crystal Maiden.
+  - "Hero Counter" sections. I hate these.
+
+* An exception is made for rejecting trap builds (that look fine on paper but suck).
+  For example, Aghanim's Scepter on OD / Necrolyte and Butterfly on Mortred.
+
+* Essential skill or item interactions should be pointed out
+  (ex.: Tinker Travels, Sand King Blink, Kunkka X+Torrent, Tiny AvaToss)
+
+* If a skill has confusing tooltips or is generally often confused/miscast it should be explained. ex.: AA Blast, Kunkka ship.
+
+  - This is the kind of stuff you can often get wrong the first time you play a hero yourself, even though you might have already known his skills from when playing against him.
+
+* Common misconceptions should be listed.
