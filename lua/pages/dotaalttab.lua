@@ -22,11 +22,11 @@ local FILE_HTML = '../results/dota2alttab/index.html'
 local FILE_CSS  = '../results/dota2alttab/guide.css'
 local FILE_JS   = '../results/dota2alttab/guide.js'
 
-local CSS_VERSION = './guide.css?v=2'
+local CSS_VERSION = './guide.css?v=3'
 local JS_VERSION  = './guide.js?v=1'
 
-local FILE_HERO_BIG_SPRITE   = "./Dota2_Alt_Tab/Images/Sprites/heroes_big.jpg?v=1"
-local FILE_HERO_SMALL_SPRITE = "./Dota2_Alt_Tab/Images/Sprites/heroes_small.jpg?v=1"
+local FILE_HERO_BIG_SPRITE   = "./Dota2_Alt_Tab/Images/Sprites/heroes_big.jpg?v=2"
+local FILE_HERO_SMALL_SPRITE = "./Dota2_Alt_Tab/Images/Sprites/heroes_small.jpg?v=2"
 local FILE_ITEM_SPRITE       = "./Dota2_Alt_Tab/Images/Sprites/items_small.jpg?v=1"
 local FILE_SYMBOL_SPRITE     = "./Dota2_Alt_Tab/Images/Sprites/symbols.png?v=1"
 local FILE_TAVERN_SPRITE     = "./Dota2_Alt_Tab/Images/Sprites/taverns.png?v=1"

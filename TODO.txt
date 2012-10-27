@@ -85,6 +85,9 @@ WISP
       
       tranquils, urn, wand
 
+CENT
+    + Needs updated tips for Stampede update.
+
 JUGGER
     + Currently lacks a hero description (only has tips).
 

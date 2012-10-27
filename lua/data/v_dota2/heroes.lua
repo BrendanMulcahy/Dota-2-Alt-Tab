@@ -48,6 +48,7 @@ H('Brew'   , 'brewmaster', {})
 H('Treant' , 'treant', {fullName = 'Treant Protector'})
   
 H('Wisp'   , 'wisp', {})
+H('Cent'   , 'centaur', {fullName = 'Centaur Warunner'})
   
 --Dire Strength
 

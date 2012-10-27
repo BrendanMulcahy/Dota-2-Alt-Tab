@@ -23,7 +23,7 @@ T('SentinelStr', {
     { 'ES', 'Sven', 'Tiny', 'Kunkka' },
     { 'Beast', 'DK', 'Clock', 'Omni' },
     { 'Huskar', 'Alch', 'Brew', 'Treant' },
-    { 'Wisp' },
+    { 'Wisp', 'Cent' },
 })
 
 T('SentinelAgi', {

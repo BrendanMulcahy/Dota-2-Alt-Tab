@@ -40,7 +40,7 @@ H('Cent', {
   Q = "Hoof Stomp",
   W = "Double Edge",
   E = "Return",
-  R = "Great Fortitude", })
+  R = "Stampede", })
 H('ES', {
   name = "Raigor Stonehoof", class = "Earthshaker",
   Q = "Fissure",
