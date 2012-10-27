@@ -109,6 +109,7 @@ H('Razor'   , 86, "gif")
 H('Slark'   ,124, "gif")
 H('Void'    , 83, "gif")
 H('Medusa'  , 72, "gif")
+H('Zet'     ,141, "gif")
 
 -- Sentinel Intelligence
 
@@ -161,5 +162,6 @@ H('Visage'  ,113, "jpg")
 H('Lesh'    , 90, "jpg")
 H('WD'      , 63, "jpg")
 H('AA'      ,128, "jpg")
+H('Auroth'  ,142, "gif")
 
 return Heroes

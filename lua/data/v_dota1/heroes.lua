@@ -469,6 +469,13 @@ H('Medusa', {
   W = "Mystic Snake",
   E = "Mana Shield",
   R = "Stone Gaze", })
+  
+H('Zet', {
+  name = "Zet", class = "Arc Warden",
+  Q = "Flux",
+  W = "Magnetic Field",
+  E = "Spark Wraith",
+  R = "Tempest Double", })
 
 -- Sentinel Intelligence
 
@@ -711,5 +718,11 @@ H('AA', {
   W = "Ice Vortex",
   E = "Chilling Touch",
   R = "Ice Blast", })
+H('Auroth', {
+  name = "Auroth", class = 'Winter Wyvern',
+  Q = "Artic Burn",
+  W = "Splinter Blast",
+  E = "Cold Embrace",
+  R = "Winter's Curse", })
 
 return Heroes

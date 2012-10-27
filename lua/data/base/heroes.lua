@@ -113,6 +113,7 @@ H('Razor', {})
 H('Slark', {})
 H('Void', {})
 H('Medusa', {})
+H('Zet', {})
 
 -- Sentinel Intelligence
 
@@ -165,5 +166,6 @@ H('Visage', {})
 H('Lesh', {})
 H('WD', {})
 H('AA', {})
+H('Auroth', {})
 
 return Heroes

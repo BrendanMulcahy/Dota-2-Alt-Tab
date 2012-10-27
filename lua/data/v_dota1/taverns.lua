@@ -58,6 +58,7 @@ T('ScourgeAgi', {
   { 'Weaver', 'PA', 'SF', 'TB' },
   { 'Spectre', 'Veno', 'Viper', 'Meepo' },
   { 'Razor', 'Slark', 'Void', 'Medusa' },
+  { 'Zet' },
 })
     
 T('ScourgeInt', {
@@ -66,7 +67,7 @@ T('ScourgeInt', {
   { 'Enigma', 'Lich', 'Necro', 'Pugna' },
   { 'OD', 'QoP', 'Warlock', 'SD' },
   { 'Bat', 'Dazzle', 'Invoker', 'Visage' },
-  { 'Lesh', 'WD', 'AA' },
+  { 'Lesh', 'WD', 'AA', 'Auroth' },
 })
 
 return Taverns
