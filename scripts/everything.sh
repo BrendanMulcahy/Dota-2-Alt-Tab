@@ -13,6 +13,8 @@ mkdir -p ../results/playdota_dota1
 echo '== Dota2 guides =='
 lua pages/dotaalttab.lua
 
+
+echo '-- Sprites --'
 cd ../images
 ../scripts/create_sprites.sh
 cd ../lua
@@ -27,3 +29,6 @@ cd ../results
 zip -r ii itembuilds
 mv ii.zip dota2alttab/itembuilds.zip
 cd ../lua
+
+echo '== Markdown guides =='
+lua pages/markdown.lua
