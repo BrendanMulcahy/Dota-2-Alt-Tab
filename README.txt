@@ -17,7 +17,34 @@ on the dota2alttab folder and going to http:8000//localhost/index.html is a quic
 
 == HOW TO ADD A NEW DOTA 1 HERO
 
+ - Add the hero to data/base/heroes.lua
+   - Just choose a short and easy to remember nickname
+ 
+ - Add the hero to data/v_dota1/heroes.lua
+ 
+ - Add the hero to data/v_dota1/taverns.lua
+ 
+ - Update data/a_playdota/hero_images
+   - Get the image URL over on palydota.com/heroes
+
 == HOW TO ADD A NEW DOTA 2 HERO
+
+ - Make sure the hero was already added to dota 1
+ 
+ - Add an entry for the hero over at data/v_dota2/heroes.lua
+   - The first field is our own hero ids
+   - The second field is the dota2 hero id.
+     You can get this from game files or from the image urls at dota2.com/heroes
+   - That last table is for overwriting default values.
+     Basically used for cases when a skill name is changed between dota1 and dota2.
+ 
+ - Update the dota2 tavern file at data/v_dota2/taverns.lua
+ 
+ - Add the hero's image to images/Heroes, renaming it to the internal hero id.
+   - I get the "hphover" images from dota2.com/heroes
+     I think those could be extracted from game files too though.
+ 
+ - Bump version numbers for the css stylesheet and for the hero sprite images.
 
 == CODE ROADMAP
 
