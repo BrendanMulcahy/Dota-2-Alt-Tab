@@ -22,23 +22,43 @@ local FILE_HTML = '../results/dota2alttab/index.html'
 local FILE_CSS  = '../results/dota2alttab/guide.css'
 local FILE_JS   = '../results/dota2alttab/guide.js'
 
-local CSS_VERSION = './guide.css?v=3'
+local CSS_VERSION = './guide.css?v=4'
 local JS_VERSION  = './guide.js?v=1'
 
-local FILE_HERO_BIG_SPRITE   = "./Dota2_Alt_Tab/Images/Sprites/heroes_big.jpg?v=2"
-local FILE_HERO_SMALL_SPRITE = "./Dota2_Alt_Tab/Images/Sprites/heroes_small.jpg?v=2"
-local FILE_ITEM_SPRITE       = "./Dota2_Alt_Tab/Images/Sprites/items_small.jpg?v=1"
+local FILE_HERO_BIG_SPRITE   = "./Dota2_Alt_Tab/Images/Sprites/heroes_big.jpg?v=3"
+local FILE_HERO_SMALL_SPRITE = "./Dota2_Alt_Tab/Images/Sprites/heroes_small.jpg?v=3"
+local FILE_ITEM_SPRITE       = "./Dota2_Alt_Tab/Images/Sprites/items_small.jpg?v=3"
 local FILE_SYMBOL_SPRITE     = "./Dota2_Alt_Tab/Images/Sprites/symbols.png?v=1"
 local FILE_TAVERN_SPRITE     = "./Dota2_Alt_Tab/Images/Sprites/taverns.png?v=1"
+
+local DEFAULT_HERO_IMG = '../defaults/heroes.png'
+local DEFAULT_ITEM_IMG = '../defaults/items.png'
 
 local FILE_HERO_SPRITE_IDS   = '../images/0_ids/heroes.txt'
 local FILE_ITEM_SPRITE_IDS   = '../images/0_ids/items.txt'
 local FILE_SYMBOL_SPRITE_IDS = '../images/0_ids/symbols.txt'
 local FILE_TAVERN_SPRITE_IDS = '../images/0_ids/taverns.txt'
 
+local SYMBOL_IMG_DIMENSIONS     = {              height = 32 }
+local TAVERN_IMG_DIMENSIONS     = { width =  24, height = 24 }
 local HERO_SMALL_IMG_DIMENSIONS = { width =  64, height = 36 }
 local HERO_BIG_IMG_DIMENSIONS   = { width = 127, height = 71 }
 local ITEM_IMG_DIMENSIONS       = { width =  51, height = 38 }
+
+local SYMBOL_SPRITE_IDS = {
+  { id = 'Arrow'   , width = 38 },
+  { id = 'Slash'   , width = 10 },
+  { id = 'LBracket', width =  7 },
+  { id = 'RBracket', width =  7 },
+}
+
+local TAVERN_SPRITE_IDS = {
+  { id = 'stat_agi' },
+  { id = 'stat_int' },
+  { id = 'stat_str' },
+  { id = 'team_scourge' },
+  { id = 'team_sentinel' },
+}
 
 local FULL_TAVERN_WIDTH = '900px'
 
@@ -472,10 +492,16 @@ io.write([[
 
 ]])
 
-local function make_sprite(spriteType, direction, dimensions, image, idsfilename, sprites, shared_rules)
-  shared_rules = shared_rules or {}
+local function make_sprite(spriteType, direction, dimensions,
+    image,
+    idsfilename, default_id,
+    sprites
+)
   
   withOutput(idsfilename, 'w', function()
+    if default_id then
+      io.write(default_id, '\n')
+    end
     for _, s in ipairs(sprites) do
       io.write(s.id, '.png\n')
     end
@@ -490,9 +516,6 @@ local function make_sprite(spriteType, direction, dimensions, image, idsfilename
       table.insert(rules, {dim, dimensions[dim]..'px'})
     end
   end
-  for _, rule in ipairs(shared_rules) do
-    table.insert(rules, rule)
-  end
 
   fwrite('.s_%s {\n', spriteType)
   for _, rule in ipairs(rules) do
@@ -501,6 +524,15 @@ local function make_sprite(spriteType, direction, dimensions, image, idsfilename
   fwrite('}\n')
 
   local delta = 0
+  
+  if default_id then
+    if direction == 'V' then
+      delta = delta - dimensions.height
+    elseif direction == 'H' then
+      delta = delta - dimensions.width
+    end
+  end
+  
   for _, s in ipairs(sprites) do
     fwrite('.s_%s.si_%s {', spriteType, s.id)
     if s.width  then fwrite(' width: %dpx;', s.width) end
@@ -536,27 +568,17 @@ local function sprite_ids_from_datatable(datatable, filter_dota2)
   return ids
 end
 
-make_sprite('symbol', 'H',  { height = 32 },
+make_sprite('symbol', 'H',  SYMBOL_IMG_DIMENSIONS,
   FILE_SYMBOL_SPRITE,
   FILE_SYMBOL_SPRITE_IDS,
-  {
-    { id = 'Arrow'   , width = 38 },
-    { id = 'Slash'   , width = 10 },
-    { id = 'LBracket', width =  7 },
-    { id = 'RBracket', width =  7 },
-  }
+  nil,
+  SYMBOL_SPRITE_IDS
 )
 
-make_sprite('tavern', 'V',  { height = 24, width = 24 },
+make_sprite('tavern', 'V',  TAVERN_IMG_DIMENSIONS,
   FILE_TAVERN_SPRITE,
-  FILE_TAVERN_SPRITE_IDS,
-  {
-    { id = 'stat_agi' },
-    { id = 'stat_int' },
-    { id = 'stat_str' },
-    { id = 'team_scourge' },
-    { id = 'team_sentinel' },
-  }
+  FILE_TAVERN_SPRITE_IDS, nil,
+  TAVERN_SPRITE_IDS
 )
 
 
@@ -565,21 +587,21 @@ local item_ids = sprite_ids_from_datatable(Items, false)
 
 make_sprite('hero', 'V', HERO_SMALL_IMG_DIMENSIONS,
   FILE_HERO_SMALL_SPRITE,
-  FILE_HERO_SPRITE_IDS,
+  FILE_HERO_SPRITE_IDS, DEFAULT_HERO_IMG,
   hero_ids,
   { }
 )
 
 make_sprite('herobig', 'V', HERO_BIG_IMG_DIMENSIONS,
   FILE_HERO_BIG_SPRITE,
-  FILE_HERO_SPRITE_IDS,
+  FILE_HERO_SPRITE_IDS, DEFAULT_HERO_IMG,
   hero_ids,
   { }
 )
 
 make_sprite('item', 'V', ITEM_IMG_DIMENSIONS,
   FILE_ITEM_SPRITE,
-  FILE_ITEM_SPRITE_IDS,
+  FILE_ITEM_SPRITE_IDS, DEFAULT_ITEM_IMG,
   item_ids,
   { }
 )
