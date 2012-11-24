@@ -110,6 +110,7 @@ H('Spectre', 'spectre', {})
 H('Meepo'  , 'meepo', {})
 
 H('NA'     , 'nyx_assassin', {})
+H('Slark'  , 'slark', {})
   
 --Radiant Intelligence
 

@@ -56,7 +56,7 @@ T('ScourgeAgi', {
     { 'BS', 'SF', 'Razor', 'Veno' },
     { 'Void', 'PA', 'Viper', 'Clinkz' },
     { 'Brood', 'Weaver', 'Spectre', 'Meepo'},
-    { 'NA' },
+    { 'NA', 'Slark' },
 })
 
 T('ScourgeInt', {
