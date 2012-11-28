@@ -1,5 +1,25 @@
 var hop = function(o, p){ return ({}).hasOwnProperty.call(o, p) }
 
+var KW = {
+  //For functions with named arguments
+  
+  get: function(kw, arg){
+    if(hop(kw, arg)){
+      return kw[arg];
+    }else{
+      throw new Error('missing argument '+arg);
+    }
+  },
+  
+  opt: function(kw, arg, opt){
+    if(hop(kw, arg)){
+      return kw[arg];
+    }else{
+      return opt;
+    }
+  }
+};
+
 var L = {
   //List functions
 
@@ -165,13 +185,13 @@ var DOM = {
     
     var node = document.createElement(tagname);
 
-    L.forIn(args, function(arg, value){
-      if(arg === 'style'){
+    L.forIn(attrs, function(attr, value){
+      if(attr === 'style'){
         L.forIn(value, function(sp, sv){
           node.style.setProperty(sp, sv);
         });
       }else{
-        node.setAttribute(arg, value);
+        node.setAttribute(attr, value);
       }
     });
     
@@ -199,13 +219,168 @@ var DOM = {
   }
 };
 
+var EVT = {
+  getKeyCode: function(evt){
+    return (evt ? evt.which : alert("I haven't coded for IE yet.") );
+  }
+};
+
 //Abbreviations
 var E = DOM.ELEM,
     T = DOM.TEXT,
     H = DOM.HTML;
 
+var AUTOCOMPLETE = {
+  create: function(input_field, kw){
+    
+    var minimum_chars = KW.opt(kw, 'minimum_chars', 1),
+        fetch_items = KW.get(kw, 'fetch_items'),
+        render_item = KW.get(kw, 'render_item'),
+        select_item = KW.get(kw, 'select_item');
+  
+    // State
+    
+    var sugestions_table_node;
+
+    var selected_row_index,
+        visible_items,
+        visible_rows;
+    
+    // Getters
+    
+    var is_valid_index = function(i){
+      return (i !== null) && (0 <= i && i < visible_rows.length);
+    };
+    
+    var selected_item = function(){
+      return (is_valid_index(selected_row_index) ? visible_items[selected_row_index] : null);
+    };
+    
+    var selected_row = function(){
+      return (is_valid_index(selected_row_index) ? visible_rows[selected_row_index] : null);
+    };
+    
+    // State Manipulation
+    
+    var clear_input = function(){
+      input_field.value = '';
+      reset_rows([]);
+    };
+    
+    var reset_rows = function(items){
+      selected_row_index = null;
+      
+      visible_items = items;
+      
+      visible_rows = L.map(items, function(item){
+        var node = render_item(item);
+        node.onclick = function(){ goto_item(item) }
+        return node;
+      });
+      
+      DOM.replc(sugestions_table_node, visible_rows);
+      
+      if(items.length > 0){
+        select_row(0);
+      }
+    };
+    
+    var select_row = function(new_i){
+      if(!is_valid_index(new_i)){ return false }
+
+      var old_row = selected_row();
+      if(old_row){
+        DOM.removeClass(old_row, 'selected');
+      }
+      
+      selected_row_index = new_i
+        
+      new_row = selected_row();
+      DOM.addClass(new_row, 'selected');
+    };
+    
+    var move_up   = function(){ select_row(selected_row_index - 1) };
+    var move_down = function(){ select_row(selected_row_index + 1) };
+    
+    var goto_item = function(item){
+      clear_input();
+      select_item(item);
+      return;
+    };
+    
+    //Autocomplete
+    
+    var update_sugestions = function(partial_name){
+      
+      if(partial_name.length < minimum_chars){
+        reset_rows([]);
+        return;
+      }
+      
+      reset_rows( fetch_items(partial_name) );
+    };
+    
+    //Initialize
+    
+    sugestions_table_node = E('table', {'class':'autocomplete'}, []);
+    DOM.insa(input_field, sugestions_table_node);
+    reset_rows([]);
+    
+    input_field.onkeydown = function(evt){
+      var keycode = EVT.getKeyCode(evt);
+      
+      console.log('down', keycode)
+      
+      switch(keycode){
+        case 9 /*TAB*/:
+          break;
+        
+        case 13 /*ENTER*/:
+          break;
+      
+        case 38 /*UP*/  :
+          move_up(); return false;
+        case 40 /*DOWN*/:
+          move_down(); return false;
+        
+        case 39 /*RIGHT*/: break;
+        case 37 /*LEFT*/: break;
+        default: break;
+      }
+    };
+
+    input_field.onkeyup = function(evt){
+      var keycode = EVT.getKeyCode(evt);
+      
+      console.log('up', keycode)
+      
+      switch(keycode){
+        case 9 /*TAB*/:
+          break;
+        
+        case 13 /*ENTER*/:
+          var item = selected_item();
+          if(item){ goto_item(item) }
+          break;
+        
+        case 38 /*UP*/: break;
+        case 40 /*DOWN*/: break;
+      
+        case 39 /*RIGHT*/: break;
+        case 37 /*LEFT*/: break
+          
+        default:
+          update_sugestions(input_field.value);
+          break;
+      }
+    }
+  }
+};
+
 var SITE = {
+  
   mk_show_hide_button: function(button, text_div){
+    
     var button_text_node = button.childNodes[0];
     button.onclick = function(){
       var alt_text  = button.getAttribute('data-alt');
@@ -217,6 +392,106 @@ var SITE = {
       button_text_node.nodeValue = alt_text;
       
     };
+  },
+  
+  mk_hero_autocomplete: function(hero_data, pattern_data){
+    
+    var tavs = DOM.qsa('div.taverns')[0];
+    
+    var autocomplete_div, autocomplete_input;
+    
+    autocomplete_div = E('div', {'class': 'autocomplete'}, [
+      (autocomplete_input = E('input', {type:'text'}))
+    ]);
+    
+    DOM.insb(tavs, autocomplete_div);
+    
+    AUTOCOMPLETE.create(autocomplete_input, {
+      minimum_chars: 1,
+  
+      fetch_items: function(partial_name){
+    
+        var first_prefix_matches  = [], //Prefix of the full name.
+            middle_prefix_matches = [], //Prefix of some inner word.
+            anywhere_matches      = []; //Any match.
+        
+        //Allow apostrophes to be ommited.
+        var name_re_src = L.map(partial_name, function(c){ return RE.escape(c) + "'*" }).join('');
+        
+        var matches_to_try = [
+          {list:first_prefix_matches,  regex:new RegExp('^'       + '(' + name_re_src + ')', 'i')},
+          {list:middle_prefix_matches, regex:new RegExp('[\\s\-]' + '(' + name_re_src + ')', 'i')},
+          {list:anywhere_matches,      regex:new RegExp(            '(' + name_re_src + ')', 'i')}
+        ];
+        
+        console.log(matches_to_try[0].regex);
+        console.log(matches_to_try[1].regex);
+        console.log(matches_to_try[2].regex);
+          
+        L.forEach(pattern_data, function(o){
+          var hid = o.id,
+              pat = o.pat;
+          
+          L.forEach(matches_to_try, function(m){
+            var list = m.list, regex = m.regex;
+            var match = pat.match(regex);
+            if(match){ list.push({patdata:o, match:match[1]}) }
+          });
+        });
+        
+        var used_heroes = {};
+        var results = [];
+      
+        var add_match = function(om){
+          var hid = om.patdata.id;
+          if(!hop(used_heroes, hid)){
+            used_heroes[hid] = true;
+            results.push(om);
+          }
+        };
+        
+        L.forEach(first_prefix_matches, add_match);
+        L.forEach(middle_prefix_matches, add_match);
+        if(first_prefix_matches.length === 0 && middle_prefix_matches.length == 0){
+          console.log('--', 'anywhere')
+          L.forEach(anywhere_matches, add_match);
+        }
+        
+        return results;
+      },
+      
+      render_item: function(om){
+        var o     = om.patdata,
+            match = om.match;
+        
+        var hid = o.id,
+            pat = o.pat,
+            rem = o.rem;
+        
+        var sprite_html = hero_data[hid].sprite;
+
+        var before = pat.substr(0, pat.indexOf(match));
+        var after  = pat.substr(pat.indexOf(match)+match.length, pat.length);
+        
+        return (
+          E('tr', [
+            E('td', {'class':'image_column'}, H(sprite_html)),
+            E('td', {'class':'name_column'}, [
+              E('strong', [
+                T(before),
+                E('span', {style:{'text-decoration':'underline'}}, [T(match)]),
+                T(after)
+              ]),
+              T(rem ? ' ('+rem+')' : '' )
+            ])
+          ])
+        );
+      },
+      
+      select_item: function(om){
+        location.href = hero_data[om.patdata.id].link;
+      }
+    });
   }
 };
 
@@ -260,3 +535,5 @@ var init_tabs = function(){
 SITE.mk_show_hide_button( DOM.byId('toggleAcks'), DOM.byId('acks') );
 
 init_tabs();
+
+SITE.mk_hero_autocomplete(DATA.heroes, DATA.patterns);

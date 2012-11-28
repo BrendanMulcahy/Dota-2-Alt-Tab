@@ -18,18 +18,27 @@ local Markup = require 'markup/html'
 -- NOTE: Version numbers should be increassed whenever we update the sprites,
 --       in order to avoid users getting wrong images due to caching.
 
-local FILE_HTML = '../results/dota2alttab/index.html'
-local FILE_CSS  = '../results/dota2alttab/guide.css'
-local FILE_JS   = '../results/dota2alttab/guide.js'
+local RESULT_DIR = '../results/dota2alttab'
 
-local CSS_VERSION = './guide.css?v=5'
-local JS_VERSION  = './guide.js?v=1'
+local FILENAME_HTML = 'index.html'
+local FILENAME_CSS  = 'guide.css'
+local FILENAME_JS   = 'guide.js'
+local FILENAME_DATA = 'data.js'
 
-local FILE_HERO_BIG_SPRITE   = "./Dota2_Alt_Tab/Images/Sprites/heroes_big.jpg?v=4"
-local FILE_HERO_SMALL_SPRITE = "./Dota2_Alt_Tab/Images/Sprites/heroes_small.jpg?v=4"
-local FILE_ITEM_SPRITE       = "./Dota2_Alt_Tab/Images/Sprites/items_small.jpg?v=4"
-local FILE_SYMBOL_SPRITE     = "./Dota2_Alt_Tab/Images/Sprites/symbols.png?v=1"
-local FILE_TAVERN_SPRITE     = "./Dota2_Alt_Tab/Images/Sprites/taverns.png?v=1"
+local VERSION_CSS    = 5
+local VERSION_JS     = 1
+local VERSION_DATA   = 1
+local VERSION_SPRITE = 4
+
+local INCLUDE_CSS  = FILENAME_CSS  .. "?v=" .. VERSION_CSS
+local INCLUDE_JS   = FILENAME_JS   .. "?v=" .. VERSION_JS
+local INCLUDE_DATA = FILENAME_DATA .. "?v=" .. VERSION_DATA
+
+local FILE_HERO_BIG_SPRITE   = "./Dota2_Alt_Tab/Images/Sprites/heroes_big.jpg?v="..VERSION_SPRITE
+local FILE_HERO_SMALL_SPRITE = "./Dota2_Alt_Tab/Images/Sprites/heroes_small.jpg?v="..VERSION_SPRITE
+local FILE_ITEM_SPRITE       = "./Dota2_Alt_Tab/Images/Sprites/items_small.jpg?v="..VERSION_SPRITE
+local FILE_SYMBOL_SPRITE     = "./Dota2_Alt_Tab/Images/Sprites/symbols.png?v="..VERSION_SPRITE
+local FILE_TAVERN_SPRITE     = "./Dota2_Alt_Tab/Images/Sprites/taverns.png?v="..VERSION_SPRITE
 
 local DEFAULT_HERO_IMG = '../defaults/heroes.png'
 local DEFAULT_ITEM_IMG = '../defaults/items.png'
@@ -107,7 +116,7 @@ local GA_CODE = [=[
 
 -- HTML --
 
-withOutput(FILE_HTML, 'w', function()
+withOutput(RESULT_DIR .. "/" .. FILENAME_HTML, 'w', function()
 
 io.write([=[
 <!doctype html>
@@ -120,7 +129,7 @@ io.write([=[
   <meta charset="utf-8">
   <title>]=]..PAGE_TITLE..[=[</title>
   <link rel="shortcut icon" href="/favicon.ico" >
-  <link rel="stylesheet" href="]=]..CSS_VERSION..[=[" >
+  <link rel="stylesheet" href="]=]..INCLUDE_CSS..[=[" >
 ]=]..GA_CODE..[=[
 </head>
 <body>
@@ -187,7 +196,8 @@ io.write([=[
 &copy; Brendan Mulcahy 2012. Dota 2 content and materials are trademarks and copyrights of Valve or its licensors.
 This site is not affiliated with Valve.
 </p>
-<script src="]=]..JS_VERSION..[=["></script>
+<script src="]=]..INCLUDE_DATA..[=["></script>
+<script src="]=]..INCLUDE_JS..[=["></script>
 </body>
 </html>]=])
 
@@ -195,7 +205,7 @@ end)
 
 -----------------------------
 
-withOutput(FILE_CSS, 'w', function()
+withOutput(RESULT_DIR .. "/" .. FILENAME_CSS, 'w', function()
 
 --[==[
 RGB codes and saturation values for the colors we used,
@@ -488,6 +498,22 @@ io.write([[
   background-color: ]]..main_bgcolor..[[;
 }
 
+/*Autocomplete*/
+
+.autocomplete input,
+.autocomplete table {width: 540px;}
+
+.autocomplete table {
+  position: absolute;
+  background-color: #11151a;
+}
+
+.autocomplete table .image_column { width: 1px; }
+
+.autocomplete .pattern    { text-decoration : underline; }
+.autocomplete tr:hover    { background-color: #66CDAA; }
+.autocomplete tr.selected { background-color: #458B74; }
+
 /* CSS sprites */
 
 ]])
@@ -609,4 +635,279 @@ make_sprite('item', 'V', ITEM_IMG_DIMENSIONS,
 end)
 
 --Static JS file
-os.execute('cp ' .. './pages/dotaalttab.js ' .. FILE_JS)
+os.execute('cp ' .. './pages/dotaalttab.js ' .. RESULT_DIR .. "/" .. FILENAME_JS)
+
+--Hero abreviations
+
+withOutput(RESULT_DIR .. "/" .. FILENAME_DATA, 'w', function()
+
+local abbreviations = {
+  {'AA', 'AA'},
+  {'AM', 'AM'},
+  {'AP', 'Kunkka', 'Admiral Proudmoore'},
+  {'AW', 'Zet'},
+  
+  {'BB', 'BB'},
+  {'BH', 'BH'},
+  
+  {'BM', 'Brood'},
+  {'BM', 'Beast'},
+  {'BM', 'Brew'},
+  
+  {'BS', 'BS'},
+  
+  {'CK', 'CK'},
+  {'CM', 'CM'},
+  
+  {'CW', 'Clock'},
+  {'CW', 'Cent'},
+  
+  {'DB', 'Doom'},
+  {'DR', 'Drow'},
+  
+  {'ES', 'ES'},
+  {'ES', 'Xin'},
+  
+  {'DS', 'DS'},
+  {'DS', 'Sniper'},
+  
+  {'DK', 'DK'},
+  
+  {'FV', 'Void'},
+  {'FD', 'Puck'},
+  
+  {'GS', 'Shredder'},
+  {'GW', 'Wisp'},
+  
+  {'HK', 'Chen'},
+  
+  {'KOTL', 'KOTL'},
+  
+  {'LC', 'Legion'},
+  {'LD', 'LD'},
+  {'LR', 'Razor'},
+  {'LS', 'Naix'},
+  
+  {'NA', 'NA'},
+  {'NP', 'Prophet'},
+  
+  {'NS', 'NS'},
+  {'NS', 'Naga'},
+  
+  {'NW', 'Weaver'},
+  
+  {'OD', 'OD'},
+  {'OM', 'Ogre'},
+  {'OK', 'Omni'},
+  
+  {'PA', 'PA'},
+  
+  {'PL', 'PL'},
+  {'PL', 'Pit'},
+  
+  {'POTM', 'POTM'},
+  
+  {'QoP', 'QoP'},
+  
+  {'RK', 'Sven', 'Rogue Knight'},
+  
+  {'SA', 'Riki'},
+  {'SB', 'SB'},
+  {'SD', 'SD'},
+  {'SF', 'SF'},
+  {'SG', 'Slardar'},
+  {'SG', 'Tiny'},
+  {'SM', 'SM'},
+  
+  {'SK', 'SK'},
+  {'SK', 'Leoric'},
+  {'SK', 'TB', 'Soul Keeper'},
+  
+  {'SP', 'Dazzle', 'Shadow Priest'},
+  
+  {'SS', 'Storm'},
+  {'SS', 'Rhasta'},
+  
+  {'SW', 'Huskar', 'Sacred Warrior'},
+  
+  {'TA', 'TA'},
+  {'TB', 'TB'},
+  {'TC', 'TC'},
+  {'TH', 'Tide'},
+  {'THD', 'Jakiro'},
+  {'TP', 'Treant'},
+  {'TS', 'Lesh', 'Tormented Soul'},
+  {'TW', 'Troll'},
+  
+  {'UW', 'Ursa'},
+  
+  {'VS', 'VS'},
+  
+  {'WD', 'WD'},
+  {'WR', 'WR'},
+  {'WW', 'Auroth'},
+}
+
+local nicknames = {
+  {'Carl', 'Invoker'},
+  {'Tree', 'Treant'},
+  {'Zues', 'Zeus'},
+}
+
+------------------------------
+-- End of Big List -----------
+------------------------------
+
+local function to_list(tbl)
+  local res = {}
+  for k, v in pairs(tbl) do
+    v.id = k
+    table.insert(res, v)
+  end
+  return res
+end
+
+
+local d1_heroes = require( "data/v_dota1/heroes" )
+local d2_heroes = require( "data/v_dota2/heroes" )
+
+local d1_list = to_list(d1_heroes)
+local d2_list = to_list(d2_heroes)
+
+local escape_js_string = function(str)
+  local s = str:gsub(".", {
+    ["'"] = [[\']],
+    ['"'] = [[\"]],
+  })
+  return '"' .. s .. '"'
+end
+
+--non nested json only
+local print_json = function(id, keys, values)
+
+  if(id ~= nil) then
+    io.write('{\n')
+  else
+    io.write('[\n')
+  end
+
+  local i = 1
+  for _, row in ipairs(values) do
+    if type(row) == "string" then
+      io.write("  //", row, "\n")
+    else
+      if (i == 1) then io.write("  ") else io.write(" ,") end
+      i = i + 1
+      
+      if(id ~= nil) then
+        io.write( escape_js_string(row[id]), ":")
+      end
+      
+      local jj = 1
+      io.write("{")
+      for j, k in ipairs(keys) do
+        if j ~= id then
+          if(jj > 1) then io.write(",") end
+          jj = jj + 1
+          io.write( k, ":", escape_js_string(row[j]) )
+        end
+      end
+      io.write("}\n")
+      
+    end
+  end
+  
+  if(id ~= nil) then
+    io.write('}')
+  else
+    io.write(']')
+  end
+  
+end
+
+local sort_by = function(tbl, f)
+  table.sort(tbl, function(x1, x2) 
+    return f(x1) < f(x2)
+  end)
+end
+
+local sort_patterns = function(pats)
+  for i, pat in ipairs(pats) do
+    pat.i = i
+  end
+  
+  table.sort(pats, function(p1, p2)
+    if p1[1] ~= p2[1] then return p1[1] < p2[1]
+    else return p1.i < p2.i end
+  end)
+end
+
+local patterns = {}
+
+table.insert(patterns, [[Abbreviations and nicknames, alphabetically and then by importance:]])
+table.insert(patterns, [[ For Dota 2 heroes the reminder should be the dota2 name, unless specified.]])
+table.insert(patterns, [[ For Dota 1 heroes the reminder is "$name the $class"]])
+local ab_patterns = {}
+for _, row in ipairs(abbreviations) do
+  local ab, id, rem = row[1], row[2], row[3]
+  assert(d1_heroes[id], "bad id "..id)
+  if not rem then
+    if d2_heroes[id] then
+      rem = d2_heroes[id].fullName
+    else
+      rem = d1_heroes[id].fullName
+    end
+  end
+  table.insert(ab_patterns, {ab, id, rem})
+end
+for _, row in ipairs(ab_patterns) do
+  table.insert(patterns, row)
+end
+
+
+table.insert(patterns, [[Dota 2 names, alphabetically]])
+table.insert(patterns, [[  (no reminder)]])
+sort_by(d2_list, function(h) return h.fullName end)
+for _, h in ipairs(d2_list) do
+  table.insert(patterns, {h.fullName, h.id, ""})
+end
+
+table.insert(patterns, [[Dota 1 names and classes, alphabetically:]])
+table.insert(patterns, [[ For Dota 2 heroes, the reminder is the dota2 name]])
+table.insert(patterns, [[ For Dota 1 heroes, the reminder is the other part of the name.]])
+
+local d1_patterns = {}
+for _, h in ipairs(d1_list) do
+  local h2 = d2_heroes[h.id]
+  
+  table.insert(d1_patterns , {h.name,  h.id, (h2 and h2.fullName or h.class) })
+  table.insert(d1_patterns , {h.class, h.id, (h2 and h2.fullName or h.name ) })
+end
+sort_patterns(d1_patterns)
+for _, row in ipairs(d1_patterns) do
+  table.insert(patterns, row)
+end
+
+----
+
+local markup = require "markup/html"
+
+local hero_data = {}
+for _, h in ipairs(d1_list) do
+  table.insert(hero_data, { h.id, "./#"..h.id,  markup.sprite('hero', h.id, h.fullName)})
+end
+sort_by(hero_data, function(row) return row[1] end)
+
+io.write('DATA = {\n')
+
+io.write(' heroes:')
+print_json(1,  {"id", "link", "sprite"}, hero_data)
+io.write(',\n')
+
+io.write(' patterns:')
+print_json(nil,  {"pat", "id", "rem"}, patterns)
+io.write('\n')
+
+io.write('};\n')
+
+end)
