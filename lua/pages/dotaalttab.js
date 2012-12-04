@@ -399,8 +399,14 @@ var AUTOCOMPLETE = {
     }
     
     return {
+      clear: function(){
+        input_field.value = '';
+        display_items([]);
+      },
+      
       update: function(value){
         update_sugestions(value);
+        input_field.focus();
       }
     }
   }
@@ -538,11 +544,9 @@ var SITE = (function(){ "use strict"; return {
       }
     });
     
-    return {
-      getNode: function(){ return autocomplete_div },
-      getValue: function(){ return autocomplete_input.value },
-      setValue: function(v){ autocomplete.update(v) }
-    };
+    autocomplete.getNode = function(){ return autocomplete_div };
+    
+    return autocomplete;
   },
   
   mk_tabs: function(){
@@ -587,10 +591,8 @@ var SITE = (function(){ "use strict"; return {
 }());
 
 
-//
-
-//Main function:
-//(function(){
+(function(){
+  //Main function
   
   SITE.mk_show_hide_button( DOM.byId('toggleAcks'), DOM.byId('acks') );
 
@@ -602,8 +604,14 @@ var SITE = (function(){ "use strict"; return {
   
   DOM.insb(tavs.firstChild, autocomplete.getNode());
 
-  EVT.onHashChange(function(){
-    autocomplete.setValue('');
+  EVT.onHashChange(function(h){
+    if(h){
+      autocomplete.clear();
+    }else{
+      autocomplete.update('')
+    }
   });
   
-//}());
+  autocomplete.update('');
+  
+}());
