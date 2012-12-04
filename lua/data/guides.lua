@@ -62,15 +62,15 @@ end
 
 local function tip_orb_lifesteal(item, skill)
 
-  local how_to = ({
-    "toggle autocast",
-    "toggle autocast or manually cast the orb",
+  local precedence_explanation = ({
+    {"Lifesteal will take precedence unless you put ", skill, " on autocast."},
+    {"You do not get the lifesteal effect when you cast", skill, "(either normally or via autocast)."},
   })[DOTA_VERSION]
 
-  return {
-    "Once you get a ", I(item), ", the lifesteal will take precedence over ",
-    skill, "unless you", how_to, ".",
-    "You should prioritize lifesteal most of the time though, since it helps DPSing.",
+  return join{
+    {"The lifesteal from ", I(item), " does not stack with ", skill, "since both are orb effects."},
+    precedence_explanation, 
+    {"You should prioritize lifesteal most of the time though, since it helps DPSing."},
   }
 
 end
