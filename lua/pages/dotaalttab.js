@@ -1,4 +1,8 @@
-var hop = function(o, p){ return ({}).hasOwnProperty.call(o, p) }
+/*jshint lastsemic:true newcap:false*/
+(function(){
+    "use strict";    
+
+var hop = function(o, p){ return ({}).hasOwnProperty.call(o, p) };
 
 var KW = {
   //For functions with named arguments
@@ -24,21 +28,21 @@ var L = {
   //List functions
 
   forIn: function(obj, f){
-    for(var k in obj) if(hop(obj, k)){
+    for(var k in obj){ if(hop(obj, k)){
       f.call(this, k, obj[k], obj);
-    }
+    }}
   },
 
   forEach: function(xs, f){
     for(var i=0, l=xs.length; i<l; i++){
-      f.call(this, xs[i], i, xs)
+      f.call(this, xs[i], i, xs);
     }
   },
   
   map: function(xs, f){
     var res = [];
     for(var i=0, l=xs.length; i<l; i++){
-      res[i] = f.call(this, xs[i], i, xs)
+      res[i] = f.call(this, xs[i], i, xs);
     }
     return res;
   },
@@ -94,7 +98,7 @@ var RE = (function(){
 
   return {
     escape : function(src){ return src.replace(specialCharsRe, addSlash) }
-  }
+  };
   
 }());
 
@@ -176,7 +180,7 @@ var DOM = {
       children = []; attrs = {};
     }else if(arguments.length === 2){
       if(L.isArray(attrs)){
-        children = attrs; attrs = {}
+        children = attrs; attrs = {};
       }else{
         children = []; attrs = attrs;
       }
@@ -228,7 +232,7 @@ var EVT = {
     if('onhashchange' in window){
       window.onhashchange = function(){
         return onChange(window.location.hash);
-      }
+      };
     }else{
       var oldHash = window.location.hash;
       setInterval(function(){
@@ -310,9 +314,9 @@ var AUTOCOMPLETE = {
         DOM.removeClass(old_row, 'selected');
       }
       
-      selected_row_index = new_i
+      selected_row_index = new_i;
         
-      new_row = selected_row();
+      var new_row = selected_row();
       DOM.addClass(new_row, 'selected');
     };
     
@@ -382,7 +386,7 @@ var AUTOCOMPLETE = {
         case 40 /*DOWN*/: break;
       
         case 39 /*RIGHT*/: break;
-        case 37 /*LEFT*/: break
+        case 37 /*LEFT*/: break;
           
         default:
           update_sugestions();
@@ -392,14 +396,14 @@ var AUTOCOMPLETE = {
     
     input_field.onfocus = function(){
       update_sugestions();
-    }
+    };
     
     input_field.onblur = function(){
       //Ugly hack to give enough time for the onclick on the menu items to proc.
       setTimeout(function(){
         display_items([]);
       }, 1000);
-    }
+    };
     
     return {
       clear: function(){
@@ -411,11 +415,11 @@ var AUTOCOMPLETE = {
         update_sugestions(value);
         input_field.focus();
       }
-    }
+    };
   }
 };
 
-var SITE = (function(){ "use strict"; return {
+var SITE = (function(){ return {
   
   mk_show_hide_button: function(button, text_div){
     
@@ -436,6 +440,7 @@ var SITE = (function(){ "use strict"; return {
     
     var autocomplete_div, autocomplete_input, results_table;
     
+    /* jshint boss:true */
     autocomplete_div = E('div', {'class': 'autocomplete'}, [
       E('table', {'class':'autocomplete-input'}, [
         E('tr', [
@@ -449,7 +454,7 @@ var SITE = (function(){ "use strict"; return {
       (results_table =
        E('table', {'class':'autocomplete-results'}))
     ]);
-    
+    /* jshint boss:false */
 
     
     var autocomplete = AUTOCOMPLETE.create(autocomplete_input, {
@@ -494,7 +499,7 @@ var SITE = (function(){ "use strict"; return {
         
         L.forEach(first_prefix_matches, add_match);
         L.forEach(middle_prefix_matches, add_match);
-        if(first_prefix_matches.length === 0 && middle_prefix_matches.length == 0){
+        if(first_prefix_matches.length === 0 && middle_prefix_matches.length === 0){
           L.forEach(anywhere_matches, add_match);
         }
         
@@ -570,7 +575,7 @@ var SITE = (function(){ "use strict"; return {
         tab.onclick = function(){
           
           L.forEach(tabs, function(other_tab, j){
-            if(i==j){
+            if(i === j){
               DOM.addClass(other_tab, 'active');
             }else{
               DOM.removeClass(other_tab, 'active');
@@ -578,7 +583,7 @@ var SITE = (function(){ "use strict"; return {
           });
           
           L.forEach(panes, function(pane, j){
-            if(i==j){
+            if(i === j){
               DOM.removeClass(pane, 'hidden');
             }else{
               DOM.addClass(pane, 'hidden');
@@ -589,32 +594,30 @@ var SITE = (function(){ "use strict"; return {
       });
     });
   }
-}
+};
 
 }());
 
-
-(function(){
-  //Main function
+//Main function
   
-  SITE.mk_show_hide_button( DOM.byId('toggleAcks'), DOM.byId('acks') );
+SITE.mk_show_hide_button( DOM.byId('toggleAcks'), DOM.byId('acks') );
 
-  SITE.mk_tabs();
+SITE.mk_tabs();
 
-  var autocomplete = SITE.mk_hero_autocomplete(DATA.heroes, DATA.patterns);
-  
-  var tavs = L.filter(document.getElementsByTagName('div'), function(n){ return DOM.hasClass(n, 'taverns') })[0];
-  
-  DOM.insb(tavs.firstChild, autocomplete.getNode());
+var autocomplete = SITE.mk_hero_autocomplete(DATA.heroes, DATA.patterns);
 
-  EVT.onHashChange(function(h){
-    if(h){
-      autocomplete.clear();
-    }else{
-      autocomplete.update('')
-    }
-  });
-  
-  autocomplete.update('');
+var tavs = L.filter(document.getElementsByTagName('div'), function(n){ return DOM.hasClass(n, 'taverns') })[0];
+
+DOM.insb(tavs.firstChild, autocomplete.getNode());
+
+EVT.onHashChange(function(h){
+  if(h){
+    autocomplete.clear();
+  }else{
+    autocomplete.update('');
+  }
+});
+
+autocomplete.update('');
   
 }());
