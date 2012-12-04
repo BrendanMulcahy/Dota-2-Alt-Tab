@@ -236,12 +236,11 @@ var AUTOCOMPLETE = {
     var minimum_chars = KW.opt(kw, 'minimum_chars', 1),
         fetch_items = KW.get(kw, 'fetch_items'),
         render_item = KW.get(kw, 'render_item'),
+        display_items = KW.get(kw, 'display_items'),
         select_item = KW.get(kw, 'select_item');
   
     // State
     
-    var sugestions_table_node;
-
     var selected_row_index,
         visible_items,
         visible_rows;
@@ -272,13 +271,12 @@ var AUTOCOMPLETE = {
       
       visible_items = items;
       
-      visible_rows = L.map(items, function(item){
-        var node = render_item(item);
-        node.onclick = function(){ goto_item(item) }
-        return node;
+      visible_rows = L.map(items, render_item);
+      L.forEach(items, function(item, i){
+        visible_rows[i].onclick = function(){ goto_item(item) };
       });
       
-      DOM.replc(sugestions_table_node, visible_rows);
+      display_items(visible_rows);
       
       if(items.length > 0){
         select_row(0);
@@ -322,8 +320,6 @@ var AUTOCOMPLETE = {
     
     //Initialize
     
-    sugestions_table_node = E('table', {'class':'autocomplete'}, []);
-    DOM.insa(input_field, sugestions_table_node);
     reset_rows([]);
     
     input_field.onkeydown = function(evt){
@@ -377,7 +373,7 @@ var AUTOCOMPLETE = {
   }
 };
 
-var SITE = {
+var SITE = (function(){ "use strict"; return {
   
   mk_show_hide_button: function(button, text_div){
     
@@ -396,15 +392,23 @@ var SITE = {
   
   mk_hero_autocomplete: function(hero_data, pattern_data){
     
-    var tavs = DOM.qsa('div.taverns')[0];
-    
-    var autocomplete_div, autocomplete_input;
+    var autocomplete_div, autocomplete_input, results_table;
     
     autocomplete_div = E('div', {'class': 'autocomplete'}, [
-      (autocomplete_input = E('input', {type:'text'}))
+      E('table', {'class':'autocomplete-input'}, [
+        E('tr', [
+          E('td', {'class': 'label'},
+            [E('label', {'for':'hero_search'}, T("Find your hero:"))]),
+          E('td',
+            [(autocomplete_input =
+              E('input', {type:'text', id:'hero_search'})) ])
+        ])
+      ]),
+      (results_table =
+       E('table', {'class':'autocomplete-results'}))
     ]);
     
-    DOM.insb(tavs, autocomplete_div);
+
     
     AUTOCOMPLETE.create(autocomplete_input, {
       minimum_chars: 1,
@@ -488,12 +492,20 @@ var SITE = {
         );
       },
       
+      display_items: function(nodes){
+        DOM.replc(results_table, nodes);
+      },
+      
       select_item: function(om){
         location.href = hero_data[om.patdata.id].link;
       }
     });
+    
+    return autocomplete_div;
   }
-};
+}
+
+}());
 
 var mk_tab_onclick = function(ix, tabs, panes){
     return function(){
@@ -532,8 +544,15 @@ var init_tabs = function(){
 
 //
 
-SITE.mk_show_hide_button( DOM.byId('toggleAcks'), DOM.byId('acks') );
+//Main function:
+//(function(){
+  
+  SITE.mk_show_hide_button( DOM.byId('toggleAcks'), DOM.byId('acks') );
 
-init_tabs();
+  init_tabs();
 
-SITE.mk_hero_autocomplete(DATA.heroes, DATA.patterns);
+  var tavs = DOM.qsa('div.taverns')[0];
+  var autocomplete_div = SITE.mk_hero_autocomplete(DATA.heroes, DATA.patterns);
+  DOM.insb(tavs.firstChild, autocomplete_div);
+  
+//}());

@@ -100,7 +100,9 @@ Zieth, Ziodex
 </p>
 ]=]
 
-local GA_CODE = [=[
+local GA_CODE = ""
+
+--[=[
   <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-34781660-1']);
@@ -500,19 +502,30 @@ io.write([[
 
 /*Autocomplete*/
 
-.autocomplete input,
-.autocomplete table {width: 540px;}
+.autocomplete,
+.autocomplete .autocomplete-results {width: 540px;}
 
-.autocomplete table {
+.autocomplete {
+  font-size: larger;
+  margin: 0 auto;
+}
+
+.autocomplete .autocomplete-input {width: 100%;}
+.autocomplete .autocomplete-input td.label {width: 7em;}
+.autocomplete .autocomplete-input input    {
+  width: 100%;
+  font-size: larger;
+  padding: 0 5px;
+}
+
+.autocomplete .autocomplete-results {
   position: absolute;
   background-color: #11151a;
 }
-
-.autocomplete table .image_column { width: 1px; }
-
-.autocomplete .pattern    { text-decoration : underline; }
-.autocomplete tr:hover    { background-color: #66CDAA; }
-.autocomplete tr.selected { background-color: #458B74; }
+.autocomplete .autocomplete-results .image_column { width: 1px; }
+.autocomplete .autocomplete-results .pattern    { text-decoration : underline; }
+.autocomplete .autocomplete-results tr:hover    { background-color: #66CDAA; }
+.autocomplete .autocomplete-results tr.selected { background-color: #458B74; }
 
 /* CSS sprites */
 
