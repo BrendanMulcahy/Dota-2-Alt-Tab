@@ -547,7 +547,7 @@ var SITE = (function(){ return {
       },
       
       select_item: function(om){
-        location.href = hero_data[om.patdata.id].link;
+        location.hash = hero_data[om.patdata.id].hash;
       }
     });
     

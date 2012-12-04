@@ -930,14 +930,14 @@ local markup = require "markup/html"
 
 local hero_data = {}
 for _, h in ipairs(d1_list) do
-  table.insert(hero_data, { h.id, "./#"..h.id,  markup.sprite('hero', h.id, h.fullName)})
+  table.insert(hero_data, { h.id, h.id,  markup.sprite('hero', h.id, h.fullName)})
 end
 sort_by(hero_data, function(row) return row[1] end)
 
 io.write('DATA = {\n')
 
 io.write(' heroes:')
-print_json(1,  {"id", "link", "sprite"}, hero_data)
+print_json(1,  {"id", "hash", "sprite"}, hero_data)
 io.write(',\n')
 
 io.write(' patterns:')
