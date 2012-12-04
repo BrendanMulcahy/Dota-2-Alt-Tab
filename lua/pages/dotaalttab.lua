@@ -526,8 +526,21 @@ io.write([[
 .autocomplete .autocomplete-results .image_column { width: 1px; }
 .autocomplete .autocomplete-results .pattern    { text-decoration : underline; }
 .autocomplete .autocomplete-results tr.selected { background-color: #458B74; }
-.autocomplete .autocomplete-results tr:hover    { background-color: #66CDAA; }
+.autocomplete .autocomplete-results tr:hover    { background-color: #58b193; }
 
+
+.autocomplete .autocomplete-results .navigation {
+  float:right;
+  margin-right: 1em;
+  font-size: small;
+  
+  visibility: hidden;
+}
+
+.autocomplete .autocomplete-results tr.selected .navigation,
+.autocomplete .autocomplete-results tr:hover .navigation{
+  visibility: visible;
+}
 
 /* CSS sprites */
 

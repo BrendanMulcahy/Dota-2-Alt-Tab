@@ -222,6 +222,24 @@ var DOM = {
 var EVT = {
   getKeyCode: function(evt){
     return (evt ? evt.which : alert("I haven't coded for IE yet.") );
+  },
+  
+  onHashChange: function(onChange){
+    
+    if('onhashchange' in window){
+      window.onhashchange = function(){
+        return onChange(window.location.hash);
+      }
+    }else{
+      var oldHash = window.location.hash;
+      setInterval(function(){
+        var newHash = window.location.hash;
+        if(oldHash !== newHash){
+          oldHash = newHash;
+          onChange(newHash);
+        }
+      }, 1000);
+    }
   }
 };
 
@@ -261,11 +279,6 @@ var AUTOCOMPLETE = {
     
     // State Manipulation
     
-    var clear_input = function(){
-      input_field.value = '';
-      reset_rows([]);
-    };
-    
     var reset_rows = function(items){
       selected_row_index = null;
       
@@ -273,7 +286,7 @@ var AUTOCOMPLETE = {
       
       visible_rows = L.map(items, render_item);
       L.forEach(items, function(item, i){
-        visible_rows[i].onclick = function(){ goto_item(item) };
+        visible_rows[i].onclick = function(){ select_item(item) };
       });
       
       display_items(visible_rows);
@@ -300,12 +313,6 @@ var AUTOCOMPLETE = {
     var move_up   = function(){ select_row(selected_row_index - 1) };
     var move_down = function(){ select_row(selected_row_index + 1) };
     
-    var goto_item = function(item){
-      clear_input();
-      select_item(item);
-      return;
-    };
-    
     //Autocomplete
     
     var update_sugestions = function(partial_name){
@@ -325,7 +332,7 @@ var AUTOCOMPLETE = {
     input_field.onkeydown = function(evt){
       var keycode = EVT.getKeyCode(evt);
       
-      console.log('down', keycode)
+      //console.log('down', keycode)
       
       switch(keycode){
         case 9 /*TAB*/:
@@ -348,7 +355,7 @@ var AUTOCOMPLETE = {
     input_field.onkeyup = function(evt){
       var keycode = EVT.getKeyCode(evt);
       
-      console.log('up', keycode)
+      //console.log('up', keycode)
       
       switch(keycode){
         case 9 /*TAB*/:
@@ -356,7 +363,7 @@ var AUTOCOMPLETE = {
         
         case 13 /*ENTER*/:
           var item = selected_item();
-          if(item){ goto_item(item) }
+          if(item){ select_item(item) }
           break;
         
         case 38 /*UP*/: break;
@@ -368,6 +375,13 @@ var AUTOCOMPLETE = {
         default:
           update_sugestions(input_field.value);
           break;
+      }
+    }
+    
+    return {
+      update: function(value){
+        input_field.value = value;
+        update_sugestions(input_field.value);
       }
     }
   }
@@ -410,11 +424,11 @@ var SITE = (function(){ "use strict"; return {
     
 
     
-    AUTOCOMPLETE.create(autocomplete_input, {
+    var autocomplete = AUTOCOMPLETE.create(autocomplete_input, {
       minimum_chars: 1,
   
       fetch_items: function(partial_name){
-    
+        
         var first_prefix_matches  = [], //Prefix of the full name.
             middle_prefix_matches = [], //Prefix of some inner word.
             anywhere_matches      = []; //Any match.
@@ -427,10 +441,6 @@ var SITE = (function(){ "use strict"; return {
           {list:middle_prefix_matches, regex:new RegExp('[\\s\-]' + '(' + name_re_src + ')', 'i')},
           {list:anywhere_matches,      regex:new RegExp(            '(' + name_re_src + ')', 'i')}
         ];
-        
-        console.log(matches_to_try[0].regex);
-        console.log(matches_to_try[1].regex);
-        console.log(matches_to_try[2].regex);
           
         L.forEach(pattern_data, function(o){
           var hid = o.id,
@@ -457,7 +467,6 @@ var SITE = (function(){ "use strict"; return {
         L.forEach(first_prefix_matches, add_match);
         L.forEach(middle_prefix_matches, add_match);
         if(first_prefix_matches.length === 0 && middle_prefix_matches.length == 0){
-          console.log('--', 'anywhere')
           L.forEach(anywhere_matches, add_match);
         }
         
@@ -486,7 +495,10 @@ var SITE = (function(){ "use strict"; return {
                 E('span', {'class':'pattern'}, [T(match)]),
                 T(after)
               ]),
-              T(rem ? ' ('+rem+')' : '' )
+              T(rem ? ' ('+rem+')' : '' ),
+              E('span', {'class':'navigation'},[
+                T('Go to guide')
+              ])
             ])
           ])
         );
@@ -501,7 +513,11 @@ var SITE = (function(){ "use strict"; return {
       }
     });
     
-    return autocomplete_div;
+    return {
+      getNode: function(){ return autocomplete_div },
+      getValue: function(){ return autocomplete_input.value },
+      setValue: function(v){ autocomplete.update(v) }
+    };
   }
 }
 
@@ -551,8 +567,13 @@ var init_tabs = function(){
 
   init_tabs();
 
+  var autocomplete = SITE.mk_hero_autocomplete(DATA.heroes, DATA.patterns);
+  
   var tavs = DOM.qsa('div.taverns')[0];
-  var autocomplete_div = SITE.mk_hero_autocomplete(DATA.heroes, DATA.patterns);
-  DOM.insb(tavs.firstChild, autocomplete_div);
+  DOM.insb(tavs.firstChild, autocomplete.getNode());
+
+  EVT.onHashChange(function(){
+    autocomplete.setValue('');
+  });
   
 //}());
