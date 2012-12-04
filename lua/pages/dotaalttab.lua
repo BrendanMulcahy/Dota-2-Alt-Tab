@@ -542,6 +542,12 @@ io.write([[
   visibility: visible;
 }
 
+.autocomplete .not-found{
+  background-color: #7e5400;
+  height: 36px;
+  text-align: center
+}
+
 /* CSS sprites */
 
 ]])

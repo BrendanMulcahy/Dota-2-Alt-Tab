@@ -254,6 +254,7 @@ var AUTOCOMPLETE = {
     var minimum_chars = KW.opt(kw, 'minimum_chars', 1),
         fetch_items = KW.get(kw, 'fetch_items'),
         render_item = KW.get(kw, 'render_item'),
+        not_found_items = KW.opt(kw, 'not_found_items', []),
         display_items = KW.get(kw, 'display_items'),
         select_item = KW.get(kw, 'select_item');
   
@@ -289,11 +290,17 @@ var AUTOCOMPLETE = {
         visible_rows[i].onclick = function(){ select_item(item) };
       });
       
-      display_items(visible_rows);
-      
       if(items.length > 0){
+        display_items(visible_rows);
         select_row(0);
+      }else{
+        if(input_field.value.length > 0){
+          display_items(not_found_items);
+        }else{
+          display_items([]);
+        }
       }
+      
     };
     
     var select_row = function(new_i){
@@ -316,6 +323,12 @@ var AUTOCOMPLETE = {
     //Autocomplete
     
     var update_sugestions = function(partial_name){
+      
+      if(arguments.length === 0){
+        partial_name = input_field.value;
+      }else{
+        input_field.value = partial_name;
+      }
       
       if(partial_name.length < minimum_chars){
         reset_rows([]);
@@ -373,15 +386,22 @@ var AUTOCOMPLETE = {
         case 37 /*LEFT*/: break
           
         default:
-          update_sugestions(input_field.value);
+          update_sugestions();
           break;
       }
+    };
+    
+    input_field.onfocus = function(){
+      update_sugestions();
+    }
+    
+    input_field.onblur = function(){
+      display_items([]);
     }
     
     return {
       update: function(value){
-        input_field.value = value;
-        update_sugestions(input_field.value);
+        update_sugestions(value);
       }
     }
   }
@@ -503,6 +523,12 @@ var SITE = (function(){ "use strict"; return {
           ])
         );
       },
+      
+      not_found_items: [
+        E('tr', [
+          E('td', {'class':'not-found'}, [T("No heroes match your search.")])
+        ])
+      ],
       
       display_items: function(nodes){
         DOM.replc(results_table, nodes);
