@@ -395,7 +395,10 @@ var AUTOCOMPLETE = {
     }
     
     input_field.onblur = function(){
-      display_items([]);
+      //Ugly hack to give enough time for the onclick on the menu items to proc.
+      setTimeout(function(){
+        display_items([]);
+      }, 1000);
     }
     
     return {
