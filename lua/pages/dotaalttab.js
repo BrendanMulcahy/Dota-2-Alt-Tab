@@ -223,10 +223,6 @@ var DOM = {
 };
 
 var EVT = {
-  getKeyCode: function(evt){
-    return (evt ? evt.which : alert("I haven't coded for IE yet.") );
-  },
-  
   onHashChange: function(onChange){
     
     if('onhashchange' in window){
@@ -290,7 +286,7 @@ var AUTOCOMPLETE = {
       
       visible_rows = L.map(items, render_item);
       L.forEach(items, function(item, i){
-        visible_rows[i].onclick = function(){ select_item(item) };
+        visible_rows[i].onmousedown = function(){ select_item(item) };
       });
       
       if(items.length > 0){
@@ -346,7 +342,9 @@ var AUTOCOMPLETE = {
     reset_rows([]);
     
     input_field.onkeydown = function(evt){
-      var keycode = EVT.getKeyCode(evt);
+      evt = evt || event;
+
+      var keycode = evt.keyCode;
       
       //console.log('down', keycode)
       
@@ -355,6 +353,10 @@ var AUTOCOMPLETE = {
           break;
         
         case 13 /*ENTER*/:
+          //I must use keyDown here because, on IE, the input loses
+          //focus after the Enter and the keyup does not fire.
+          var item = selected_item();
+          if(item){ select_item(item) }
           break;
       
         case 38 /*UP*/  :
@@ -369,7 +371,9 @@ var AUTOCOMPLETE = {
     };
 
     input_field.onkeyup = function(evt){
-      var keycode = EVT.getKeyCode(evt);
+      evt = evt || event;
+
+      var keycode = evt.keyCode;
       
       //console.log('up', keycode)
       
@@ -378,10 +382,8 @@ var AUTOCOMPLETE = {
           break;
         
         case 13 /*ENTER*/:
-          var item = selected_item();
-          if(item){ select_item(item) }
           break;
-        
+         
         case 38 /*UP*/: break;
         case 40 /*DOWN*/: break;
       
@@ -399,10 +401,7 @@ var AUTOCOMPLETE = {
     };
     
     input_field.onblur = function(){
-      //Ugly hack to give enough time for the onclick on the menu items to proc.
-      setTimeout(function(){
-        display_items([]);
-      }, 1000);
+      display_items([]);
     };
     
     return {
