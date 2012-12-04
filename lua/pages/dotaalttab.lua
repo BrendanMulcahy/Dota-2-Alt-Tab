@@ -890,11 +890,12 @@ for _, row in ipairs(abbreviations) do
   if not rem then
     if d2_heroes[id] then
       rem = d2_heroes[id].fullName
+      table.insert(ab_patterns, {ab, id, rem})
     else
-      rem = d1_heroes[id].fullName
+      --rem = d1_heroes[id].fullName
     end
   end
-  table.insert(ab_patterns, {ab, id, rem})
+  --table.insert(ab_patterns, {ab, id, rem})
 end
 for _, row in ipairs(ab_patterns) do
   table.insert(patterns, row)
@@ -915,9 +916,10 @@ table.insert(patterns, [[ For Dota 1 heroes, the reminder is the other part of t
 local d1_patterns = {}
 for _, h in ipairs(d1_list) do
   local h2 = d2_heroes[h.id]
-  
-  table.insert(d1_patterns , {h.name,  h.id, (h2 and h2.fullName or h.class) })
-  table.insert(d1_patterns , {h.class, h.id, (h2 and h2.fullName or h.name ) })
+  if h2 then
+    table.insert(d1_patterns , {h.name,  h.id, (h2 and h2.fullName or h.class) })
+    table.insert(d1_patterns , {h.class, h.id, (h2 and h2.fullName or h.name ) })
+  end
 end
 sort_patterns(d1_patterns)
 for _, row in ipairs(d1_patterns) do
