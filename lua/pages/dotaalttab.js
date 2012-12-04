@@ -104,7 +104,6 @@ var DOM = {
   //Query
   
   byId: function(id){  return document.getElementById(id) },
-  qsa : function(qry){ return document.querySelectorAll(qry) },
 
   //Node Manipulation
   
@@ -155,7 +154,7 @@ var DOM = {
   removeClass: function(node, cls){
     var classes = DOM.getClasses(node);
     if(L.contains(classes, cls)){
-      DOM.setClasses(node, L.filter(classes, function(c){ c !== cls }));
+      DOM.setClasses(node, L.filter(classes, function(c){ return c !== cls }));
     }
   },
   
@@ -544,45 +543,49 @@ var SITE = (function(){ "use strict"; return {
       getValue: function(){ return autocomplete_input.value },
       setValue: function(v){ autocomplete.update(v) }
     };
+  },
+  
+  mk_tabs: function(){
+    var tab_containers = L.filter(document.getElementsByTagName('div'), function(n){ return DOM.hasClass(n, 'tabs') });
+    L.forEach(tab_containers, function(div){
+      
+      var tabs = [], panes = [];
+      for(var node=div.firstChild; node; node=node.nextSibling){
+        if(DOM.hasClass(node, 'tab')){
+         tabs.push(node);
+        }else if(DOM.hasClass(node, 'pane')){
+         panes.push(node);
+        }
+      }
+      
+      L.forEach(tabs, function(tab, i){
+        
+        tab.onclick = function(){
+          
+          L.forEach(tabs, function(other_tab, j){
+            if(i==j){
+              DOM.addClass(other_tab, 'active');
+            }else{
+              DOM.removeClass(other_tab, 'active');
+            }
+          });
+          
+          L.forEach(panes, function(pane, j){
+            if(i==j){
+              DOM.removeClass(pane, 'hidden');
+            }else{
+              DOM.addClass(pane, 'hidden');
+            }
+          });
+          
+        };
+      });
+    });
   }
 }
 
 }());
 
-var mk_tab_onclick = function(ix, tabs, panes){
-    return function(){
-        for(var i=0; i<tabs.length; i++){
-            var tab = tabs[i];
-            tab.className = (i === ix ?  "tab active" : "tab inactive")
-        }
-        
-        for(var i=0; i<panes.length; i++){
-            var pane = panes[i];
-            pane.className = (i === ix ?  "pane visible" : "pane hidden")
-        }
-    }
-};
-
-var init_tabs = function(){
-    var divs = document.getElementsByTagName('div');
-    for(var i=0; i<divs.length; i++){
-        var div = divs[i];
-        if(div.className === 'tabs'){
-            var tabs = [];
-            var panes = [];
-            for(var node=div.firstChild; node; node=node.nextSibling){
-                if(/^tab/.test(node.className)){
-                   tabs.push(node);
-                }else if(/^pane/.test(node.className)){
-                   panes.push(node);
-                }
-            }
-            for(var j=0; j<tabs.length; j++){
-                tabs[j].onclick = mk_tab_onclick(j, tabs, panes);
-            }
-        }
-    }
-};
 
 //
 
@@ -591,11 +594,12 @@ var init_tabs = function(){
   
   SITE.mk_show_hide_button( DOM.byId('toggleAcks'), DOM.byId('acks') );
 
-  init_tabs();
+  SITE.mk_tabs();
 
   var autocomplete = SITE.mk_hero_autocomplete(DATA.heroes, DATA.patterns);
   
-  var tavs = DOM.qsa('div.taverns')[0];
+  var tavs = L.filter(document.getElementsByTagName('div'), function(n){ return DOM.hasClass(n, 'taverns') })[0];
+  
   DOM.insb(tavs.firstChild, autocomplete.getNode());
 
   EVT.onHashChange(function(){

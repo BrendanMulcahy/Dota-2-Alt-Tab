@@ -471,6 +471,13 @@ io.write([[
   margin-right: 5px;
   border-radius: 10px 10px 0px 0px;
   padding: 0px 7px;
+  
+  cursor: pointer;
+  background-color: ]]..tab_inactive_bgcolor..[[;
+}
+
+.tab:hover {
+  background-color: ]]..tab_inactive_bgcolor_hover..[[;
 }
 
 .tab h3 {
@@ -478,12 +485,7 @@ io.write([[
 }
 
 .tab.inactive {
-  cursor: pointer;
-  background-color: ]]..tab_inactive_bgcolor..[[;
-}
 
-.tab.inactive:hover {
-  background-color: ]]..tab_inactive_bgcolor_hover..[[;
 }
 
 .tab.active {
