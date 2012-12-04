@@ -521,11 +521,13 @@ io.write([[
 .autocomplete .autocomplete-results {
   position: absolute;
   background-color: #11151a;
+  border-collapse: collapse;
 }
 .autocomplete .autocomplete-results .image_column { width: 1px; }
 .autocomplete .autocomplete-results .pattern    { text-decoration : underline; }
-.autocomplete .autocomplete-results tr:hover    { background-color: #66CDAA; }
 .autocomplete .autocomplete-results tr.selected { background-color: #458B74; }
+.autocomplete .autocomplete-results tr:hover    { background-color: #66CDAA; }
+
 
 /* CSS sprites */
 

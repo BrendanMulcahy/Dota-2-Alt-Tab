@@ -483,7 +483,7 @@ var SITE = (function(){ "use strict"; return {
             E('td', {'class':'name_column'}, [
               E('strong', [
                 T(before),
-                E('span', {style:{'text-decoration':'underline'}}, [T(match)]),
+                E('span', {'class':'pattern'}, [T(match)]),
                 T(after)
               ]),
               T(rem ? ' ('+rem+')' : '' )
