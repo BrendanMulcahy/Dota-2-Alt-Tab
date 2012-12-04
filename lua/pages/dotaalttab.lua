@@ -71,9 +71,40 @@ local TAVERN_SPRITE_IDS = {
 
 local FULL_TAVERN_WIDTH = '900px'
 
+local GUIDE_HOW_TO_USE = [=[
+<p>Choose your guide using the search bar or by clicking on the hero taverns. You can use arrow keys to navigate and enter to select the options given by the search bar.</p>
+<p>To pick another hero use the "Go to top" link or use the back button of your browser.</p>
+<p><strong>For faster access to the guides from within the game, we recommend using the Steam web browser</strong>. It is available from inside Dota2 via the Shift-Tab shortcut and avoids the usual delay from alt-tabbing.</p>
+<p>You can replace the ingame recommended items lists with ours. <a href="http://www.dota2alttab.com/itembuilds.zip">Click here</a> to download the files.</p>
+<p>The skill and item builds in this guide are typically "standard" or "dependable" builds, since we have little time to explain things and since we err on the side of making builds that can also help beginning and intermediate players. Do not assume that these builds are the only way to play the heroes and <strong>always adapt them to your game</strong>!</p>
+<p>I particular, feel free to pick up some extra early game items, such as TP scrolls or bracers, even if they aren't explicitly listed in the guides.</p>
+<p>Skills are color coded:</p>
+<ul>
+<li><span class="Q">The first skill is green.</span></li>
+<li><span class="W">The second skill is tan.</span></li>
+<li><span class="E">The third skill is blue.</span></li>
+<li><span class="R">The ultimate is red.</span></li>
+<li><span class="S">Attribute Bonus is yellow.</span></li>
+</ul>
+<p>The following symbols are used in these guides:
+<table>
+  <tr>
+  	<th style="width:30px">]=]..Markup.sprite('symbol', 'Slash')..[=[</th>
+  	<td>Pick either item to the immediate left or right of a slash, but typically don't get both.</td>
+  </tr>
+  <tr>
+  	<th>]=]..Markup.sprite('symbol', 'Arrow')..[=[</th>
+  	<td>Prioritize items to the left of an arrow before getting the items on the right.</td>
+  </tr>
+  <tr>
+  	<th>]=]..Markup.sprite('symbol', 'LBracket')..Markup.sprite('symbol', 'RBracket')..[=[</th>
+  	<td>Items in brackets are situational and are up to player judgement. For example, only buy a bottle if you are mid or no one else has one.</td>
+  </tr>
+</table>
+]=]
+
 local GUIDE_NOTES = [=[
-<p>Last updated: October 19, 2012. Updated all guides to reflect changes since patch 6.75.</p>
-<p>Click here to download the <a href="http://www.dota2alttab.com/itembuilds.zip">In-game Recommended Items</a></p>
+<p>Last updated: December 4, 2012. Usability improvements, added the latest ported heroes.</p>
 <p>Suggestions, typos, bugs? Contact me at deathcalibur@dota2alttab.com</p>
 <p>Submitting a guide? Send to guides@dota2alttab.com</p>
 ]=]
@@ -100,9 +131,7 @@ Zieth, Ziodex
 </p>
 ]=]
 
-local GA_CODE = ""
-
---[=[
+local GA_CODE = [=[
   <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-34781660-1']);
@@ -146,33 +175,7 @@ Output.print_taverns(GUIDE_TAVERNS)
 io.write([=[
 <div class="section">
 <h1>How to Use</h1>
-<p>Select your guide via the hero taverns or by doing a text search with your browser (Ctrl-F).</p>
-<p>For quick alt-tabbing, you can try to use the builtin steam web browser (accessible via Shift-Tab) or you can set Dota2 to play on windowed mode.
-<p>The skill and item builds in this guide are typically "standard" or "dependable" builds, since we have little time to explain things and since we err on the side of making builds that can also help beginning and intermediate players. Do not assume that these builds are the only way to play the heroes and <strong>always adapt them to your game</strong>.</p>
-<p>Feel free to pick up some extra early game items, such as TP scrolls or bracers, even if they aren't explicitly listed in the guides.</p>
-<p>Skills are color coded:</p>
-<ul>
-<li><span class="Q">The first skill is green.</span></li>
-<li><span class="W">The second skill is tan.</span></li>
-<li><span class="E">The third skill is blue.</span></li>
-<li><span class="R">The ultimate is red.</span></li>
-<li><span class="S">Attribute Bonus is yellow.</span></li>
-</ul>
-<p>The following symbols are used in these guides:
-<table>
-  <tr>
-  	<th style="width:30px">]=]..Markup.sprite('symbol', 'Slash')..[=[</th>
-  	<td>Pick either item to the immediate left or right of a slash, but typically don't get both.</td>
-  </tr>
-  <tr>
-  	<th>]=]..Markup.sprite('symbol', 'Arrow')..[=[</th>
-  	<td>Prioritize items to the left of an arrow before getting the items on the right.</td>
-  </tr>
-  <tr>
-  	<th>]=]..Markup.sprite('symbol', 'LBracket')..Markup.sprite('symbol', 'RBracket')..[=[</th>
-  	<td>Items in brackets are situational and are up to player judgement. For example, only buy a bottle if you are mid or no one else has one.</td>
-  </tr>
-</table>
+]=]..GUIDE_HOW_TO_USE..[=[
 <h1>Notes</h1>
 ]=]..GUIDE_NOTES..[=[
 <h1>Acknowledgements</h1>

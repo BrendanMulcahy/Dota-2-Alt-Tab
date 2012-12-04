@@ -26,6 +26,10 @@ on the dota2alttab folder and going to http:8000//localhost/index.html is a quic
  
  - Update data/a_playdota/hero_images
    - Get the image URL over on palydota.com/heroes
+ 
+ - Add relevant hero abreviations so the search bar knows about them.
+   Currently this is directly in the dotaalttab.lua file but it would be better if
+   this information were moved to the data folder.
 
 == HOW TO ADD A NEW DOTA 2 HERO
 

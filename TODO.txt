@@ -3,9 +3,9 @@
 
 - Add Tuskar, Legion commander and Shredder guides
 
-- Add hero textual search bar
-
 - Add item and hero tooltips
+
+- Make the autocomplete HTML static to avoid "blinking" when loading the page.
 
 == General todo list ==
 =======================
@@ -23,8 +23,6 @@
 - Fix tabbed builds not being in the same position (see tinker)
 
 - Add links to original dota1 version of the guide.
-    
-- Choose new colors for the skill (invoker currently looks weird...)
 
 - Check spelling; Choose between british and american english (armor vs armour, etc)
 
