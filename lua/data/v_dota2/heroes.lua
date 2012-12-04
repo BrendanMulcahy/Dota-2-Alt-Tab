@@ -59,7 +59,7 @@ H('Slardar', 'slardar', {})
   
 H('Tide'   , 'tidehunter', {})
 H('Leoric' , 'skeleton_king', {})
-H('Naix'   , 'life_stealer', {})
+H('Naix'   , 'life_stealer', {fullName = 'Lifestealer'})
 H('NS'     , 'night_stalker', {})
   
 H('Doom'   , 'doom_bringer', {})
