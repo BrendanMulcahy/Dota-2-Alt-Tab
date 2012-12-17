@@ -50,6 +50,9 @@ on the dota2alttab folder and going to http:8000//localhost/index.html is a quic
  
  - Bump version numbers for the css stylesheet and for the hero sprite images.
 
+ - Check if new abbreviations need to be added (in case the initials changed,
+   like they did with Shredder/Timbersaw)
+
 == CODE ROADMAP
 
 scripts/

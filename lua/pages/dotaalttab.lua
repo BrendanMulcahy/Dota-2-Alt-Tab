@@ -898,12 +898,13 @@ for _, row in ipairs(abbreviations) do
   if not rem then
     if d2_heroes[id] then
       rem = d2_heroes[id].fullName
-      table.insert(ab_patterns, {ab, id, rem})
     else
       --rem = d1_heroes[id].fullName
     end
   end
-  --table.insert(ab_patterns, {ab, id, rem})
+  if d2_heroes[id] then --hide non ported heroes
+    table.insert(ab_patterns, {ab, id, rem})
+  end
 end
 for _, row in ipairs(ab_patterns) do
   table.insert(patterns, row)
