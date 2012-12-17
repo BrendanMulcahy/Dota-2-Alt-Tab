@@ -252,6 +252,7 @@ int taverns
 --]==]
 
 local main_bgcolor   = [[#080b0d]]
+local lighter_bgcolor = [[#11151a]]
 
 local main_fontcolor   = [[#b4ccb6]]
 local header_fontcolor = [[#edffd9]]
@@ -460,9 +461,8 @@ a:link, a:visited, a:hover, a:active {
 .tip {
   margin-top: 1em;
   margin-bottom: 1em;
-}]])
+}
 
-io.write([[
 /* Tabs */
 
 .tabs {
@@ -513,6 +513,11 @@ io.write([[
 .autocomplete {
   font-size: larger;
   margin: 0 auto;
+}
+
+.autocomplete input {
+  background-color: ]]..lighter_bgcolor..[[;
+  color: ]]..header_fontcolor..[[;
 }
 
 .autocomplete .autocomplete-input {width: 100%;}
