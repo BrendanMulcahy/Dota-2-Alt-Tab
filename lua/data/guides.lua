@@ -2809,7 +2809,7 @@ Go{
     "and you already deal good damage anyway."},
 
     {Q, "dispells buffs!",
-      "Timing it right will remove most stuns and", I'smoke_of_deceit', "."},
+      "Timing it right can remove stuns and", I'dust', "."},
 
     {R, "gets deactivated by enemy wards. This lets you detect when one is present."},
   },
