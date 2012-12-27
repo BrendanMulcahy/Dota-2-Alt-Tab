@@ -885,8 +885,8 @@ Go{
   TIPS{
     {Q, "deals pure damage if you use it near trees.",
      "It is also extra strong against STR heroes due to the main stat reduction."},
-    {"Keeping", R, "in place is better against low HP enemies, due to the slow",
-     "Recalling", R, "just after is useful for quickly dealing blade travel damage."},
+    {"Keeping", R, "in place is better against low HP enemies, due to the slow.",
+     "Recalling", R, "just after its cast is useful for quickly dealing blade travel damage."},
   }
 }
 

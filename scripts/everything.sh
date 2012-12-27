@@ -1,5 +1,8 @@
 #! /bin/bash
 
+#stop script on errors:
+set -e
+
 echo '== Creating folders =='
 
 mkdir -p ../results/dota2alttab/
