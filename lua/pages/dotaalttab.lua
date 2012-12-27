@@ -104,7 +104,7 @@ local GUIDE_HOW_TO_USE = [=[
 ]=]
 
 local GUIDE_NOTES = [=[
-<p>Last updated: December 4, 2012. Usability improvements, added the latest ported heroes.</p>
+<p>Last updated: December 27, 2012. Added Timbersaw.</p>
 <p>Suggestions, typos, bugs? Contact me at deathcalibur@dota2alttab.com</p>
 <p>Submitting a guide? Send to guides@dota2alttab.com</p>
 ]=]
@@ -168,6 +168,18 @@ io.write([=[
 
 io.write([[
 <h1 class="title"><a href="./#"><img src="./Dota2_Alt_Tab/Images/banner.png"></a></h1>
+<script>
+  document.write(
+    '<div id="autocomplete" class="autocomplete">' + 
+      '<table class="autocomplete-input">' +
+        '<tr>' +
+          '<td class="label"><label for="hero_search">Find your hero:</label></td>' +
+          '<td><input type="text" id="hero_search"></td>' +
+        '</tr>' +
+      '</table>' +
+    '</div>'
+  );
+</script>
 ]])
 
 Output.print_taverns(GUIDE_TAVERNS)

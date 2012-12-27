@@ -435,26 +435,12 @@ var SITE = (function(){ return {
     };
   },
   
-  mk_hero_autocomplete: function(hero_data, pattern_data){
+  mk_hero_autocomplete: function(autocomplete_div, hero_data, pattern_data){
     
-    var autocomplete_div, autocomplete_input, results_table;
+    var autocomplete_input = autocomplete_div.getElementsByTagName('input')[0];
     
-    /* jshint boss:true */
-    autocomplete_div = E('div', {'class': 'autocomplete'}, [
-      E('table', {'class':'autocomplete-input'}, [
-        E('tr', [
-          E('td', {'class': 'label'},
-            [E('label', {'for':'hero_search'}, T("Find your hero:"))]),
-          E('td',
-            [(autocomplete_input =
-              E('input', {type:'text', id:'hero_search'})) ])
-        ])
-      ]),
-      (results_table =
-       E('table', {'class':'autocomplete-results'}))
-    ]);
-    /* jshint boss:false */
-
+    var results_table = E('table', {'class':'autocomplete-results'});
+    DOM.insc(autocomplete_div, results_table);
     
     var autocomplete = AUTOCOMPLETE.create(autocomplete_input, {
       minimum_chars: 1,
@@ -551,8 +537,6 @@ var SITE = (function(){ return {
       }
     });
     
-    autocomplete.getNode = function(){ return autocomplete_div };
-    
     return autocomplete;
   },
   
@@ -603,11 +587,7 @@ SITE.mk_show_hide_button( DOM.byId('toggleAcks'), DOM.byId('acks') );
 
 SITE.mk_tabs();
 
-var autocomplete = SITE.mk_hero_autocomplete(DATA.heroes, DATA.patterns);
-
-var tavs = L.filter(document.getElementsByTagName('div'), function(n){ return DOM.hasClass(n, 'taverns') })[0];
-
-DOM.insb(tavs.firstChild, autocomplete.getNode());
+var autocomplete = SITE.mk_hero_autocomplete(DOM.byId('autocomplete'), DATA.heroes, DATA.patterns);
 
 EVT.onHashChange(function(h){
   if(h){
