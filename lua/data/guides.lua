@@ -861,8 +861,32 @@ Go{
   heroid='Shredder',
   date={day=30, month=7, year=2012},
 
+  SKILLBUILD{
+    W, E, {MAX, Q}, {MAX, W}, {MAX, E}
+  },
+  
+  ITEMBUILD{
+    {I_STARTING,
+      'stout_shield', {3, 'branches'}, 'flask', 'tango'},
+    {I_CORE,
+      'magic_wand', 'arcane_boots', 'ancient_janggo', 'bloodstone'},
+    {I_LUXURY,
+      'shivas_guard', 'sheepstick', 'pipe', 'heart', 'blade_mail'},
+    tips = { tip_ab_disassemble() }
+  },
+  
+  HERODESC{
+    {THIS, "is a tanky ganker/nuker with an arsenal of high damage, low cooldown spells.",
+      "He is fairly mobile as his", W, "is a pseudo-blink skill, and his", E, "helps him survive through fights.",
+      R, "'s long range and powerful slow can help him keep up with weakened enemies that are trying to flee.",
+      "As long as he has the mana regeneration to sustain him in combat, he is a force that needs to be reckoned with."}
+  },
+  
   TIPS{
-    tip_todo(),
+    {Q, "deals pure damage if you use it near trees.",
+     "It is also extra strong against STR heroes due to the main stat reduction."},
+    {"Keeping", R, "in place is better against low HP enemies, due to the slow",
+     "Recalling", R, "just after is useful for quickly dealing blade travel damage."},
   }
 }
 
@@ -880,7 +904,7 @@ Go{
 
   ITEMBUILD{
     {I_STARTING,
-      'stout_shield', {3, 'branches'}, 'stout_shield', 'flask', 'tango' },
+      'stout_shield', {3, 'branches'}, 'flask', 'tango' },
     {I_CORE,
       'tranquil_boots', 'soul_ring', 'vanguard', 'blink', 'hood_of_defiance'},
     {I_LUXURY,
