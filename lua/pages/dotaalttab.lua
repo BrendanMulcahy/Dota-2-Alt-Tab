@@ -775,7 +775,10 @@ local abbreviations = {
   {'TH', 'Tide'},
   {'THD', 'Jakiro'},
   {'TP', 'Treant'},
+  
+  {'TS', 'Shredder'},
   {'TS', 'Lesh', 'Tormented Soul'},
+  
   {'TW', 'Troll'},
   
   {'UW', 'Ursa'},
