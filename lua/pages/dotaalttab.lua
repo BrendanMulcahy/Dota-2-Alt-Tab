@@ -25,10 +25,10 @@ local FILENAME_CSS  = 'guide.css'
 local FILENAME_JS   = 'guide.js'
 local FILENAME_DATA = 'data.js'
 
-local VERSION_CSS    = 6
-local VERSION_JS     = 1
-local VERSION_DATA   = 1
-local VERSION_SPRITE = 4
+local VERSION_CSS    = 7
+local VERSION_JS     = 2
+local VERSION_DATA   = 2
+local VERSION_SPRITE = 5
 
 local INCLUDE_CSS  = FILENAME_CSS  .. "?v=" .. VERSION_CSS
 local INCLUDE_JS   = FILENAME_JS   .. "?v=" .. VERSION_JS
