@@ -25,7 +25,7 @@ local FILENAME_CSS  = 'guide.css'
 local FILENAME_JS   = 'guide.js'
 local FILENAME_DATA = 'data.js'
 
-local VERSION_CSS    = 5
+local VERSION_CSS    = 6
 local VERSION_JS     = 1
 local VERSION_DATA   = 1
 local VERSION_SPRITE = 4
@@ -780,7 +780,10 @@ local abbreviations = {
   {'TH', 'Tide'},
   {'THD', 'Jakiro'},
   {'TP', 'Treant'},
+  
+  {'TS', 'Shredder'},
   {'TS', 'Lesh', 'Tormented Soul'},
+  
   {'TW', 'Troll'},
   
   {'UW', 'Ursa'},
