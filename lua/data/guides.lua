@@ -69,7 +69,7 @@ local function tip_orb_lifesteal(item, skill)
 
   return join{
     {"The lifesteal from ", I(item), " does not stack with ", skill, "since both are orb effects."},
-    precedence_explanation, 
+    precedence_explanation,
     {"You should prioritize lifesteal most of the time though, since it helps DPSing."},
   }
 
@@ -864,7 +864,7 @@ Go{
   SKILLBUILD{
     W, E, {MAX, Q}, {MAX, W}, {MAX, E}
   },
-  
+
   ITEMBUILD{
     {I_STARTING,
       'stout_shield', {3, 'branches'}, 'flask', 'tango'},
@@ -874,14 +874,14 @@ Go{
       'shivas_guard', 'sheepstick', 'pipe', 'heart', 'blade_mail'},
     tips = { tip_ab_disassemble() }
   },
-  
+
   HERODESC{
     {THIS, "is a tanky ganker/nuker with an arsenal of high damage, low cooldown spells.",
       "He is fairly mobile as his", W, "is a pseudo-blink skill, and his", E, "helps him survive through fights.",
       R, "'s long range and powerful slow can help him keep up with weakened enemies that are trying to flee.",
       "As long as he has the mana regeneration to sustain him in combat, he is a force that needs to be reckoned with."}
   },
-  
+
   TIPS{
     {Q, "deals pure damage if you use it near trees.",
      "It is also extra strong against STR heroes due to the main stat reduction."},
@@ -2907,12 +2907,12 @@ Go{
 
   TIPS{
 
-    {"Cast", W, "so that the last bounce hits an enemy hero (hopefully killing some creeps toopy)."},
+    {"Cast", W, "so that the last bounce hits an enemy hero. Also try to get some last hits with it."},
 
     {"Activating", I'manta', "will turn off the", E, ".",
-      "turn it back on afterwards."},
+      "Remember to turn it back on afterwards."},
 
-    {"Focus on farming safely early on - you onlyshine in the lategame."},
+    {"Focus on farming safely early on - you need lots of items to be effective."},
   },
 
 }

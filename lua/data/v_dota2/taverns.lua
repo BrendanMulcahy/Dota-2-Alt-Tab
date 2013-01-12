@@ -16,7 +16,7 @@ local function T(id, rows)
   rows.id = id
   Taverns[id] = rows
 end
-   
+
 
 T('SentinelStr', {
     stat='str', team='sentinel',
@@ -46,7 +46,7 @@ T('SentinelInt', {
 T('ScourgeStr', {
     stat='str', team='scourge',
     { 'Axe', 'Pudge', 'SK', 'Slardar' },
-    { 'Tide', 'Leoric', 'Naix', 'NS' }, 
+    { 'Tide', 'Leoric', 'Naix', 'NS' },
     { 'Doom', 'SB', 'Lycan', 'CK' },
     { 'Dirge', 'Magnus' },
 })
@@ -56,7 +56,7 @@ T('ScourgeAgi', {
     { 'BS', 'SF', 'Razor', 'Veno' },
     { 'Void', 'PA', 'Viper', 'Clinkz' },
     { 'Brood', 'Weaver', 'Spectre', 'Meepo'},
-    { 'NA', 'Slark' },
+    { 'NA', 'Slark', 'Medusa' },
 })
 
 T('ScourgeInt', {

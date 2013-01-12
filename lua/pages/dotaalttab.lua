@@ -27,8 +27,8 @@ local FILENAME_DATA = 'data.js'
 
 local VERSION_CSS    = 7
 local VERSION_JS     = 2
-local VERSION_DATA   = 2
-local VERSION_SPRITE = 5
+local VERSION_DATA   = 3
+local VERSION_SPRITE = 6
 
 local INCLUDE_CSS  = FILENAME_CSS  .. "?v=" .. VERSION_CSS
 local INCLUDE_JS   = FILENAME_JS   .. "?v=" .. VERSION_JS
@@ -170,7 +170,7 @@ io.write([[
 <h1 class="title"><a href="./#"><img src="./Dota2_Alt_Tab/Images/banner.png"></a></h1>
 <script>
   document.write(
-    '<div id="autocomplete" class="autocomplete">' + 
+    '<div id="autocomplete" class="autocomplete">' +
       '<table class="autocomplete-input">' +
         '<tr>' +
           '<td class="label"><label for="hero_search">Find your hero:</label></td>' +
@@ -486,7 +486,7 @@ a:link, a:visited, a:hover, a:active {
   margin-right: 5px;
   border-radius: 10px 10px 0px 0px;
   padding: 0px 7px;
-  
+
   cursor: pointer;
   background-color: ]]..tab_inactive_bgcolor..[[;
 }
@@ -555,7 +555,7 @@ a:link, a:visited, a:hover, a:active {
   float:right;
   margin-right: 1em;
   font-size: small;
-  
+
   visibility: hidden;
 }
 
@@ -579,7 +579,7 @@ local function make_sprite(spriteType, direction, dimensions,
     idsfilename, default_id,
     sprites
 )
-  
+
   withOutput(idsfilename, 'w', function()
     if default_id then
       io.write(default_id, '\n')
@@ -606,7 +606,7 @@ local function make_sprite(spriteType, direction, dimensions,
   fwrite('}\n')
 
   local delta = 0
-  
+
   if default_id then
     if direction == 'V' then
       delta = delta - dimensions.height
@@ -614,12 +614,12 @@ local function make_sprite(spriteType, direction, dimensions,
       delta = delta - dimensions.width
     end
   end
-  
+
   for _, s in ipairs(sprites) do
     fwrite('.s_%s.si_%s {', spriteType, s.id)
     if s.width  then fwrite(' width: %dpx;', s.width) end
     if s.height then fwrite(' height: %dpx;', s.height) end
-    
+
     if direction == 'V' then
       fwrite( ' background-position: 0 %dpx;', delta )
       delta = delta - (s.height or dimensions.height)
@@ -627,7 +627,7 @@ local function make_sprite(spriteType, direction, dimensions,
       fwrite( ' background-position: %dpx 0;', delta )
       delta = delta - (s.width or dimensions.width)
     end
-    
+
     fwrite('}\n')
   end
 
@@ -646,7 +646,7 @@ local function sprite_ids_from_datatable(datatable, filter_dota2)
 
   local function k(x) return string.upper(x.id) end
   table.sort(ids, function(x1, x2) return k(x1) < k(x2) end)
-  
+
   return ids
 end
 
@@ -702,71 +702,71 @@ local abbreviations = {
   {'AM', 'AM'},
   {'AP', 'Kunkka', 'Admiral Proudmoore'},
   {'AW', 'Zet'},
-  
+
   {'BB', 'BB'},
   {'BH', 'BH'},
-  
+
   {'BM', 'Brood'},
   {'BM', 'Beast'},
   {'BM', 'Brew'},
-  
+
   {'BS', 'BS'},
-  
+
   {'CK', 'CK'},
   {'CM', 'CM'},
-  
+
   {'CW', 'Clock'},
   {'CW', 'Cent'},
-  
+
   {'DB', 'Doom'},
   {'DR', 'Drow'},
-  
+
   {'ES', 'ES'},
   {'ES', 'Xin'},
-  
+
   {'DS', 'DS'},
   {'DS', 'Sniper'},
-  
+
   {'DK', 'DK'},
-  
+
   {'FV', 'Void'},
   {'FD', 'Puck'},
-  
+
   {'GS', 'Shredder'},
   {'GW', 'Wisp'},
-  
+
   {'HK', 'Chen'},
-  
+
   {'KOTL', 'KOTL'},
-  
+
   {'LC', 'Legion'},
   {'LD', 'LD'},
   {'LR', 'Razor'},
   {'LS', 'Naix'},
-  
+
   {'NA', 'NA'},
   {'NP', 'Prophet'},
-  
+
   {'NS', 'NS'},
   {'NS', 'Naga'},
-  
+
   {'NW', 'Weaver'},
-  
+
   {'OD', 'OD'},
   {'OM', 'Ogre'},
   {'OK', 'Omni'},
-  
+
   {'PA', 'PA'},
-  
+
   {'PL', 'PL'},
   {'PL', 'Pit'},
-  
+
   {'POTM', 'POTM'},
-  
+
   {'QoP', 'QoP'},
-  
+
   {'RK', 'Sven', 'Rogue Knight'},
-  
+
   {'SA', 'Riki'},
   {'SB', 'SB'},
   {'SD', 'SD'},
@@ -774,34 +774,34 @@ local abbreviations = {
   {'SG', 'Slardar'},
   {'SG', 'Tiny'},
   {'SM', 'SM'},
-  
+
   {'SK', 'SK'},
   {'SK', 'Leoric'},
   {'SK', 'TB', 'Soul Keeper'},
-  
+
   {'SP', 'Dazzle', 'Shadow Priest'},
-  
+
   {'SS', 'Storm'},
   {'SS', 'Rhasta'},
-  
+
   {'SW', 'Huskar', 'Sacred Warrior'},
-  
+
   {'TA', 'TA'},
   {'TB', 'TB'},
   {'TC', 'TC'},
   {'TH', 'Tide'},
   {'THD', 'Jakiro'},
   {'TP', 'Treant'},
-  
+
   {'TS', 'Shredder'},
   {'TS', 'Lesh', 'Tormented Soul'},
-  
+
   {'TW', 'Troll'},
-  
+
   {'UW', 'Ursa'},
-  
+
   {'VS', 'VS'},
-  
+
   {'WD', 'WD'},
   {'WR', 'WR'},
   {'WW', 'Auroth'},
@@ -857,11 +857,11 @@ local print_json = function(id, keys, values)
     else
       if (i == 1) then io.write("  ") else io.write(" ,") end
       i = i + 1
-      
+
       if(id ~= nil) then
         io.write( escape_js_string(row[id]), ":")
       end
-      
+
       local jj = 1
       io.write("{")
       for j, k in ipairs(keys) do
@@ -872,20 +872,20 @@ local print_json = function(id, keys, values)
         end
       end
       io.write("}\n")
-      
+
     end
   end
-  
+
   if(id ~= nil) then
     io.write('}')
   else
     io.write(']')
   end
-  
+
 end
 
 local sort_by = function(tbl, f)
-  table.sort(tbl, function(x1, x2) 
+  table.sort(tbl, function(x1, x2)
     return f(x1) < f(x2)
   end)
 end
@@ -894,7 +894,7 @@ local sort_patterns = function(pats)
   for i, pat in ipairs(pats) do
     pat.i = i
   end
-  
+
   table.sort(pats, function(p1, p2)
     if p1[1] ~= p2[1] then return p1[1] < p2[1]
     else return p1.i < p2.i end
