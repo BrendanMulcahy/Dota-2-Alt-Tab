@@ -3720,7 +3720,7 @@ Go{
     { "Stolen ultimates come with the", I'ultimate_scepter', "upgraded version if",
       "either the enemy hero or", THIS, "have a scepter."},
 
-    {"Stolen spells have instant casting animation, but spells with an aditional cast delay",
+    {"Stolen spells have instant casting animation, but spells with an additional cast delay",
       "(such as", H'Sniper', "'s Assassinate", "or", H'Prophet', "'s Teleport", ")",
       "will still have that delay."},
   },
@@ -3766,10 +3766,10 @@ Go{
 
 Go{
   heroid='Bane',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
-    E, {MAX, W}, {MAX, E}, {MAX, Q}
+    E, {MAX, W}, {MAX, Q}, {MAX, E}
   },
 
   ITEMBUILD{
@@ -3800,7 +3800,7 @@ Go{
 
 Go{
   heroid='DS',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, W}, E, {MAX, Q}, {MAX, R}, {MAX, E},
@@ -3849,7 +3849,7 @@ local krob_starting = {I_STARTING,
 
 Go{
   heroid='Krob',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, Q}, E, W, {MAX, E}, {MAX, W}
@@ -3915,7 +3915,7 @@ end
 
 Go{
   heroid='Lion',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, Q}, {MAX, W}, E, {MAX, S},
@@ -3960,7 +3960,7 @@ Go{
 
 Go{
   heroid='Enigma',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {3, W}, {MAX, Q}, {MAX, W}, {MAX, E}
@@ -4001,7 +4001,7 @@ Go{
 
 Go{
   heroid='Lich',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     E, {MAX, Q}, E, W, {MAX, E}, {MAX, W}
@@ -4047,7 +4047,7 @@ Go{
 
 Go{
   heroid='Necro',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, Q}, W, {MAX, E}, {MAX, W}
@@ -4107,7 +4107,7 @@ Go{
 
 Go{
   heroid='Pugna',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, Q}, W, {MAX, E}, {MAX, W}
@@ -4117,7 +4117,7 @@ Go{
     {I_STARTING,
       {4, 'branches'}, {2, 'flask'} },
     {I_CORE,
-      'bottle', 'power_treads', 'void_stone', 'mekansm' },
+      'bottle', 'phase_boots', 'ancient_janggo', 'void_stone', 'mekansm' },
     {I_LUXURY,
       'sheepstick', 'ultimate_scepter', 'travel_boots', 'black_king_bar' },
   },
