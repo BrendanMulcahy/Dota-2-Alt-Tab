@@ -104,7 +104,7 @@ local GUIDE_HOW_TO_USE = [=[
 ]=]
 
 local GUIDE_NOTES = [=[
-<p>Last updated: December 27, 2012. Added Timbersaw.</p>
+<p>Last updated: January 14, 2013. Updated skill and item builds for all heroes.</p>
 <p>Suggestions, typos, bugs? Contact me at deathcalibur@dota2alttab.com</p>
 <p>Submitting a guide? Send to guides@dota2alttab.com</p>
 ]=]
@@ -210,7 +210,7 @@ print("Wrote "..n.." guides.")
 io.write([=[
 </div>
 <p class="copyright">
-&copy; Brendan Mulcahy 2012. Dota 2 content and materials are trademarks and copyrights of Valve or its licensors.
+&copy; Brendan Mulcahy 2012-2013. Dota 2 content and materials are trademarks and copyrights of Valve or its licensors.
 This site is not affiliated with Valve.
 </p>
 <script src="]=]..INCLUDE_DATA..[=["></script>
