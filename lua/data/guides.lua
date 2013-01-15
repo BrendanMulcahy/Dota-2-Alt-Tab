@@ -2782,7 +2782,7 @@ Go{
 
 Go{
   heroid='Razor',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{ {MAX, Q}, W, E, {MAX, W}, {MAX, E} },
 
@@ -2805,7 +2805,7 @@ Go{
 
   TIPS{
     {"Most of your damage comes from your (close-ranged) spells.",
-      "Prioritize tankability and the mobility items earlygame",
+      "Prioritize tankability and the mobility items early game",
       "and leave the traditional carry items for latter."},
   },
 
@@ -2815,7 +2815,7 @@ Go{
 
 Go{
   heroid='Slark',
-  date={day=30, month=7, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{ W, E, {MAX, Q}, {MAX, W}, {MAX, E} },
 
@@ -2823,7 +2823,7 @@ Go{
     {I_STARTING,
       'stout_shield', {3, 'branches'}, 'flask', 'tango' },
     {I_CORE,
-      'magic_wand', 'power_treads', 'vanguard' },
+      'magic_wand', 'orb_of_venom', 'power_treads', 'vanguard' },
     {I_LUXURY,
       'sange_and_yasha', 'black_king_bar', 'basher', 'armlet',
       'butterfly', 'skadi' },
