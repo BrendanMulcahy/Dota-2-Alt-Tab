@@ -1119,7 +1119,7 @@ Go{
 
 Go{
   heroid='Lycan',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, Q}, {MAX, E}, {MAX, W}
@@ -1154,7 +1154,7 @@ Go{
 
 Go{
   heroid='NS',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     Q, W, Q, E, Q, E, Q, R, {MAX, R}, {MAX, E}, {MAX, W}
@@ -1229,7 +1229,7 @@ Go{
 
 Go{
   heroid='Pudge',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     W, {MAX, Q}, {MAX, W}, {MAX, E}
@@ -1239,8 +1239,7 @@ Go{
     {I_STARTING,
       {3, 'branches'}, {2, 'tango'}, {2, 'clarity'} },
     {I_CORE,
-      'bottle', 'magic_wand', 'urn_of_shadows',
-      {OPT, 'vanguard'}, 'hood_of_defiance', 'ultimate_scepter' },
+      'bottle', 'magic_wand', 'urn_of_shadows', 'boots', 'hood_of_defiance', 'ultimate_scepter' },
     {I_LUXURY,
       'pipe', 'force_staff', 'travel_boots', 'ancient_janggo',
       'blade_mail', 'shivas_guard', 'heart' }
@@ -1270,7 +1269,7 @@ Go{
 
 Go{
   heroid='Leoric',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, Q}, {2, S}, {1, W}, {MAX, E}, {MAX, W}
@@ -1309,7 +1308,7 @@ Go{
 
 Go{
   heroid='Slardar',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, W}, {MAX, Q}, {MAX, E}
@@ -1341,7 +1340,7 @@ Go{
 
 Go{
   heroid='Dirge',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     W, Q, {MAX, E}, W, {MAX, Q}, {MAX, W}
@@ -1383,7 +1382,7 @@ Go{
 
 Go{
   heroid='Tide',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     Q, {MAX, E}, W, {MAX, Q}, {MAX, W}
@@ -1419,7 +1418,7 @@ Go{
 
 Go{
   heroid='Magnus',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     E, {MAX, Q}, {MAX, E}, {MAX, W}
@@ -1429,7 +1428,7 @@ Go{
     {I_STARTING,
       {3, 'branches'}, 'stout_shield', 'flask', 'tango' },
     {I_CORE,
-      'bottle', 'magic_wand', 'power_treads', 'blink', 'bfury' },
+      'bottle', 'magic_wand', 'arcane_boots', 'blink', 'refresher' },
     {I_LUXURY,
       'mask_of_madness', 'black_king_bar', 'vladmir', 'greater_crit' },
   },
@@ -1445,6 +1444,8 @@ Go{
     "This maximizes the regen."},
 
     {"Unit-targeting",Q,"makes it easier to hit but ground-targeting allows you to better control the AoE gives a bit more range."},
+
+	{"In a tough off-lane situation, maxing ",E," first can make staying alive much easier."},
   }
 }
 
