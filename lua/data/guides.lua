@@ -4633,7 +4633,7 @@ Go{
 
 Go{
   heroid='WD',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, Q}, W, {MAX, E}, {MAX, W}
@@ -4673,7 +4673,7 @@ Go{
 
 Go{
   heroid='AA',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, Q}, {MAX, W}, {MAX, S}, {MAX, E}
