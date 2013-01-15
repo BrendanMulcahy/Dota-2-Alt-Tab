@@ -894,7 +894,7 @@ Go{
 
 Go{
   heroid='Axe',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     E, {MAX, W}, Q, {MAX, E}, {MAX, Q}
@@ -932,7 +932,7 @@ Go{
 
 Go{
   heroid='CK',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, Q}, {MAX, W}, {MAX, R}, {MAX, E}
@@ -970,7 +970,7 @@ Go{
 
 Go{
   heroid='Doom',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{ name="Standard Skills",
     {MAX, Q}, W, {MAX, E}, {MAX, W}
@@ -1031,7 +1031,7 @@ Go{
 
 Go{
   heroid='Naix',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{ name="Jungle Skills",
     {MAX, W}, E, {MAX, Q}, {MAX, E}
@@ -1046,7 +1046,7 @@ Go{
       {3, 'branches'}, 'stout_shield', 'flask', 'tango' },
     {I_CORE,
       {OPT, 'quelling_blade', 'hand_of_midas'},
-      'magic_wand', 'power_treads', 'armlet' },
+      'magic_wand', 'phase_boots', 'ancient_janggo', 'armlet' },
     {I_LUXURY,
       'desolator', 'basher', 'hyperstone',
       'assault', 'mjollnir', 'abyssal_blade', 'blink' },
@@ -2192,7 +2192,7 @@ Go{
 
 Go{
   heroid='VS',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, Q}, W, E, {MAX, W}, {MAX, E}
@@ -2232,7 +2232,7 @@ Go{
 
 Go{
   heroid='BH',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{ name = "Hard lane",
     {2, E}, W, {MAX, Q}, {MAX, W}, {MAX, E}
