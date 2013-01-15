@@ -2105,18 +2105,18 @@ Go{
 
   ITEMBUILD{ name="Standard Items",
     {I_STARTING,
-      {3, 'branches'}, {1, 'tango'} },
+      {3, 'branches'}, {1, 'tango'}, SEQ, 'bottle'},
     {I_CORE,
-      'bottle', 'phase_boots', 'blink', 'desolator' },
+      'phase_boots', 'blink', 'desolator' },
     {I_LUXURY,
       'black_king_bar', 'medallion_of_courage', 'assault', 'butterfly' },
   },
 
   ITEMBUILD{ name="Alternate Items",
     {I_STARTING,
-      {3, 'branches'}, {1, 'tango'} },
+      {3, 'branches'}, {1, 'tango'}, SEQ, 'bottle'},
     {I_CORE,
-      'bottle', 'phase_boots', 'medallion_of_courage', 'ancient_janggo', 'yasha'},
+      'phase_boots', 'medallion_of_courage', 'ancient_janggo', 'yasha'},
     {I_LUXURY,
       'lesser_crit', 'black_king_bar', 'manta', 'greater_crit', 'assault', 'butterfly' },
   },
@@ -2144,7 +2144,7 @@ Go{
 
 Go{
   heroid='Ursa',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {3, W}, {MAX, E}, {MAX, W}, {MAX, Q},
@@ -2154,7 +2154,7 @@ Go{
     {I_STARTING,
       'branches', 'stout_shield', 'flask', {2, 'tango'} },
     {I_CORE,
-      'tranquil_boots', SEQ, 'phase_boots', 'vladmir', 'blink' },
+      'tranquil_boots', SEQ, 'vladmir', 'phase_boots', 'blink' },
     {I_LUXURY,
       'black_king_bar', 'heart', 'sheepstick', 'blade_mail' },
 
