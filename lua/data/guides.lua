@@ -1617,7 +1617,7 @@ Go{
 
 Go{
   heroid='Jugger',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, Q}, S, W, {MAX, E}, {MAX, W}
@@ -1627,7 +1627,7 @@ Go{
     {I_STARTING,
       {2,'branches'}, 'slippers', 'flask', 'tango', {3,'clarity'}},
     {I_CORE,
-      'soul_ring', 'poor_mans_shield', 'phase_boots', 'bfury', 'ancient_janggo'},
+      {OPT,'soul_ring'}, 'poor_mans_shield', 'phase_boots', 'bfury', 'ancient_janggo'},
     {I_LUXURY,
       {ALT, 'manta', 'sange_and_yasha'}, 'desolator', 'assault', 'butterfly' },
   },
