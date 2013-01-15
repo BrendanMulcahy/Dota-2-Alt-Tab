@@ -1578,7 +1578,7 @@ Go{
 
 Go{
   heroid='Sniper',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     W, E, {MAX, Q}, {MAX, E}, {MAX, W}
@@ -1651,7 +1651,7 @@ Go{
 
 Go{
   heroid='LD',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, Q}, {MAX, E}, {MAX, W}
@@ -1663,7 +1663,7 @@ Go{
 	{'Bear Starting',
       'stout_shield'},
     {'Hero Core',
-      'magic_wand', 'tranquil_boots'},
+      {OPT, 'hand_of_midas'}, 'magic_wand', 'tranquil_boots'},
 	{'Bear Core',
       'phase_boots', 'orb_of_venom', 'radiance'},
     {I_LUXURY,
@@ -1737,7 +1737,7 @@ Go{
 
 Go{
   heroid='Morph',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, Q}, {MAX, E}, {MAX, W}
