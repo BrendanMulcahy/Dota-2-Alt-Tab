@@ -221,7 +221,7 @@ Go{
 
 Go{
   heroid = 'Cent',
-  date = {day=30, month=7, year=2012},
+  date = {day=14, month=1, year=2013},
 
   SKILLBUILD{
     Q, E, {MAX, W}, {MAX, Q}, {MAX, E}
@@ -231,9 +231,9 @@ Go{
     {I_STARTING,
       'stout_shield', 'branches', 'flask', {2, 'tango'} },
     {I_CORE,
-      'magic_wand', {ALT, 'hood_of_defiance', 'vanguard'}, 'boots', 'blink'},
+      'magic_wand', 'hood_of_defiance','tranquil_boots', {OPT,'blink'} },
     {I_LUXURY,
-      'radiance', 'pipe', 'heart', 'shivas_guard', 'assault'},
+      'pipe', 'heart', 'shivas_guard', 'assault', 'radiance', },
   },
 
   HERODESC{
