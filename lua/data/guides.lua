@@ -1774,17 +1774,17 @@ Go{
 
 Go{
   heroid='Naga',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
-    W, {MAX, E}, Q, {MAX, W}, {MAX, Q}
+    W, {MAX, E}, W, {MAX, Q}, {MAX, W}
   },
 
   ITEMBUILD{ name="Standard Items",
     {I_STARTING,
       {3, 'branches'}, 'stout_shield', 'flask', 'tango' },
     {I_CORE,
-      'quelling_blade', 'vanguard', 'arcane_boots', 'diffusal_blade'},
+      'quelling_blade', 'arcane_boots', 'vitality_booster', 'diffusal_blade'},
     {I_LUXURY,
       'heart', 'manta', 'butterfly', 'greater_crit' },
   },
