@@ -1701,7 +1701,7 @@ Go{
 
 Go{
   heroid='Luna',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     E, {MAX, Q}, {MAX,E}, {MAX, W}
@@ -1711,16 +1711,15 @@ Go{
     {I_STARTING,
       'ring_of_protection', {3, 'branches'}, 'flask', 'tango' },
     {I_CORE,
-      'magic_wand', 'ring_of_aquila', 'power_treads',
-      'helm_of_the_dominator', 'yasha' },
+      'magic_wand', 'ring_of_aquila', 'phase_boots', 'ancient_janggo', 'yasha', 'helm_of_the_dominator'},
     {I_LUXURY,
       'black_king_bar', 'manta', 'butterfly',
       'satanic', 'assault' },
   },
 
   HERODESC{
-    {THIS, "is a carry hero with solid nuking potential early game and good AoE damage potential late game. However, she has to deal with her low survivability and attack range.",
-      "Maybe she has a place in teams that can take advantage of her early-game damage aura?"},
+    {THIS, "is a carry hero with solid nuking potential early game and good AoE damage potential late game. What she lacks in survivability and attack range, she makes up for with maneuverability.",
+      "She is a very strong tri-lane hero."},
   },
 
   TIPS{
