@@ -448,17 +448,10 @@ Go{
 
 Go{
   heroid='Tiny',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {3, Q}, {MAX, W}, {MAX, Q}, {MAX, E}
-  },
-
-  ITEMBUILD{ name="Ganker Items",
-    {I_STARTING, {4, 'branches'}, 'flask', {2, 'clarity'} },
-    {I_CORE, 'bottle', 'magic_wand', 'arcane_boots', 'blink' },
-    {'Extension',
-      'force_staff', 'cyclone', 'ethereal_blade', 'shivas_guard', 'sheepstick'},
   },
 
   ITEMBUILD{ name="Carry Items",
@@ -466,6 +459,13 @@ Go{
     {I_CORE, 'phase_boots', 'ancient_janggo', 'yasha' },
     {'Extension',
       'ultimate_scepter', 'manta', 'assault', 'greater_crit', 'mjollnir'},
+  },
+
+  ITEMBUILD{ name="Ganker Items",
+    {I_STARTING, {4, 'branches'}, 'flask', {2, 'clarity'} },
+    {I_CORE, 'bottle', 'magic_wand', 'arcane_boots', 'blink' },
+    {'Extension',
+      'force_staff', 'cyclone', 'ethereal_blade', 'shivas_guard', 'sheepstick'},
   },
 
   HERODESC{
