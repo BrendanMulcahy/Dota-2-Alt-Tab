@@ -4147,9 +4147,9 @@ Go{
 
 Go{
   heroid='OD',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
-  SKILLBUILD{ {3, W}, {MAX, E}, {MAX, R}, {MAX, Q}, {MAX, W} },
+  SKILLBUILD{ {MAX, W}, {MAX, E}, {MAX, R}, {MAX, Q} },
 
   ITEMBUILD{
     {I_STARTING,
@@ -4202,7 +4202,7 @@ Go{
 
 Go{
   heroid='QoP',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     W, {2, Q}, {MAX, E}, {MAX, W}, {MAX, Q}
@@ -4249,7 +4249,7 @@ Go{
 
 Go{
   heroid='Warlock',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, W}, {MAX, Q}, {MAX, E}
@@ -4288,10 +4288,10 @@ Go{
 
 Go{
   heroid='SD',
-  date={day=30, month=7, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{ name = "Support Skills",
-    Q, {MAX, W}, {MAX, Q}, {MAX, E}
+    Q, {MAX, W}, {MAX, E}, {MAX, Q}
   },
 
   SKILLBUILD{ name = "Solo Mid skills",
@@ -4336,7 +4336,7 @@ Go{
 
 Go{
   heroid='Bat',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, Q}, {MAX, E}, {MAX, W}
