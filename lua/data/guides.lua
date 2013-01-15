@@ -1885,7 +1885,7 @@ Go{
 
 Go{
   heroid='POTM',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {1, W}, {1, E}, {MAX, Q}, {MAX, W}, {MAX, R}, {MAX, E}
@@ -1921,7 +1921,7 @@ Go{
 
 Go{
   heroid='Riki',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     W, Q, E, {MAX, W}, {MAX, E}, {MAX, Q}
@@ -2008,9 +2008,13 @@ Go{
 
 Go{
   heroid='Gyro',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
-  SKILLBUILD{
+  SKILLBUILD{ name="Flak Build",
+    W, Q, {MAX, E}, {MAX, Q}, {MAX, W}
+  },
+
+  SKILLBUILD{ name="Alternate Skills",
     W, {MAX, Q}, {MAX, W}, {MAX, E}
   },
 
@@ -2018,7 +2022,7 @@ Go{
     {I_STARTING,
       'ring_of_protection', {3, 'branches'}, 'flask', 'tango' },
     {I_CORE,
-      'magic_wand', 'ring_of_aquila', 'phase_boots', 'bottle' },
+      'magic_wand', 'ring_of_aquila', 'phase_boots', 'invis_sword'},
     {I_LUXURY,
       'manta', 'black_king_bar', 'monkey_king_bar',
       'butterfly', 'satanic' },
@@ -2035,7 +2039,7 @@ Go{
   TIPS{
     {E, "hits farther then your attack range; You don't always need to target your intended target."},
 
-    {"Depending on the game, it might be a good to delay ",E,"or",Q,"for",S, "."},
+    {"Depending on the game, it might be a good to keep only 1 level in each ",W,"and",Q,"for",S, " instead."},
   },
 
 }
