@@ -1825,7 +1825,7 @@ Go{
 
 Go{
   heroid='PL',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{ name="Standard Skills",
     {MAX, Q}, {MAX, W}, {MAX, R}, {MAX, E}
@@ -1839,7 +1839,7 @@ Go{
     {I_STARTING,
       {3, 'branches'}, 'stout_shield', 'flask', 'tango' },
     {I_CORE,
-      'tranquil_boots', 'soul_ring', 'vanguard', 'diffusal_blade'},
+      'tranquil_boots', 'soul_ring', 'vitality_booster', 'diffusal_blade'},
     {I_LUXURY,
       'heart', 'butterfly', 'manta', 'travel_boots' },
   },
