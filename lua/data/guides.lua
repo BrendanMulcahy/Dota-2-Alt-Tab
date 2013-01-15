@@ -546,7 +546,7 @@ Go{
 
 Go{
   heroid='Treant',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, W}, Q, {MAX, E}, {MAX, Q}
@@ -590,7 +590,7 @@ Go{
     {I_CORE,
       'ring_of_basilius', 'boots', 'magic_wand', 'mekansm' },
     {I_LUXURY,
-      {2, 'bracer'}, 'vanguard', 'ancient_janggo', 'urn_of_shadows'}
+      {2, 'bracer'}, 'arcane_boots', 'vanguard', 'ancient_janggo', 'urn_of_shadows'}
   },
 
   HERODESC{
