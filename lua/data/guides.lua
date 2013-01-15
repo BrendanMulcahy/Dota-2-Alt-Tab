@@ -2097,19 +2097,28 @@ Go{
 
 Go{
   heroid='TA',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, Q}, E, {MAX, W}, {MAX, E}
   },
 
-  ITEMBUILD{
+  ITEMBUILD{ name="Standard Items",
     {I_STARTING,
-      {4, 'branches'}, {2, 'flask'} },
+      {3, 'branches'}, {1, 'tango'} },
     {I_CORE,
       'bottle', 'phase_boots', 'blink', 'desolator' },
     {I_LUXURY,
       'black_king_bar', 'medallion_of_courage', 'assault', 'butterfly' },
+  },
+
+  ITEMBUILD{ name="Alternate Items",
+    {I_STARTING,
+      {3, 'branches'}, {1, 'tango'} },
+    {I_CORE,
+      'bottle', 'phase_boots', 'medallion_of_courage', 'ancient_janggo', 'yasha'},
+    {I_LUXURY,
+      'lesser_crit', 'black_king_bar', 'manta', 'greater_crit', 'assault', 'butterfly' },
   },
 
   HERODESC{
