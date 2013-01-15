@@ -1453,7 +1453,7 @@ Go{
 
 Go{
   heroid='SB',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     Q, E, W, {MAX, E}, {MAX, Q}, {MAX, W}
@@ -1492,7 +1492,7 @@ Go{
 
 Go{
   heroid='SK',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, Q}, {MAX, W}, {MAX, E}
@@ -2309,7 +2309,7 @@ Go{
 
 Go{
   heroid='BS',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {2, W}, Q, {MAX, E}, {MAX, W}, {MAX, Q}
@@ -2347,7 +2347,7 @@ Go{
 
 Go{
   heroid='Clinkz',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     E, {MAX, W}, E, {MAX, Q}, {MAX, E}
@@ -2355,9 +2355,9 @@ Go{
 
   ITEMBUILD{
     {I_STARTING,
-      'circlet', {3, 'branches'}, 'flask', 'tango'},
+      {2, 'branches'}, {2, 'slippers'}, 'flask', 'tango'},
     {I_CORE,
-      'wraith_band', 'magic_wand', 'power_treads', 'orchid' },
+      'orchid', 'magic_wand', 'power_treads',},
     {I_LUXURY,
       'black_king_bar', 'monkey_king_bar', 'butterfly', 'skadi' },
   },
@@ -2383,7 +2383,7 @@ Go{
 
 Go{
   heroid='Brood',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{ W, {MAX, Q}, {MAX, W}, {MAX, R}, {MAX, E} },
 
@@ -2417,7 +2417,7 @@ Go{
 
 Go{
   heroid='NA',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, Q}, W, {MAX, E}, {MAX, W},
@@ -2458,7 +2458,7 @@ local weaver_luxury   = {I_LUXURY,
 
 Go{
   heroid='Weaver',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     W, E, {MAX, W}, {MAX, Q}, {MAX, E}
@@ -2501,7 +2501,7 @@ end
 
 Go{
   heroid='PA',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     Q, W, E, {MAX, Q}, {MAX, W}, {MAX, E}
@@ -2539,7 +2539,7 @@ Go{
 
 Go{
   heroid='SF',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     W, {MAX, Q}, {MAX, W}, {MAX, R}, {MAX, E}
@@ -2613,7 +2613,7 @@ Go{
 
 Go{
   heroid='Spectre',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, Q}, E, {MAX, W}, {MAX, E}
@@ -2651,7 +2651,7 @@ Go{
 
 Go{
   heroid='Veno',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{ Q, W, {MAX, E}, {MAX, Q}, {MAX, W} },
 
@@ -2690,7 +2690,7 @@ Go{
 
 Go{
   heroid='Viper',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {3, Q}, {MAX, W}, {MAX, E}, {MAX, Q}
@@ -2726,7 +2726,7 @@ Go{
 
 Go{
   heroid='Meepo',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     Q, {MAX, W}, E, {MAX, Q}, {MAX, E}
@@ -2736,9 +2736,9 @@ Go{
     {I_STARTING,
       'ring_of_protection', {2, 'branches'}, {2, 'flask'}, 'tango' },
     {I_CORE,
-      'ring_of_basilius', 'mekansm', 'travel_boots'},
+      'ring_of_basilius', 'mekansm', 'ultimate_scepter', 'travel_boots'},
     {I_LUXURY,
-      'pipe', 'vladmir', 'assault' },
+      'heart', 'pipe', 'vladmir', 'assault' },
     {I_OPTIONAL,
       'blink' },
   },
