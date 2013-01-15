@@ -578,7 +578,7 @@ Go{
 
 Go{
   heroid='Wisp',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, Q}, {MAX, W}, {MAX, E}
@@ -857,10 +857,10 @@ Go{
 
 Go{
   heroid='Shredder',
-  date={day=30, month=7, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
-    W, E, {MAX, Q}, {MAX, W}, {MAX, E}
+    W, E, Q, {MAX, W}, {MAX, Q}, {MAX, E}
   },
 
   ITEMBUILD{
@@ -1534,7 +1534,7 @@ Go{
 
 Go{
   heroid='AM',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     W, Q, E, {MAX, Q}, {MAX, W}, {MAX, E}
@@ -2045,10 +2045,10 @@ Go{
 
 Go{
   heroid='Drow',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{ name="Carry Skills",
-    Q, {MAX, E}, {MAX, W}, {MAX, S}
+    {MAX, Q}, W, {MAX, E}, {MAX, W}
   },
   SKILLBUILD{ name="Ganker Skills",
     {MAX, Q}, E, W, {MAX, E}, {MAX, W}
@@ -2058,10 +2058,9 @@ Go{
     {I_STARTING,
       {2, 'slippers'}, {2, 'branches'}, 'flask', 'tango' },
     {I_CORE,
-      'power_treads', {ALT, 'helm_of_the_dominator', 'invis_sword'},
-      'manta'},
+      'power_treads', 'invis_sword', 'manta'},
     {I_LUXURY,
-      'black_king_bar', 'butterfly', 'greater_crit', 'heart' },
+      'black_king_bar', 'helm_of_the_dominator', 'butterfly', 'greater_crit', 'heart' },
   },
 
   HERODESC{
