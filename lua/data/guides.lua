@@ -252,7 +252,7 @@ Go{
 
 Go{
   heroid = 'ES',
-  date = {day=18, month=10, year=2012},
+  date = {day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, Q}, {1,E}, W, {MAX, E}, {MAX, W},
@@ -417,20 +417,19 @@ Go{
 
 Go{
   heroid = 'Sven',
-  date = {day=18, month=10, year=2012},
+  date = {day=14, month=1, year=2013},
 
   SKILLBUILD{
-    Q, E, Q, S, Q, R, Q, S, S, S, {MAX, R}, {MAX, W}, {MAX, E},
+    {MAX, Q}, E, {MAX, W}, {MAX, E},
   },
 
   ITEMBUILD{
     {I_STARTING,
-      {ALT, 'courier', 'ward_observer'}, {3, 'branches'}, 'flask', 'tango', {2, 'clarity'} },
+      {3, 'branches'}, 'flask', 'tango', 'stout_shield'},
     {I_CORE,
-      'soul_ring', 'magic_wand', 'power_treads', 'black_king_bar' },
+      'magic_wand', 'power_treads', {OPT, 'ancient_janggo'}, 'black_king_bar',  'greater_crit'},
     {I_LUXURY,
-      {OPT, 'blink', 'invis_sword'}, 'urn_of_shadows', 'ancient_janggo', 'mask_of_madness',
-      'heart'},
+      {OPT, 'blink', 'invis_sword'}, 'mask_of_madness', 'heart'},
   },
 
   HERODESC{
@@ -441,8 +440,7 @@ Go{
   },
 
   TIPS{
-    {"The levels in",S,"are to help with the mana pool - you want to be able to cast ",
-    Q,"twice."},
+    {"An early ", I'ancient_janggo', " is an all-around great item for a hero like Sven who needs mana and movespeed."}
   }
 }
 
