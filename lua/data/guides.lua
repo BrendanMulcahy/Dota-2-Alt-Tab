@@ -147,7 +147,7 @@ end
 
 Go{
   heroid = 'Kunkka',
-  date = {day=18, month=10, year=2012},
+  date = {day=14, month=1, year=2013},
 
   SKILLBUILD{
     Q ,{MAX, W}, {MAX, Q}, {MAX, E}
@@ -188,7 +188,7 @@ Go{
 
 Go{
   heroid = 'Beast',
-  date = {day=18, month=10, year=2012},
+  date = {day=14, month=1, year=2013},
 
   SKILLBUILD{
     Q, {MAX, W}, {MAX, Q}, {MAX, E}
@@ -350,7 +350,7 @@ Go{
 
 Go{
   heroid = 'Omni',
-  date = {day=18, month=10, year=2012},
+  date = {day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, Q}, W, E, {MAX, E}, {MAX, W}
@@ -381,17 +381,17 @@ Go{
 
 Go{
   heroid='Brew',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{ {MAX, Q}, {2, S}, {MAX, E}, {MAX, W} },
 
   ITEMBUILD{
 	{I_STARTING, {3, 'branches'}, 'flask', 'tango', 'stout_shield' },
     {I_CORE,
-      'magic_wand', 'phase_boots', 'blink', 'ultimate_scepter'},
+      'magic_wand', 'arcane_boots', 'blink', 'ultimate_scepter'},
     {I_LUXURY,
-      'necronomicon', 'shivas_guard', 'vladmir',
-      'ancient_janggo', 'assault', 'pipe' },
+      'assault', 'heart', 'necronomicon', 'shivas_guard', 'vladmir',
+      'ancient_janggo', 'pipe' },
   },
 
   HERODESC{
@@ -610,7 +610,7 @@ Go{
 
 Go{
   heroid='Alch',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{ name="Carry Skills",
     W, {MAX, E}, {MAX, Q}, {MAX, W}
@@ -654,7 +654,7 @@ Go{
 
 Go{
   heroid='Clock',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {2, E}, W, {2, Q}, {2, E}, {2,Q}, {MAX, W}
@@ -667,7 +667,7 @@ Go{
       'magic_wand', 'phase_boots', 'bottle', 'vanguard' },
     {'Defensive Items',
       'blade_mail', 'hood_of_defiance'},
-    {'Agressive Items',
+    {'Aggressive Items',
       'ultimate_scepter', 'shivas_guard', 'necronomicon' }
   },
 
@@ -702,7 +702,7 @@ Go{
 
 Go{
   heroid='DK',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {1, R}, {1, W}, {1, E}, {MAX, Q}, {MAX, E}, {MAX, W}, S, {MAX, R}
@@ -733,7 +733,7 @@ Go{
 
 Go{
   heroid='Huskar',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     W, {MAX, E}, {MAX, Q}, {MAX, S}
