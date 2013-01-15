@@ -4339,7 +4339,7 @@ Go{
   date={day=14, month=1, year=2013},
 
   SKILLBUILD{
-    {MAX, Q}, {MAX, E}, {MAX, W}
+    {MAX, Q}, E, {MAX, W}, {MAX, E}
   },
 
   ITEMBUILD{
@@ -4374,7 +4374,7 @@ Go{
 
 Go{
   heroid='Dazzle',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     E, W, {3, Q}, {MAX, E}, {MAX, R}, {MAX, Q}, {MAX, W}
@@ -4434,7 +4434,7 @@ end
 
 Go{
   heroid='Invoker',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{ name="QW Disabler", isInvoker=true,
     Q, {MAX, R}, {MAX, W}, {2, Q}, E, {MAX, Q}, {MAX, E},
@@ -4448,7 +4448,7 @@ Go{
 
   ITEMBUILD{
     {I_STARTING,
-      'blades_of_attack', 'branches', 'tango'},
+      'blades_of_attack', 'branches', 'flask'},
     {I_CORE,
       'phase_boots', 'ancient_janggo', {ALT, 'cyclone', 'force_staff'} },
     {I_LUXURY,
@@ -4543,7 +4543,7 @@ end
 
 Go{
   heroid='Visage',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, W}, Q, {MAX, E}, {MAX, Q}
@@ -4581,7 +4581,7 @@ Go{
 
 Go{
   heroid='Lesh',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{ name="Skills",
     Q, {MAX, W}, {MAX, Q}, {MAX, R}, {MAX, S}
@@ -4592,9 +4592,9 @@ Go{
       {3, 'branches'}, 'circlet', 'flask', 'tango' },
     {I_CORE,
       'magic_wand', {OPT, 'bracer', 'bracer', 'null_talisman'},
-      'arcane_boots', 'bloodstone' },
+      'arcane_boots', 'black_king_bar' },
     {I_LUXURY,
-      'ancient_janggo', 'ultimate_scepter', 'black_king_bar',
+      'ancient_janggo', 'ultimate_scepter', 'bloodstone',
       'travel_boots', 'shivas_guard', 'heart' },
     tips = { tip_ab_disassemble() }
   },
