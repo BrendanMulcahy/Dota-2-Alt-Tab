@@ -2854,7 +2854,7 @@ Go{
 
 Go{
   heroid='Void',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     Q, {MAX, W}, {MAX, E}, {MAX, Q}
@@ -2891,7 +2891,7 @@ Go{
 
 Go{
   heroid='Medusa',
-  date={day=30, month=7, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{ {MAX, W}, {2, S}, {MAX, E}, {MAX, Q} },
 
@@ -2933,7 +2933,7 @@ Go{
 
 Go{
   heroid='CM',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     Q, W, {2, E}, {MAX, Q}, {MAX, W}, {MAX, E}, {MAX, R}
@@ -2981,7 +2981,7 @@ Go{
 
 Go{
   heroid='Ench',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, W}, {MAX, E}, {MAX, Q}
@@ -3020,7 +3020,7 @@ Go{
 
 Go{
   heroid='Puck',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, Q}, E, {MAX, W}, {MAX, E}
@@ -3055,7 +3055,7 @@ Go{
 
 Go{
   heroid='Chen',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     E, {2, W}, {MAX, E}, {MAX, W}, {MAX, Q}
@@ -3094,7 +3094,7 @@ Go{
 
 Go{
   heroid='KOTL',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{ Q, {MAX, E}, {MAX, Q}, {MAX, R}, {MAX, W} },
 
@@ -3128,7 +3128,7 @@ Go{
 
 Go{
   heroid='Zeus',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{ Q, E, {MAX, W}, {MAX, E}, {MAX, Q} },
 
@@ -3180,14 +3180,14 @@ local furion_luxury = {I_LUXURY,
 
 Go{
   heroid='Prophet',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{ name="Jungling Skills",
-    E, W, Q, {MAX, E}, {MAX, W}, {MAX, Q}
+    {MAX, E}, W, Q, {MAX, W}, {MAX, Q}
   },
 
   SKILLBUILD{ name="Laning Skills",
-    Q, W, {3, E}, {MAX, W}, E, {MAX, Q}
+    Q, {MAX, W}, {MAX, E}, {MAX, Q}
   },
 
   ITEMBUILD{ name="Jungle Items",
@@ -3228,10 +3228,10 @@ end
 
 Go{
   heroid='Silencer',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
-    {MAX, W}, S, {MAX, E}, {MAX, S}, {MAX, Q}
+    W, {MAX, E}, {MAX, Q}, {MAX, W}
   },
 
   ITEMBUILD{
@@ -3266,7 +3266,7 @@ Go{
 
 Go{
   heroid = 'Lina',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     W, {MAX, Q}, E, {MAX, W}, {MAX, E}
@@ -3303,7 +3303,7 @@ Go{
 
 Go{
   heroid='Storm',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{ name="Overload Build",
     Q, E, {3, W}, {MAX, E}, {MAX, W}, {MAX, Q},
@@ -3354,7 +3354,7 @@ Go{
 
 Go{
   heroid='WR',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{ E, {MAX, W}, {MAX, Q}, {MAX, R}, {MAX, E} },
 
@@ -3391,7 +3391,7 @@ Go{
 
 Go{
   heroid='Disruptor',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{ name="Mid Solo",
     R, {MAX, Q}, E, {MAX, W}, {MAX, E}, {MAX, R}
@@ -3434,7 +3434,7 @@ Go{
 
 Go{
   heroid='Ogre',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, Q}, {MAX, W}, {MAX, R}, {MAX, E}
@@ -3506,7 +3506,7 @@ Go{
 
 Go{
   heroid='Jakiro',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{ name="Skills",
     {MAX, W}, E, Q, {MAX, E}, {MAX, R}, {MAX, Q}
@@ -3548,7 +3548,7 @@ local tinker_rearm_tip = {
 
 Go{
   heroid='Tinker',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{ name="Ganking Skills",
     {MAX, Q}, {MAX, W}, R, {MAX, E}, {MAX, R},
@@ -3616,7 +3616,7 @@ end
 
 Go{
   heroid='Rhasta',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
     E, {MAX, Q}, {MAX, W}, {MAX, E}
@@ -3672,10 +3672,10 @@ Go{
 
 Go{
   heroid='Rubick',
-  date={day=18, month=10, year=2012},
+  date={day=14, month=1, year=2013},
 
   SKILLBUILD{
-    {2, Q}, {MAX, W}, {MAX, E}, {MAX, Q}, {MAX, W},
+    Q, {MAX, W}, {MAX, E}, {MAX, Q}, {MAX, W},
   },
 
   ITEMBUILD{
