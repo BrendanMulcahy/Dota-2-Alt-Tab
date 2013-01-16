@@ -3667,7 +3667,7 @@ Go{
 
 Go{
   heroid='Rubick',
-  date={day=14, month=1, year=2013},
+  date={day=16, month=1, year=2013},
 
   SKILLBUILD{
     Q, {MAX, W}, {MAX, E}, {MAX, Q}, {MAX, W},
@@ -3679,7 +3679,7 @@ Go{
     {I_CORE,
       'bottle', 'magic_wand', 'arcane_boots', {ALT, 'force_staff', 'cyclone'} },
     {I_LUXURY,
-      'mekansm', 'urn_of_shadows', 'necronomicon', 'bloodstone', 'sheepstick' },
+      'mekansm', 'blink', 'necronomicon', 'bloodstone', 'sheepstick' },
     {I_FALLBACK,
       'urn_of_shadows', 'ancient_janggo'},
 
