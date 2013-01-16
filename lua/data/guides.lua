@@ -490,7 +490,7 @@ Go{
     {"Basically any combination of ",Q,",",W,"and",R,"is fine early on.",
      "The suggested build is a balanced default."},
 
-    {"Maxing",W,"over",Q,"is is better for harassing and for lasthitting in though lanes."},
+    {"Maxing",W,"over",Q,"is is better for harassing and for lasthitting in tough lanes."},
 
     {R," at 6 gives good movespeed and equivalent AvaToss damage if you can land an auto-attack in.",
      "Delaying",R,"to level 9 gives maximum magical burst though."},
