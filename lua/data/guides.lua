@@ -4334,7 +4334,7 @@ Go{
   date={day=14, month=1, year=2013},
 
   SKILLBUILD{
-    {MAX, Q}, E, {MAX, W}, {MAX, E}
+    {MAX, Q}, E, W, {MAX, E}, {MAX, W},
   },
 
   ITEMBUILD{
