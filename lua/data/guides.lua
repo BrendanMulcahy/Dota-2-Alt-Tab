@@ -1886,10 +1886,10 @@ Go{
 
 Go{
   heroid='POTM',
-  date={day=14, month=1, year=2013},
+  date={day=16, month=1, year=2013},
 
   SKILLBUILD{
-    {1, W}, {1, E}, {MAX, Q}, {MAX, W}, {MAX, R}, {MAX, E}
+    {1, W}, {1, E}, {MAX, Q}, {MAX, R}, {MAX, W}, {MAX, E}
   },
 
   ITEMBUILD{
