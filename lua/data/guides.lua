@@ -1737,7 +1737,7 @@ Go{
 
 Go{
   heroid='Morph',
-  date={day=14, month=1, year=2013},
+  date={day=16, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, Q}, {MAX, E}, {MAX, W}
@@ -1747,9 +1747,9 @@ Go{
     {I_STARTING,
       {4, 'branches'}, {2, 'flask'}, {2 ,'tango'} },
     {I_CORE,
-      'ring_of_aquila', 'wraith_band', 'power_treads', {OPT, 'sphere'} },
+      'ring_of_aquila', 'wraith_band', 'power_treads', {OPT, 'ethereal_blade'}, 'sphere'},
     {I_LUXURY,
-      'ethereal_blade', 'skadi', 'manta', 'butterfly',
+      'skadi', 'manta', 'butterfly',
       'black_king_bar', 'helm_of_the_dominator', 'heart' },
   },
 
@@ -1763,7 +1763,7 @@ Go{
   },
 
   TIPS{
-    {"When in a tough spot,", E, "into STR for a strong pseudo-heal."},
+    {"When in a tough spot,", E, "into STR for a strong pseudo-heal. This works even while stunned."},
     {I'travel_boots', "give you insane mobility for farming,",
       "but only get them if you are going really well."},
     {I'manta', "and", I'sphere', "are nice survivability options"},
