@@ -2049,13 +2049,10 @@ Go{
 
 Go{
   heroid='Drow',
-  date={day=14, month=1, year=2013},
+  date={day=16, month=1, year=2013},
 
-  SKILLBUILD{ name="Carry Skills",
+  SKILLBUILD{ name="Skills",
     {MAX, Q}, W, {MAX, E}, {MAX, W}
-  },
-  SKILLBUILD{ name="Ganker Skills",
-    {MAX, Q}, E, W, {MAX, E}, {MAX, W}
   },
 
   ITEMBUILD{
@@ -2064,7 +2061,7 @@ Go{
     {I_CORE,
       'power_treads', 'invis_sword', 'manta'},
     {I_LUXURY,
-      'black_king_bar', 'helm_of_the_dominator', 'butterfly', 'greater_crit', 'heart' },
+      'black_king_bar', 'helm_of_the_dominator', 'butterfly', 'greater_crit', 'heart', 'ethereal_blade' },
   },
 
   HERODESC{
@@ -2082,12 +2079,10 @@ Go{
   },
 
   TIPS{ name = T_BUILD_VARIATIONS,
-    {"In the", I'helm_of_the_dominator', "build we leave",Q," at level one.",
+    {"Some players will rush", I'helm_of_the_dominator', "and leave ",Q," at level one.",
       "This still allows orbwalking, but",E,"and",S,"give more damage."},
 
     {"It is OK to delay one or more levels of", W, "for", S},
-
-    {"If you want to gank more, get more levels in", Q, "and skip the ", I'helm_of_the_dominator'},
   },
 
   tips_orbwalking(Q),
