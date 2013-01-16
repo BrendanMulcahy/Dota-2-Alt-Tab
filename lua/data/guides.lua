@@ -2188,7 +2188,7 @@ Go{
 
 Go{
   heroid='VS',
-  date={day=14, month=1, year=2013},
+  date={day=16, month=1, year=2013},
 
   SKILLBUILD{
     {MAX, Q}, W, E, {MAX, W}, {MAX, E}
@@ -2196,7 +2196,7 @@ Go{
 
   ITEMBUILD{
     {I_STARTING,
-      {3, 'branches'}, 'flask', {2, 'tango'}, {3, 'clarity'} },
+      {ALT, 'courier', 'ward_observer'}, {3, 'branches'}, 'flask', {1, 'tango'}, {2, 'clarity'} },
     {I_CORE,
       'magic_wand', 'boots', 'ward_observer', 'ward_sentry' },
     {I_LUXURY,
