@@ -3429,19 +3429,19 @@ Go{
 
 Go{
   heroid='Ogre',
-  date={day=14, month=1, year=2013},
+  date={day=16, month=1, year=2013},
 
   SKILLBUILD{
-    {MAX, Q}, {MAX, W}, {MAX, R}, {MAX, E}
+    {MAX, Q}, {3, W}, {MAX, R}, W, {MAX, E}
   },
 
   ITEMBUILD{
     {I_STARTING,
-      {2, 'mantle'}, {2, 'branches'}, 'flask', 'tango' },
+	  {3, 'branches'}, 'stout_shield', 'flask', 'tango' },
     {I_CORE,
-      {2, 'null_talisman'}, 'bottle', 'arcane_boots' },
+      'magic_wand', 'arcane_boots', 'force_staff' },
     {I_LUXURY,
-      'force_staff', 'blade_mail', 'bloodstone',
+      'orchid', 'blade_mail', 'bloodstone',
       'sheepstick', 'shivas_guard' },
   },
 
