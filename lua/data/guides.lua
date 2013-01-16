@@ -1535,7 +1535,7 @@ Go{
 
 Go{
   heroid='AM',
-  date={day=14, month=1, year=2013},
+  date={day=16, month=1, year=2013},
 
   SKILLBUILD{
     W, Q, E, {MAX, Q}, {MAX, W}, {MAX, E}
@@ -1564,7 +1564,7 @@ Go{
     tip_ministun(R),
     {"The \"Anti-Mage\" title is misleading;",
       Q,"is actually better against low-mana STR and AGI heroes and",
-      E,"only makes you tanky if you also get HP items (lategame)."},
+      E,"only makes you tanky if you also get HP items (lategame).  His ultimate still works best against intelligence heroes with large amounts of mana missing though."},
   },
 
   TIPS{ name=T_BUILD_VARIATIONS,
