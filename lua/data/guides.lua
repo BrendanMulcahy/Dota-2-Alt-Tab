@@ -448,7 +448,7 @@ Go{
 
 Go{
   heroid='Tiny',
-  date={day=14, month=1, year=2013},
+  date={day=16, month=1, year=2013},
 
   SKILLBUILD{
     {3, Q}, {MAX, W}, {MAX, Q}, {MAX, E}
@@ -456,9 +456,9 @@ Go{
 
   ITEMBUILD{ name="Carry Items",
 	{I_STARTING, {3, 'branches'}, 'flask', 'tango', 'stout_shield' },
-    {I_CORE, 'phase_boots', 'ancient_janggo', 'yasha' },
+    {I_CORE, 'phase_boots', 'ancient_janggo', 'yasha', 'ultimate_scepter' },
     {'Extension',
-      'ultimate_scepter', 'manta', 'assault', 'greater_crit', 'mjollnir'},
+      'manta', 'assault', 'greater_crit', 'mjollnir'},
   },
 
   ITEMBUILD{ name="Ganker Items",
@@ -475,7 +475,7 @@ Go{
   },
 
   TIPS{
-    {"AvaToss combo: for max damage, cast",Q,"and immediately follow up with",W,".",
+    {"AvaToss combo: for max damage, cast",Q,"first and immediately follow up with",W,".",
      Q,"deals double damage to units being tossed."},
 
     {THIS,"has instant cast time; Always animation cancel."},
