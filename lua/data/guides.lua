@@ -381,9 +381,9 @@ Go{
 
 Go{
   heroid='Brew',
-  date={day=14, month=1, year=2013},
+  date={day=16, month=1, year=2013},
 
-  SKILLBUILD{ {MAX, Q}, {2, S}, {MAX, E}, {MAX, W} },
+  SKILLBUILD{ {MAX, Q}, {2, S}, {1, E}, W, {MAX, E}, {MAX, W} },
 
   ITEMBUILD{
 	{I_STARTING, {3, 'branches'}, 'flask', 'tango', 'stout_shield' },
