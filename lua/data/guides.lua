@@ -3386,14 +3386,15 @@ Go{
 
 Go{
   heroid='Disruptor',
-  date={day=14, month=1, year=2013},
-
-  SKILLBUILD{ name="Mid Solo",
-    R, {MAX, Q}, E, {MAX, W}, {MAX, E}, {MAX, R}
-  },
+  date={day=16, month=1, year=2013},
 
   SKILLBUILD{ name="Support",
-    R, {MAX, W}, E, {MAX, Q}, {MAX, E}, {MAX, R}
+    E, Q, {MAX, W}, {MAX, R}, {MAX, Q}, {MAX, E}
+  },
+
+
+  SKILLBUILD{ name="Mid Solo",
+    {MAX, Q}, E, W, {MAX, R}, {MAX, W}, {MAX, E}
   },
 
   ITEMBUILD{
@@ -3418,8 +3419,7 @@ Go{
   },
 
   TIPS{ name=T_BUILD_VARIATIONS,
-    {"Most people leave", R, "at 1 point, since it scales very badly."},
-    {E, "scales extremely well.", "Get it first if you won't have many levels,",
+    {W, "scales extremely well.", "Get it first if you won't have many levels,",
       "or as your second skill if you have solo XP."},
     {"It is OK to leave", E, "for last, since it is already good at level 1."},
   }
