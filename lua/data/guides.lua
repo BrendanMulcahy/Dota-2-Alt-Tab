@@ -702,7 +702,7 @@ Go{
 
 Go{
   heroid='DK',
-  date={day=14, month=1, year=2013},
+  date={day=16, month=1, year=2013},
 
   SKILLBUILD{
     {1, R}, {1, W}, {1, E}, {MAX, Q}, {MAX, E}, {MAX, W}, S, {MAX, R}
@@ -725,7 +725,7 @@ Go{
   TIPS{
     {"Level 1 of",R,"is generally considered better then level 2, due to the tower damage.",
     "Some people don't level up anything in level 15 and skip straight to level 3 after that."},
-    {"If you get a",I'helm_of_the_dominator',", use a creep to stack ancients; You can farm a stack quickly with your AoE."},
+    {"If you get a",I'helm_of_the_dominator',", use a creep to stack ancients; You can farm a stack quickly with your AoE from your level 2 ultimate. Consider leveling it sooner than recommended to take out stacks."},
   },
 }
 
