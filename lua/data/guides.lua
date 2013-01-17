@@ -4145,13 +4145,14 @@ Go{
   heroid='OD',
   date={day=14, month=1, year=2013},
 
-  SKILLBUILD{ {MAX, W}, {MAX, E}, {MAX, R}, {MAX, Q} },
+  SKILLBUILD{
+    {2, W}, {2, E}, Q, {MAX, E}, {MAX, R}, W, {MAX, Q}, {MAX, W} },
 
   ITEMBUILD{
     {I_STARTING,
       'mantle', {3, 'branches'}, {2, 'tango'}, 'flask' },
     {I_CORE,
-      'magic_wand', 'power_treads', 'force_staff', 'rod_of_atos' },
+      'magic_wand', 'power_treads', 'force_staff', {ALT, 'mekansm', 'rod_of_atos'} },
     {I_LUXURY,
       'sheepstick', 'black_king_bar', 'shivas_guard', 'hyperstone', 'heart' },
   },
