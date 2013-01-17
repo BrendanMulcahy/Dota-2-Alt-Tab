@@ -2541,11 +2541,9 @@ Go{
     {I_STARTING,
       {2, 'slippers'}, {2, 'branches'}, 'flask', 'tango' },
     {I_CORE,
-      'bottle', SEQ, 'power_treads', 'black_king_bar' },
+      'bottle', 'power_treads', 'invis_sword', 'black_king_bar' },
     {I_LUXURY,
       'manta', 'butterfly', 'desolator', 'greater_crit'},
-    {"Mobility",
-      'blink', 'invis_sword'},
   },
 
   HERODESC{
