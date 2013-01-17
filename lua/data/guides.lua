@@ -3503,7 +3503,11 @@ Go{
   heroid='Jakiro',
   date={day=14, month=1, year=2013},
 
-  SKILLBUILD{ name="Skills",
+  SKILLBUILD{
+    {MAX, W}, {MAX, Q}, E, {MAX, R}, {MAX, E}
+  },
+
+  SKILLBUILD{ name="Pusher Skills",
     {MAX, W}, E, Q, {MAX, E}, {MAX, R}, {MAX, Q}
   },
 
