@@ -456,7 +456,7 @@ Go{
 
   ITEMBUILD{ name="Carry Items",
 	{I_STARTING, {3, 'branches'}, 'flask', 'tango', 'stout_shield' },
-    {I_CORE, 'phase_boots', 'ancient_janggo', 'yasha', 'ultimate_scepter' },
+    {I_CORE, 'phase_boots', 'ancient_janggo', 'ultimate_scepter', 'yasha' },
     {'Extension',
       'manta', 'assault', 'greater_crit', 'mjollnir'},
   },
@@ -465,7 +465,7 @@ Go{
     {I_STARTING, {4, 'branches'}, 'flask', {2, 'clarity'} },
     {I_CORE, 'bottle', 'magic_wand', 'arcane_boots', 'blink' },
     {'Extension',
-      'force_staff', 'cyclone', 'ethereal_blade', 'shivas_guard', 'sheepstick'},
+      'force_staff', 'shivas_guard', 'sheepstick', 'ultimate_scepter'},
   },
 
   HERODESC{
@@ -480,7 +480,7 @@ Go{
 
     {THIS,"has instant cast time; Always animation cancel."},
 
-    {W,"can throw an initiator (",H'ES',",",H'Tide',",",H'Techies',")",
+    {W,"can throw an initiator (",H'ES',",",H'Tide',")",
      "into the other team."},
 
     {"Don't stack",Q,"and",W,"when you want to maximize disable time (you deal less damage though)."},
@@ -723,9 +723,9 @@ Go{
   },
 
   TIPS{
-    {"Level 1 of",R,"is generally considered better then level 2, due to the tower damage.",
-    "Some people don't level up anything in level 15 and skip straight to level 3 after that."},
-    {"If you get a",I'helm_of_the_dominator',", use a creep to stack ancients; You can farm a stack quickly with your AoE from your level 2 ultimate. Consider leveling it sooner than recommended to take out stacks."},
+    {"Level 1 of",R,"is often better then level 2, since it deals damage to towers.",
+    "Only get the second level sooner if you need to counterpush or farm a big stack of ancients."},
+    {"If you get a",I'helm_of_the_dominator',", use a creep to stack ancients;"},
   },
 }
 
