@@ -4346,10 +4346,9 @@ Go{
     {I_STARTING,
       'ring_of_protection', {4, 'branches'}, {2, 'tango'} },
     {I_CORE,
-      'ring_of_basilius', 'bottle', 'boots',
-      'urn_of_shadows', 'blink', 'travel_boots' },
+      'bottle', 'tranquil_boots', 'blink', 'force_staff'},
     {I_LUXURY,
-      'pipe', 'black_king_bar', 'heavens_halberd', 'shivas_guard' },
+      'travel_boots', 'pipe', 'black_king_bar', 'shivas_guard' },
   },
 
   HERODESC{
