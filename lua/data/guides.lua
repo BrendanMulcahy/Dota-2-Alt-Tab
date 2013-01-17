@@ -3799,14 +3799,14 @@ Go{
   date={day=14, month=1, year=2013},
 
   SKILLBUILD{
-    {MAX, W}, E, {MAX, Q}, {MAX, R}, {MAX, E},
+    {MAX, W}, {2, E}, {3, Q}, {MAX, R}, {MAX, Q}, {MAX, E},
   },
 
   ITEMBUILD{
     {I_STARTING,
       'stout_shield', 'branches', 'flask', {2, 'tango'} },
     {I_CORE,
-      'soul_ring', 'vanguard', 'arcane_boots', 'cloak' },
+      'soul_ring', 'vanguard', 'arcane_boots', 'mekansm', 'cloak' },
     {I_LUXURY,
       'pipe', 'shivas_guard', 'ultimate_scepter', 'sheepstick' },
   },
