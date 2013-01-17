@@ -244,7 +244,6 @@ Go{
     { "Getting a", I'blink', "is crucial, since everything you do is melee ranged." },
     { "Best combo order: ", Q, ", auto-attack, ",
       W, " (while the attack cooling), another attack. Don't forget to animation cancel!" },
-    tip_ministun(W),
   }
 }
 
