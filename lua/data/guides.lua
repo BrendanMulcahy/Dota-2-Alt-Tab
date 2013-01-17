@@ -4583,8 +4583,16 @@ Go{
   heroid='Lesh',
   date={day=14, month=1, year=2013},
 
-  SKILLBUILD{ name="Skills",
+  SKILLBUILD{ name="Easy Skills",
+    {MAX, Q}, {MAX, E}, {MAX, W}, {MAX, R},
+  },
+
+  SKILLBUILD{ name="Early Push",
     Q, {MAX, W}, {MAX, Q}, {MAX, R}, {MAX, S}
+  },
+
+  SKILLBUILD{ name="Counterpush",
+    Q, {MAX, E}, {MAX, W}, {MAX, R}, {MAX, Q}
   },
 
   ITEMBUILD{
