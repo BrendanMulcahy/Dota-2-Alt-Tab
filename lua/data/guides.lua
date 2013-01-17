@@ -4132,7 +4132,7 @@ Go{
 
     {"You can", W, "your own", E, "to protect it from attacks."},
 
-    {"Get HP items to compensate your 1.0 STR gain.",
+    {"Get HP items to compensate your very low STR gain.",
       "On the other hand, just a few percentage mana regen items",
       "should cover your mana needs (you have the highest INT gain in the game)."},
   },
@@ -4200,8 +4200,12 @@ Go{
   heroid='QoP',
   date={day=14, month=1, year=2013},
 
-  SKILLBUILD{
-    W, {2, Q}, {MAX, E}, {MAX, W}, {MAX, Q}
+  SKILLBUILD{ name="Strong Lane Skills",
+    W, {2, Q}, {MAX, E}, {MAX, R}, {MAX, W}, {MAX, Q}
+  },
+
+  SKILLBUILD{ name="Strong Gank Skills",
+    W, Q, {MAX, E}, {MAX, W}, {MAX, Q}
   },
 
   ITEMBUILD{
@@ -4213,7 +4217,7 @@ Go{
     {I_LUXURY,
       'sphere', 'ultimate_scepter',
       'sheepstick', 'travel_boots',
-      'skadi', 'veil_of_discord' },
+      'necronomicon', 'veil_of_discord' },
   },
 
   HERODESC{
