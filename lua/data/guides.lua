@@ -2012,11 +2012,11 @@ Go{
   date={day=14, month=1, year=2013},
 
   SKILLBUILD{ name="Flak Build",
-    W, Q, {MAX, E}, {MAX, Q}, {MAX, W}
+    Q, W, {MAX, E}, {MAX, Q}, {MAX, W}
   },
 
   SKILLBUILD{ name="Alternate Skills",
-    W, {MAX, Q}, {MAX, W}, {MAX, E}
+    {MAX, Q}, {MAX, W}, {MAX, E}
   },
 
   ITEMBUILD{
