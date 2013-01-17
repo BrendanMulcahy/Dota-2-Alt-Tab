@@ -3671,7 +3671,7 @@ Go{
   date={day=16, month=1, year=2013},
 
   SKILLBUILD{
-    Q, {MAX, W}, {MAX, E}, {MAX, Q}, {MAX, W},
+    Q, {MAX, W}, {MAX, Q}, {MAX, E},
   },
 
   ITEMBUILD{
@@ -3695,6 +3695,8 @@ Go{
   },
 
   TIPS{
+    {"If you are underleveled, get ", E, "over", Q, "since the resistance helps all your team in teamfights."},
+
     {"Strong ultimates are especially desireable,",
       "but don't limit yourself to those, since", R, "has a very low",
       "cooldown and a great cast range."},
