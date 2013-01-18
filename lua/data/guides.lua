@@ -1362,7 +1362,7 @@ Go{
   },
 
   TIPS{
-    {"Get survivability items first and mana regen items latter (the mana costs increase a lot in levels 12-14)."},
+    {"Get survivability items first and mana regen items later (the mana costs increase a lot in levels 12-14)."},
     {"Stay in close, to spam",Q,"and amplify damage with",R,".",
       "You are very hard to take down if you can continuously hit good", Q, "s."},
     {W,"can heal your",E,"."},
@@ -2796,7 +2796,7 @@ Go{
   TIPS{
     {"Most of your damage comes from your (close-ranged) spells.",
       "Prioritize tankability and the mobility items early game",
-      "and leave the traditional carry items for latter."},
+      "and leave the traditional carry items for later."},
   },
 
 }
@@ -3273,7 +3273,7 @@ Go{
   },
 
   HERODESC{
-    {THIS, "is a nuker that can also have reasonable physical damage latter in the game",
+    {THIS, "is a nuker that can also have reasonable physical damage later in the game",
       "with", E, "."},
   },
 
@@ -4394,7 +4394,7 @@ Go{
     {THIS, "is usually played as a support,",
       "but his stats also allow him to make good use of gold and levels if those come by."},
     {"Early game, he can use his good base damage to control the lane.",
-      "Latter on, he has 3 skills that keep your team alive while his",
+      "Later on, he has 3 skills that keep your team alive while his",
       "ultimate turns the enemy into fragile targets over time."},
   },
 
