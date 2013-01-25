@@ -75,7 +75,7 @@ local GUIDE_HOW_TO_USE = [=[
 <p>Choose your guide using the search bar or by clicking on the hero taverns. You can use arrow keys to navigate and enter to select the options given by the search bar.</p>
 <p>To pick another hero use the "Go to top" link or use the back button of your browser.</p>
 <p><strong>For faster access to the guides from within the game, we recommend using the Steam web browser</strong>. It is available from inside Dota2 via the Shift-Tab shortcut and avoids the usual delay from alt-tabbing.</p>
-<p>You can replace the ingame recommended items lists with ours. <a href="http://www.dota2alttab.com/itembuilds.zip">Click here</a> to download the files.</p>
+<p>You can replace the ingame recommended items lists with ours. <a href="./itembuilds.zip">Click here</a> to download the files.</p>
 <p>The skill and item builds in this guide are typically "standard" or "dependable" builds, since we have little time to explain things and since we err on the side of making builds that can also help beginning and intermediate players. Do not assume that these builds are the only way to play the heroes and <strong>always adapt them to your game</strong>!</p>
 <p>I particular, feel free to pick up some extra early game items, such as TP scrolls or bracers, even if they aren't explicitly listed in the guides.</p>
 <p>Skills are color coded:</p>
