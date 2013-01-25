@@ -85,6 +85,7 @@ WISP
 
 CENT
     + Needs updated tips for Stampede update.
+    + max stun over nuke on centaur (current build is from when he got tons of HP at 6)
 
 JUGGER
     + Currently lacks a hero description (only has tips).
@@ -149,11 +150,20 @@ NECRO
 
 KROB:
     + Add more luxury items to the MS itembuild.
+      (shivas pipe and ghost could appear somewhere)
 
 LESH:
     + We should add the tabs back in (there is more then one way to play lesh)
       The text got outdated because of this too.
     + Do we need all those bracers in the stats build?
+    
+    - Lesh skillbuild
+    I don't think early edict is good by *default*, since it is hard to use, so I put back the stun+lightning build there instead.
+    I  believe this is not optimal, but is good if you are new on him. I need to know what you think though (just be sure to not just copy whatever is trendy on him - that changes a lot over time)
+    
+
+AA:
+    chilling touch got buffed
 
 INVOKER:
     + (jtrager)
@@ -164,7 +174,9 @@ INVOKER:
         Starting: tango,2 branches,circlet,Gauntlet
 
 OD:
-    Mek/Nulls  in optional
+    
+    I reverted it to something more similar to how it used to be a while back. But perhaps orb could be taken even earlier?
+
 
 == Dota1 heroes without guides
 
