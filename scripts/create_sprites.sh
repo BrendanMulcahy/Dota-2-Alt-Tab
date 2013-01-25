@@ -8,6 +8,8 @@
 # For more advanced stuff, it looks like that there is a "montage"
 #  command we could be using instead.
 
+set -e
+
 dpath='../results/dota2alttab/Dota2_Alt_Tab'
 ipath="$dpath/Images"
 spath="$ipath/Sprites"
