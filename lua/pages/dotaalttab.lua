@@ -27,8 +27,8 @@ local FILENAME_DATA = 'data.js'
 
 local VERSION_CSS    = 7
 local VERSION_JS     = 2
-local VERSION_DATA   = 3
-local VERSION_SPRITE = 7
+local VERSION_DATA   = 7
+local VERSION_SPRITE = 8
 
 local INCLUDE_CSS  = FILENAME_CSS  .. "?v=" .. VERSION_CSS
 local INCLUDE_JS   = FILENAME_JS   .. "?v=" .. VERSION_JS

@@ -93,6 +93,8 @@ H('Gyro'   , 'gyrocopter', {})
 H('LD'     , 'lone_druid', {})
 H('Naga'   , 'naga_siren', {})
 
+H('Troll'  , 'troll_warlord', {})
+
 --Dire Agility
 
 H('BS'     , 'bloodseeker', { E = "Thirst" })

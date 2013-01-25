@@ -32,6 +32,7 @@ T('SentinelAgi', {
     { 'Morph', 'PL', 'VS', 'Riki' },
     { 'Sniper', 'TA', 'Luna', 'BH' },
     { 'Ursa', 'Gyro', 'LD', 'Naga' },
+    { 'Troll' },
 })
 
 T('SentinelInt', {
