@@ -2703,7 +2703,7 @@ Go{
   TIPS{
     {"You already deal good early game damage with your skills; Focus on getting items that let you get in and fight in the first place."},
 
-    {"Gank frequently when you ave your ultimate, but always bring a fried to stop enemies from TP-ing away."},
+    {"Gank frequently when you ave your ultimate, but always bring a friend to stop enemies from TP-ing away."},
 
     {R, "goes through BKB and is a a good debuff against enemy carries in fights."},
   },

@@ -43,7 +43,7 @@ H('Clock'  , 'rattletrap', {fullName = 'Clockwerk'})
 H('Omni'   , 'omniknight', {})
 
 H('Huskar' , 'huskar', {})
-H('Alch'   , 'alchemist', {})
+H('Alch'   , 'alchemist', { E = "Greevil's Greed"})
 H('Brew'   , 'brewmaster', {})
 H('Treant' , 'treant', {fullName = 'Treant Protector'})
 
@@ -164,7 +164,7 @@ H('Bat'    , 'batrider', { W = "Flamebreak" })
 H('AA'     , 'ancient_apparition', {})
 H('Invoker', 'invoker', {})
 
-H('OD'     , 'obsidian_destroyer', {fullName = "Outworld Destroyer"})
+H('OD'     , 'obsidian_destroyer', {fullName = "Outworld Devourer"})
 H('SD'     , 'shadow_demon', {})
 H('Visage' , 'visage', {})
 
