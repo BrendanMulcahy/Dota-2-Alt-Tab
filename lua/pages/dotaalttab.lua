@@ -104,7 +104,7 @@ local GUIDE_HOW_TO_USE = [=[
 ]=]
 
 local GUIDE_NOTES = [=[
-<p>Last updated: January 14, 2013. Updated skill and item builds for all heroes.</p>
+<p>Last updated: February 15, 2013.  Added Tusk. Still needs description.</p>
 <p>Suggestions, typos, bugs? Contact me at deathcalibur@dota2alttab.com</p>
 <p>Submitting a guide? Send to guides@dota2alttab.com</p>
 ]=]

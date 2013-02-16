@@ -912,7 +912,7 @@ Go{
   },
 
   TIPS{
-
+	{"Be careful not to feed enemies the summon from your ", E, ". The bounty gold is fairly substantial."},
   }
 }
 
