@@ -22,7 +22,7 @@ on the dota2alttab folder and going to *http:8000//localhost/index.html* is a qu
 2. Add the hero to data/v_dota1/heroes.lua
 3. Add the hero to data/v_dota1/taverns.lua
 4. Update data/a_playdota/hero_images
-    - Get the image URL over on palydota.com/heroes
+    - Get the image URL over on playdota.com/heroes
 5. Add relevant hero abbreviations so the search bar knows about them.
    Currently this is directly in the dotaalttab.lua file but it would be better if
    this information were moved to the data folder.

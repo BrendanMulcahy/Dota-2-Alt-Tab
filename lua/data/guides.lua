@@ -887,6 +887,35 @@ Go{
   }
 }
 
+-----
+
+Go{
+  heroid='Tuskarr',
+  date={day=15, month=2, year=2013},
+
+  SKILLBUILD{
+    {MAX, Q}, {2, W}, {MAX, E}, {MAX, W}
+  },
+
+  ITEMBUILD{
+    {I_STARTING,
+      'stout_shield', {3, 'branches'}, 'flask', 'tango'},
+    {I_CORE,
+      'magic_wand', {OPT, 'orb_of_venom'}, {ALT, 'phase_boots', 'arcane_boots'},
+      'ancient_janggo', 'invis_sword'},
+    {I_LUXURY,
+      'desolator', 'pipe', 'heart', 'shivas_guard'},
+  },
+
+  HERODESC{
+
+  },
+
+  TIPS{
+
+  }
+}
+
 ----------------------
 -- Scourge Strength --
 ----------------------

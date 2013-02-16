@@ -50,6 +50,7 @@ H('Treant' , 'treant', {fullName = 'Treant Protector'})
 H('Wisp'   , 'wisp', {})
 H('Cent'   , 'centaur', {fullName = 'Centaur Warunner'})
 H('Shredder', 'shredder', {fullName = 'Timbersaw'})
+H('Tuskarr', 'tusk', {fullName = 'Tusk', R="Walrus PUNCH!"})
 
 --Dire Strength
 
