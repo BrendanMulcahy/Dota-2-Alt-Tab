@@ -25,10 +25,10 @@ local FILENAME_CSS  = 'guide.css'
 local FILENAME_JS   = 'guide.js'
 local FILENAME_DATA = 'data.js'
 
-local VERSION_CSS    = 9
+local VERSION_CSS    = 10
 local VERSION_JS     = 2
-local VERSION_DATA   = 9
-local VERSION_SPRITE = 9
+local VERSION_DATA   = 10
+local VERSION_SPRITE = 10
 
 local INCLUDE_CSS  = FILENAME_CSS  .. "?v=" .. VERSION_CSS
 local INCLUDE_JS   = FILENAME_JS   .. "?v=" .. VERSION_JS
@@ -104,7 +104,7 @@ local GUIDE_HOW_TO_USE = [=[
 ]=]
 
 local GUIDE_NOTES = [=[
-<p>Last updated: February 15, 2013.  Added Tusk. Still needs description.</p>
+<p>Last updated: July 20, 2013.  Added Abaddon, Skywrath Mage, Elder Titan, Bristleback, and added Tusk description. Updated hero icons for Centaur Warrunner and Sniper. Updated guide for Treant.</p>
 <p>Suggestions, typos, bugs? Contact me at deathcalibur@dota2alttab.com</p>
 <p>Submitting a guide? Send to guides@dota2alttab.com</p>
 ]=]
@@ -114,7 +114,7 @@ local GUIDE_CREDITS = [=[
 <p>The current version is being maintained by Ninguem and DeathCalibur. We wish to thank he following people for helping us write the guides:
 <p>Decency, deathpie, Gregarious, Valiant Penguin
 <p>Ninguem would also want to thank the following people:
-<p>grimlock123 and Homer00, for hosting the weekly hero discussions in the dota2 subreddit. They have been a great source of info on the current metagame and have served the same purpose as the treads Val used to run on Playdota back in the day.
+<p>grimlock123 and Homer00, for hosting the weekly hero discussions in the dota2 subreddit. They have been a great source of info on the current metagame and have served the same purpose as the threads Val used to run on Playdota back in the day.
 <p>Shred_kid, for writing so many insightful posts in those said discussion treads and
 <p>Adm_Chookington, albaek, Blitzmael, capgrass, corporate_g, KnightingGale, orgodemir, Stop_Sign for also giving valuable tips on some heroes.
 <p>fireblaze762, No_Worries and Bude for giving valuable feedback on the guide itself
@@ -741,6 +741,7 @@ local abbreviations = {
 
   {'LC', 'Legion'},
   {'LD', 'LD'},
+  {'LoA', 'LoA'},
   {'LR', 'Razor'},
   {'LS', 'Naix'},
 
@@ -788,7 +789,8 @@ local abbreviations = {
 
   {'TA', 'TA'},
   {'TB', 'TB'},
-  {'TC', 'TC'},
+  {'TC', 'TC', 'Tauren Chieftan'},
+  {'ET', 'TC'},
   {'TH', 'Tide'},
   {'THD', 'Jakiro'},
   {'TP', 'Treant'},
