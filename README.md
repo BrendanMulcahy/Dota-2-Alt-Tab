@@ -1,8 +1,14 @@
-﻿## How to run the code
+﻿## Prerequisites
+- The ability to execute Unix shell scripts (CygWin or native *nix)
+- Lua
+- Python
+- ImageMagick
+
+## How to run the code
 Go to the /lua directory and, from there run the scripts in the /pages directory
 
     cd lua
-    lua pages/dota2alttab.lua
+    lua pages/dotaalttab.lua
 
 The output will be placed somewhere in the results folder.
 (In the future we should have some way to automate this better)

@@ -522,17 +522,17 @@ Go{
     {I_STARTING,
       'quelling_blade', {3, 'branches'}, {2, 'tango'} },
     {I_CORE,
-      'boots', 'magic_wand', 'bottle', 'urn_of_shadows',
-      'power_treads', {OPT, 'vanguard'} },
+      'magic_wand', 'bottle', 'urn_of_shadows',
+      {ALT, 'power_treads', 'arcane_boots'}, {OPT, 'vanguard', 'hood_of_defiance'} },
     {I_LUXURY,
       'assault', 'satanic', 'black_king_bar',
-      'shivas_guard', 'refresher' },
+      'shivas_guard', 'refresher', 'pipe' },
   },
 
   HERODESC{
-    {THIS, "is part initiator, part damage buffer, part dpser.",
+    {THIS, "is an item-independent part initiator, part damage buffer, part DPS-er.",
      W,"+",Q,"can allow a lot of set-up time (useful for his ult or allied spells).",
-     "His aura, while melee ranged, is devastating and his damage buff from ancestral spirit can make him a temporary dpser."},
+     "His aura, while melee ranged, is devastating and his damage buff from ancestral spirit can make him a temporary DPS-er."},
 
   },
 
@@ -548,7 +548,7 @@ Go{
   date={day=14, month=1, year=2013},
 
   SKILLBUILD{
-    {MAX, W}, Q, {MAX, E}, {MAX, Q}
+    {MAX, E}, {MAX, W}, {MAX, Q}
   },
 
   ITEMBUILD{
@@ -568,7 +568,9 @@ Go{
 
   TIPS{
     {THIS,"can cast spells under",Q,"without breaking invis. (But allies can't)"},
-    {Q,"is not only for escaping. Use it as a",I'smoke_of_deceit',"to set up ganks"},
+    {"Feel free to get a level in ", Q, "at 4 if you are in a solo hard lane."},
+	{Q, " is not only for escaping. Use it as a",I'smoke_of_deceit',"to set up ganks."},
+	{E,"is really powerful early game, and can be used to heal towers, preventing early pushes."},
     {R,"will entangle opponents that used BKB before you cast it, but if they cast BKB after they get entangled they will break free."},
   },
 }
@@ -786,8 +788,7 @@ Go{
     {I_STARTING,
       'stout_shield', {3, 'branches'}, 'flask', 'tango' },
     {I_CORE,
-      'magic_wand', 'sobi_mask', 'boots',
-      'power_treads', 'vanguard', 'hood_of_defiance' },
+      'magic_wand', 'power_treads', {ALT,'vanguard', 'hood_of_defiance'}, {OPT, 'medallion_of_courage'} },
     {I_LUXURY,
       'radiance', 'blade_mail', 'assault', 'pipe' }
   },
@@ -796,12 +797,13 @@ Go{
     {THIS, "is an unique kind of carry hero, depending on long drawn out fights to let",
       Q, "and radiance damage rack up.",
       "As such, healers and",H'Dazzle',"(for his ult) go very well with him.",
-      "He can also be a very useful chaser with his snot."},
+      "He can also be a very useful chaser with his ", Q,"."},
   },
 
   TIPS{
-    {"Don't worry too much about mana. The mana problems quickly go away due to your very high INT gain."},
-    {W,"is great for ganking and for getting hero kills, but get levels in $E if you want to survive and push towers."},
+    {"Don't worry too much about mana. The mana problems quickly go away due to your very high INT gain.",
+	"The ", I'medallion_of_courage', " can be picked up to offset your early mana issues.",
+    W,"is great for ganking and for getting hero kills, but get levels in ", E, " if you want to survive and push towers."},
   }
 }
 
@@ -908,11 +910,15 @@ Go{
   },
 
   HERODESC{
-
+    {THIS, "is an item independent ganker who has great single target initiation with ", W, " and ", R,
+	"If placed in a strong dual lane, ", THIS, " can 'snowball' out of control."},
   },
 
   TIPS{
+	{"Try not to trap your own teammates with your ", Q, "!"},
 	{"Be careful not to feed enemies the summon from your ", E, ". The bounty gold is fairly substantial."},
+	{"Don't be afraid to use ", R," on enemy's who have more than 50% HP. The slow and damage are always great."},
+	{R, "'s damage and disable go through magic immunity, but not the slow."},
   }
 }
 
@@ -939,7 +945,7 @@ Go{
 
   HERODESC{
     {THIS,"is an initiator and DotA's only true tank (since he can force enemies to attack him).",
-      "He is also a bestly caster and ganker early game, being able to deal very high damage with",W,"and ",
+      "He is also a beastly caster and ganker early game, being able to deal very high damage with",W,"and ",
       E,"making it very dangerous for any enemies that get too close him."},
   },
 

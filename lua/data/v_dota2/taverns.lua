@@ -23,7 +23,8 @@ T('SentinelStr', {
     { 'ES', 'Sven', 'Tiny', 'Kunkka' },
     { 'Beast', 'DK', 'Clock', 'Omni' },
     { 'Huskar', 'Alch', 'Brew', 'Treant' },
-    { 'Wisp', 'Cent', 'Shredder', 'Tuskarr' },
+    { 'Wisp', 'Cent', 'Shredder', 'BB' },
+    { 'Tuskarr', 'TC' },
 })
 
 T('SentinelAgi', {
@@ -41,7 +42,7 @@ T('SentinelInt', {
     { 'Zeus', 'Lina', 'Rhasta', 'Tinker' },
     { 'Prophet', 'Ench', 'Jakiro', 'Chen' },
     { 'Silencer', 'Ogre', 'Rubick', 'Disruptor' },
-    { 'KOTL' },
+    { 'KOTL', 'SM' },
 })
 
 T('ScourgeStr', {
@@ -49,7 +50,7 @@ T('ScourgeStr', {
     { 'Axe', 'Pudge', 'SK', 'Slardar' },
     { 'Tide', 'Leoric', 'Naix', 'NS' },
     { 'Doom', 'SB', 'Lycan', 'CK' },
-    { 'Dirge', 'Magnus' },
+    { 'Dirge', 'Magnus', 'LoA' },
 })
 
 T('ScourgeAgi', {
