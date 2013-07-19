@@ -741,6 +741,7 @@ local abbreviations = {
 
   {'LC', 'Legion'},
   {'LD', 'LD'},
+  {'LoA', 'LoA'},
   {'LR', 'Razor'},
   {'LS', 'Naix'},
 
@@ -788,7 +789,8 @@ local abbreviations = {
 
   {'TA', 'TA'},
   {'TB', 'TB'},
-  {'TC', 'TC'},
+  {'TC', 'TC', 'Elder Titan'},
+  {'ET', 'TC', 'Elder Titan'},
   {'TH', 'Tide'},
   {'THD', 'Jakiro'},
   {'TP', 'Treant'},
