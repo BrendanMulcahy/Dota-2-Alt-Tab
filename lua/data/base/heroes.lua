@@ -3,8 +3,8 @@ Hero data that is common to both Dota1 and Dota2
 
 Currently this is just for ids but we could all add tooltips, and other stuff.
 
-We might want to use dota2 ids here ot simplify stuff in the future but right now I think
-my Ids are more intuitiv and we don't yet have ids for all the dota1 heroes anyways.
+We might want to use dota2 ids here to simplify stuff in the future but right now I think
+my Ids are more intuitive and we don't yet have ids for all the dota1 heroes anyways.
 ]]
 
 
