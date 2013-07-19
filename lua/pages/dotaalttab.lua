@@ -789,8 +789,8 @@ local abbreviations = {
 
   {'TA', 'TA'},
   {'TB', 'TB'},
-  {'TC', 'TC', 'Elder Titan'},
-  {'ET', 'TC', 'Elder Titan'},
+  {'TC', 'TC', 'Tauren Chieftan'},
+  {'ET', 'TC'},
   {'TH', 'Tide'},
   {'THD', 'Jakiro'},
   {'TP', 'Treant'},
