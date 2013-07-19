@@ -50,7 +50,10 @@ H('Treant' , 'treant', {fullName = 'Treant Protector'})
 H('Wisp'   , 'wisp', {})
 H('Cent'   , 'centaur', {fullName = 'Centaur Warunner'})
 H('Shredder', 'shredder', {fullName = 'Timbersaw'})
+H('BB', 'bristleback', {})
+
 H('Tuskarr', 'tusk', {fullName = 'Tusk', R="Walrus PUNCH!"})
+H('TC', 'elder_titan',  {fullName = 'Elder Titan', W = 'Astral Spirit'})
 
 --Dire Strength
 
@@ -71,6 +74,7 @@ H('CK'     , 'chaos_knight', {})
 
 H('Dirge'  , 'undying', {})
 H('Magnus' , 'magnataur', {fullName = 'Magnus'})
+H('LoA'    , 'abaddon', {fullName = 'Abaddon', Q = 'Mist Coil', E = 'Curse of Avernus'})
 
 -- Radiant Agility
 
@@ -140,6 +144,7 @@ H('Rubick'   , 'rubick', {})
 H('Disruptor', 'disruptor', {})
 
 H('KOTL'     , 'keeper_of_the_light', {fullName = "Keeper of the Light"})
+H('SM'		 , 'skywrath_mage', {fullName = "Skywrath Mage"})
 
 --H('Techies'  , nil, {fullName="Techies"})
 
