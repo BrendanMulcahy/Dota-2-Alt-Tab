@@ -801,7 +801,7 @@ Go{
 
   TIPS{
     {"Don't worry too much about mana. The mana problems quickly go away due to your very high INT gain.",
-    {W,"is great for ganking and for getting hero kills, but get levels in $E if you want to survive and push towers."},
+    W,"is great for ganking and for getting hero kills, but get levels in ", E, " if you want to survive and push towers."},
   }
 }
 
