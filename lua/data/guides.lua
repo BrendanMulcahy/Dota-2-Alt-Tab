@@ -778,10 +778,10 @@ Go{
 
 Go{
   heroid='BB',
-  date={day=30, month=7, year=2012},
+  date={day=18, month=7, year=2013},
 
   SKILLBUILD{
-    {MAX, Q}, {MAX, W}, {MAX, E}
+    Q, {MAX, W}, {MAX, Q}, {MAX, E}
   },
 
   ITEMBUILD{
@@ -795,7 +795,7 @@ Go{
 
   HERODESC{
     {THIS, "is an unique kind of carry hero, depending on long drawn out fights to let",
-      Q, "and radiance damage rack up.",
+      W, "and radiance damage rack up.",
       "As such, healers and",H'Dazzle',"(for his ult) go very well with him.",
       "He can also be a very useful chaser with his ", Q,"."},
   },
