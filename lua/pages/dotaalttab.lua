@@ -125,7 +125,7 @@ CounterGambit, Cross-Hair, DarkArcana, darkmega, DarK_MischieF, de_end, dondy, D
 ETurn, feral_nature, fevgatos, fgivme, FightF4te, fodminah, FUSE, Gheizen64, GoD_Tyr, green.bear, HappyCat, iKrivetko, Isa, iser, JaCKaSS_69,
 Jay.J, JimRaynor55, JukeboxDragon, Karst, kawumm, Killer Draco, kitsune1255, Kris, Leadblast, leathality, leomon235, Logo, Lycan, Manta, Mercy,
 MonsterFEED, Monsterlord, Motas, mrmemories, MurazorOFAngmar, Nae ireun, Nights16, nix, Pepsi-Plunge, Phantom_IV, pipser, pnoize, PNutz, progenitus, rayMi,
-reh, Senkon, Shadow-Seeker, SirDumpling, sLiff, Sohl, Solistus, Sonicspear, Steric, -]stOka[-, SuperSheep, Swiftkick, Syaska, teStud0,
+reh, Senkon, Shadow-Seeker, SirDumpling, sLiff, Sohl, Solistus, Sonicspear, Steric, -]stOka[-, SuperSheep, Swiftkick, Syaska, teStud0, TehRobber,
 The Oreo, The Other Guy, TheTrickster2, (TK)WhiteWolf, Val, Vienna, Vindicate, Visnger, Vlricus, Vot1_Bear, WGDB|SCC, wutwat, XJDevil, Zesty_Pancakes,
 Zieth, Ziodex
 </p>

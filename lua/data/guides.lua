@@ -3771,9 +3771,9 @@ Go{
     {I_STARTING,
       {2, 'mantle'}, {2, 'branches'}, 'flask', 'tango' },
     {I_CORE,
-      'null_talisman', 'arcane_boots', 'bloodstone' },
+      'null_talisman', 'arcane_boots', 'force_staff',  {OPT, 'rod_of_atos'}},
     {I_LUXURY,
-      'sheepstick', 'heart', 'shivas_guard' },
+      'sheepstick', 'heart', 'shivas_guard', 'bloodstone'},
   },
 
   HERODESC{
