@@ -361,7 +361,7 @@ Go{
     {I_CORE,
       'arcane_boots', 'soul_ring', 'mekansm' },
     {I_LUXURY,
-      'orb_of_venom', 'vanguard', 'pipe', 'shivas_guard', 'sheepstick' },
+      'orb_of_venom', 'pipe', 'shivas_guard', 'sheepstick', 'ultimate_scepter' },
   },
 
   HERODESC{
@@ -613,41 +613,44 @@ Go{
   heroid='Alch',
   date={day=14, month=1, year=2013},
 
-  SKILLBUILD{ name="Carry Skills",
-    W, {MAX, E}, {MAX, Q}, {MAX, W}
+  SKILLBUILD{ name="Ganker Skills",
+    {MAX, W}, {MAX, Q}, {MAX, E},
   },
 
-  SKILLBUILD{ name="Aggressive Skills",
-    {2, W}, {MAX, Q}, {MAX, E}, {MAX, W}
+  SKILLBUILD{ name="Farmer Skills",
+    W, {MAX, E}, {MAX, Q}, {MAX, W},
   },
 
-  ITEMBUILD{
-	{I_STARTING, {3, 'branches'}, 'flask', 'tango', 'stout_shield' },
-    {I_CORE,
-      {ALT, 'vanguard', 'hood_of_defiance'},
-      'radiance', 'power_treads' },
+  ITEMBUILD{ name="Ganker Items",
+    {I_STARTING, {3, 'branches'}, 'flask', 'tango', 'stout_shield' },
+    {I_CORE, 
+      "power_treads", "invis_sword", {OPT, "medallion_of_courage"} },
     {I_LUXURY,
-       'mjollnir', 'basher', 'assault', 'heart', 'manta', 'shivas_guard'}
+      'assault', 'abyssal_blade', 'mjollnir', 'heart'},
+  },  
+
+  ITEMBUILD{ name="Farmer Items",
+	  {I_STARTING, {3, 'branches'}, 'flask', 'tango', 'stout_shield' },
+    {I_CORE,
+      {ALT, 'hand_of_midas', 'bfury'}, "power_treads"},
+    {I_LUXURY,
+      'assault', 'abyssal_blade', 'mjollnir', 'heart'},
   },
 
   HERODESC{
-    {THIS, "is a versatile hero, but the most popular way to play him is as a tanky",
-    I'radiance',"carry. An ",THIS,"with high levels of",R,"is very hard to kill - add some DPS items and the enemy team wil be in a tough spot."},
+    {THIS, "is a versatile hero. The most popular way to play him is as a tanky carry but its also possible to play as an early-game oriented ganker due to his very powerful stun."},
   },
 
   TIPS{
-    {"Alchemist can get super farmed in a defensive or offensive tri-lane, and get maxed out items by the 30 minute mark; well before most other carries."},
+    {W, "reaches maximum power with 2 seconds left on the countdown."},
 
-    {R,"gives lots of health and mana back when you cast it. It is OK to use it while farming."},
-  },
+    {"Use", I'invis_sword', "offensively: start charging", W, "in fog and then run in invisible."},
 
-  TIPS{ name=T_BUILD_VARIATIONS,
-    {"Feel free to max",E,"first if you can safely freefarm without needing",Q,
-      "to counter-push."},
+    {R,"gives lots of health and mana regen and has a small cooldown. It can be OK to use it when farming if you don have full health."},
 
-    {"An alternative play-style for",THIS,"is to use him as a support.",
-      "Max your long-duration stun early, get cheap items such as",I'soul_ring',
-      "and go around ganking."},
+    {"The skill build is very flexible:", "Early", Q, "is best for counterpushing, ", W, "is best for fighting and", E, "is ideal if you are freefarming a safe lane."},
+  
+    {"Get some armor items to compensate for your low base armor."},
   },
 }
 
@@ -706,14 +709,14 @@ Go{
   date={day=16, month=1, year=2013},
 
   SKILLBUILD{
-    {1, R}, {1, W}, {1, E}, {MAX, Q}, {MAX, E}, {MAX, W}, S, {MAX, R}
+    {MAX, R}, {1, W}, {1, E}, {MAX, Q}, {MAX, E}, {MAX, W}, S, 
   },
 
   ITEMBUILD{
 	{I_STARTING, {3, 'branches'}, 'flask', 'tango', 'stout_shield' },
     {I_CORE,
-      {OPT, 'quelling_blade', 'urn_of_shadows', 'soul_ring'},
-      'power_treads', 'black_king_bar', 'helm_of_the_dominator' },
+      {OPT, 'quelling_blade'},
+      'power_treads', 'black_king_bar', 'helm_of_the_dominator', 'invis_sword' },
     {I_LUXURY,
       'hyperstone', 'greater_crit', 'assault', 'satanic', 'mjollnir' },
   },
@@ -724,8 +727,6 @@ Go{
   },
 
   TIPS{
-    {"Level 1 of",R,"is often better then level 2, since it deals damage to towers.",
-    "Only get the second level sooner if you need to counterpush or farm a big stack of ancients."},
     {"If you get a",I'helm_of_the_dominator',", use a creep to stack ancients;"},
   },
 }
@@ -737,40 +738,32 @@ Go{
   date={day=14, month=1, year=2013},
 
   SKILLBUILD{
-    W, {MAX, E}, {MAX, Q}, {MAX, S}
+    W, E, W, Q, {MAX, W}, {MAX, E}, {MAX, Q},
   },
 
   ITEMBUILD{
     {I_STARTING,
       {2, 'gauntlets'}, {2, 'branches'}, 'flask', 'tango'},
     {I_CORE,
-      'power_treads', 'helm_of_the_dominator', 'armlet' },
+      'power_treads', 'ghost', 'ultimate_scepter' },
     {'Damage',
-      'black_king_bar', 'greater_crit', 'ultimate_scepter'},
+      'black_king_bar', 'armlet', 'greater_crit', 'ethereal_blade'},
     {'Survivability',
-      'magic_wand', 'hood_of_defiance', 'urn_of_shadows', 'heavens_halberd'},
+      'magic_wand', 'helm_of_the_dominator', 'hood_of_defiance', 'heavens_halberd', 'assault'},
   },
 
   HERODESC{
     {THIS,"is a rambo initiator and anti-tank DPS hero.",
       "He is also a great aggressive laner, since he can use",W,
       "to orbwalk and harass. In a teamfight",THIS,"will deal massive damage if",
-      "left unchecked at low life, but he is very vulnerable to burst nukes and disables."},
+      "left unchecked at low life, but he is very vulnerable to non-magic burst damage."},
   },
 
   TIPS{
-    {"The single level in",W,"is for orbwalking and for lowering your HP when jungling.",
-      "We don't max it since we go for the ",I'helm_of_the_dominator',"build."},
-    tip_orb_lifesteal('helm_of_the_dominator', W),
-    {"You can reduce the self-damage from",R,
-      "by getting magic resistance items or BKB."},
-  },
+    {E, "gives almost 100% magic resistanceat low HP levels. This means that", I'ghost', "makes you essentially immune to everything (except pure damage nukes: Pudge hook, Bane Nightmare, etc)."},
+    {"You can still orbwalk (manually cast", W, ") while under the effect of", I'ghost', ". However, you cannot right-click attack or use", W, "on autocast."},
 
-  TIPS{ name=T_BUILD_VARIATIONS,
-    {"The idea behind the ",E,"+",Q,"build is to maximize fighting potential with",
-      I'helm_of_the_dominator', ". The lifeleech and heal lets you stay alive at low hitpoints while dealing lots of damage with",E},
-    {"Popular alternate skill builds are ",W,"+",E,"and",E,"+",S,".",
-      "They have more damage potential, but come at a cost in survivability."},
+    tip_orb_lifesteal('helm_of_the_dominator', W),
   },
 }
 
@@ -4719,7 +4712,7 @@ Go{
   date={day=14, month=1, year=2013},
 
   SKILLBUILD{
-    {MAX, Q}, {MAX, W}, {MAX, S}, {MAX, E}
+    {MAX, Q}, {MAX, E}, {MAX, W}
   },
 
   ITEMBUILD{
@@ -4728,7 +4721,7 @@ Go{
     {I_CORE,
       'boots', 'magic_wand', 'mekansm', 'force_staff', 'urn_of_shadows' },
     {I_LUXURY,
-      'ancient_janggo', 'travel_boots', 'sheepstick', 'cyclone' },
+      'ancient_janggo', 'travel_boots', 'sheepstick', 'cyclone', 'rod_of_atos' },
   },
 
   HERODESC{
@@ -4740,7 +4733,7 @@ Go{
 
   TIPS{
     {"You can use", W, "to scout fogged areas before entering them."},
-
+    {"Level 3", R, "can kill a big creepwave by itself. This can be useful for counterpushing across the map."},
     {R, "casting mechanics:",
       "You start by sending an invisible marker in the target direction.",
       "When the marker is where you want it to be, cast the skill again",
